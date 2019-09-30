@@ -1,39 +1,37 @@
 <template>
   <v-app>
       <section>
-          <v-toolbar>
-              <v-toolbar-title>Toolbar Mobile Menu</v-toolbar-title>
-              <v-spacer></v-spacer>
-              <v-toolbar-items class="hidden-sm-and-down">
-                  <v-btn
-                          v-for="item in items"
-                          :key="index"
-                          flat
-                  >{{ item.title }}</v-btn>
-              </v-toolbar-items>
 
-              <v-menu class="hidden-md-and-up">
-                  <v-app-bar-nav-icon
-                          class="hidden-md-and-up"
-                          slot="activator"
-                          v-on="on"
-                  >
-
-                  </v-app-bar-nav-icon>
-                  <v-list>
-                      <v-list-item
-                              v-for="(item, index) in items"
-                              :key="index"
-                              @click=""
-                      >
-                              <v-list-item-title>{{ item.title }}</v-list-item-title>
-                      </v-list-item>
-                  </v-list>
-              </v-menu>
-          </v-toolbar>
 
 
           <v-parallax id="#home" src='./assets/header.jpg' :height="windowHeight">
+              <v-toolbar flat class="transparent">
+                  <v-toolbar-title class="white--text">LOGO</v-toolbar-title>
+                  <v-spacer></v-spacer>
+                  <v-toolbar-items class="hidden-sm-and-down">
+                      <v-btn text color="white" @click="goToSection('#why')">About</v-btn>
+                      <v-btn text color="white" @click="goToSection('#courses')">Courses</v-btn>
+                      <v-btn text color="white" @click="goToSection('#apply')">Apply</v-btn>
+                      <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
+                      <v-btn text color="white" @click="goToSection('#contact')">Contact</v-btn>
+                  </v-toolbar-items>
+                  <div class="hidden-md-and-up text-center">
+                      <v-menu offset-y>
+                          <template v-slot:activator="{ on }">
+                              <v-btn text flat fab class="transparent" v-on="on">
+                                  <v-icon color="white">mdi-menu</v-icon>
+                              </v-btn>
+                          </template>
+                          <v-list>
+                              <v-list-item @click="goToSection('#why')">About</v-list-item>
+                              <v-list-item @click="goToSection('#courses')">Courses</v-list-item>
+                              <v-list-item @click="goToSection('#apply')">Apply</v-list-item>
+                              <v-list-item @click="goToSection('#team')">Team</v-list-item>
+                              <v-list-item @click="goToSection('#contact')">Contact</v-list-item>
+                          </v-list>
+                      </v-menu>
+                  </div>
+              </v-toolbar>
 
 <!--                              <v-toolbar-items>
                                   <v-btn text color="white" @click="goToSection('#why')">About</v-btn>
@@ -133,7 +131,7 @@
                                                 <v-card-text class="text-center text-justify">
                                                     One of our efforts is to bring Python to schools. We are making special prices
                                                     and partnerships with different Universities in Portugal. Our main goal is to help
-                                                    with the gap between the offer and demand at this level. Our focus is currrently
+                                                    with the gap between the offer and demand at this level. Our focus is currently
                                                     in the areas of Management and Economics, as this is where we found the biggest gap.
                                                 </v-card-text>
                                             </v-card>
@@ -262,10 +260,12 @@
                                             <div class="display-1">Application process</div>
                                         </v-card-title>
                                         <v-card-text>
-                                            <p class="text-center body-1">
+                                            <p class="text-justify text-center body-1">
                                                 After reaching out to us, we have a well-defined timeline that will let
-                                                you have our courses in less than 5 weeks, even if you want a
-                                                tailor-made program of our courses.
+                                                you get a final proposal of any of our courses in less than 4 weeks, even if you want a
+                                                tailor-made program. This application process can change in case your
+                                                organisation feel there is a need to. Some of the following processes might take more time
+                                                depending on your organisation's complexity and how many layers of approval our proposal has to go.
                                             </p>
                                         </v-card-text>
                                     </v-card>
@@ -276,38 +276,72 @@
                                             <v-timeline>
                                                 <v-timeline-item color="blue lighten-2" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>Day-0<br>Week-1</span>
+                                                        <span>day 0</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Reach us</v-card-title>
+                                                        <v-card-title class="headline">Send us an email</v-card-title>
                                                         <v-card-text>
-                                                            Send us an e-mail or contact us using the phone number.
+                                                            Talk to us via email and give us a brief explanation on what we could help you with.
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
                                                 <v-timeline-item color="blue lighten-2" right fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>Day-1<br>Week-1</span>
+                                                        <span color="blue">48 hours</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Recieve an answer</v-card-title>
+                                                        <v-card-title class="headline">Schedule a call</v-card-title>
                                                         <v-card-text>
-                                                            You'll receive an answer to schedule a meeting in the next
-                                                            48 hours.
+                                                            We will get back to you within 48h and give you options to schedule a 15min call.
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
                                                 <v-timeline-item color="blue lighten-2" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>Day-3<br>Week-1</span>
+                                                        <span>one week</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Meet us</v-card-title>
+                                                        <v-card-title class="headline">Receive a proposal</v-card-title>
                                                         <v-card-text>
-                                                            This meeting aims to talk about all the topics on the
-                                                            courses you are interested in. By the end of this meeting,
-                                                            a list of actionables should be done so we can start
-                                                            planning and organize the course for you.
+                                                            Based on the pre-requisites that we are able to get from the 15min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
+                                                        </v-card-text>
+                                                    </v-card>
+                                                </v-timeline-item>
+                                                <v-timeline-item color="blue lighten-2" right fill-dot small>
+                                                    <template v-slot:opposite>
+                                                        <span>one week</span>
+                                                    </template>
+                                                    <v-card class="elevation-2">
+                                                        <v-card-title class="headline">Educational document</v-card-title>
+                                                        <v-card-text>
+                                                            We should work together to come up with a final document that is able to fulfill your educational needs. To move forward, we should agree, at least, on the following conditions:
+                                                            <br>
+                                                            <ul>
+                                                                <li>Venue</li>
+                                                                <li>Starting date</li>
+                                                                <li>Operations & Logistics</li>
+                                                                <li>Number of students</li>
+                                                                <li>Learning outcomes</li>
+                                                            </ul>
+                                                        </v-card-text>
+                                                    </v-card>
+                                                </v-timeline-item>
+                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                    <template v-slot:opposite>
+                                                        <span>one week</span>
+                                                    </template>
+                                                    <v-card class="elevation-2">
+                                                        <v-card-title class="headline">Final proposal and timelines</v-card-title>
+                                                        <v-card-text>
+                                                            After the document suits everyone’s needs, we will deliver a final
+                                                            proposal that all the above mentioned as well as:
+                                                            <br>
+                                                            <ul>
+                                                                <li>Support hours</li>
+                                                                <li>In case there is any different from the curriculum proposed by Thorly we will also include the new curriculum</li>
+                                                                <li>Final fees - having into consideration the appropriate discounts</li>
+                                                                <li>Legal documents necessary from both parties</li>
+                                                            </ul>
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
