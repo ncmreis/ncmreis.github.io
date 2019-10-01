@@ -1,9 +1,6 @@
 <template>
   <v-app>
       <section>
-
-
-
           <v-parallax id="#home" src='./assets/header.jpg' :height="windowHeight">
               <v-toolbar flat class="transparent">
                   <v-toolbar-title class="white--text">LOGO</v-toolbar-title>
@@ -16,7 +13,7 @@
                       <v-btn text color="white" @click="goToSection('#contact')">Contact</v-btn>
                   </v-toolbar-items>
                   <div class="hidden-md-and-up text-center">
-                      <v-menu offset-y>
+                      <v-menu bottom offset-y>
                           <template v-slot:activator="{ on }">
                               <v-btn text flat fab class="transparent" v-on="on">
                                   <v-icon color="white">mdi-menu</v-icon>
@@ -116,7 +113,7 @@
                             <v-flex md10 xs12>
                                 <v-container grid-list-xl>
                                     <v-layout row wrap align-start>
-                                        <v-flex xs12 md4>
+                                        <v-flex xs12 md6>
                                             <v-card
                                                     flat
                                                     class="transparent"
@@ -136,7 +133,7 @@
                                                 </v-card-text>
                                             </v-card>
                                         </v-flex>
-                                        <v-flex xs12 md4>
+                                        <v-flex xs12 md6>
                                             <v-card
                                                     flat
                                                     class="transparent">
@@ -154,12 +151,12 @@
                                                 </v-card-text>
                                             </v-card>
                                         </v-flex>
-                                        <v-flex xs12 md4>
+                                        <!--<v-flex xs12 md4>
                                             <v-card
                                                     flat
                                                     class="transparent">
                                                 <v-card-text class="text-center">
-                                                    <v-icon x-large class="red--text text--lighten-2">mdi-code-tags</v-icon>
+                                                    <v-icon x-large class="red&#45;&#45;text text&#45;&#45;lighten-2">mdi-code-tags</v-icon>
                                                 </v-card-text>
                                                 <v-card-title primary-title class="layout justify-center">
                                                     <div class="headline text-center">Workshops</div>
@@ -172,7 +169,7 @@
                                                     workshops.
                                                 </v-card-text>
                                             </v-card>
-                                        </v-flex>
+                                        </v-flex>-->
                                     </v-layout>
                                 </v-container>
                             </v-flex>
@@ -214,7 +211,7 @@
                                       <v-card-text class="text-center">
                                         <v-icon x-large class="orange--text text--lighten-2 mt-3">mdi-matrix</v-icon>
                                       </v-card-text>
-                                      <v-card-title primary-title class="layout justify-center">
+                                      <v-card-title primary-title class="fix layout justify-center">
                                         <div class="headline text-center mb-6">Introduction to Python</div>
                                       </v-card-title>
                                     </v-card>
@@ -229,7 +226,7 @@
                                       <v-card-text class="text-center">
                                         <v-icon x-large class="purple--text text--lighten-2 mt-3">mdi-matrix</v-icon>
                                       </v-card-text>
-                                      <v-card-title primary-title class="layout justify-center">
+                                      <v-card-title primary-title class="fix layout justify-center">
                                         <div class="headline text-center mb-6">Python for Data Science</div>
                                       </v-card-title>
                                     </v-card>
@@ -273,13 +270,13 @@
                                 <v-flex md10 xs12>
                                     <v-container grid-list-xl>
                                         <v-layout row wrap justify-center>
-                                            <v-timeline>
+                                            <v-timeline class="d-none d-sm-block">
                                                 <v-timeline-item color="blue lighten-2" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>day 0</span>
+                                                        <span>day-0</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Send us an email</v-card-title>
+                                                        <v-card-title class="fix headline">Send us an email</v-card-title>
                                                         <v-card-text>
                                                             Talk to us via email and give us a brief explanation on what we could help you with.
                                                         </v-card-text>
@@ -287,10 +284,10 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color="blue lighten-2" right fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span color="blue">48 hours</span>
+                                                        <span>day-2</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Schedule a call</v-card-title>
+                                                        <v-card-title class="fix headline">Schedule a call</v-card-title>
                                                         <v-card-text>
                                                             We will get back to you within 48h and give you options to schedule a 15min call.
                                                         </v-card-text>
@@ -298,10 +295,10 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color="blue lighten-2" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>one week</span>
+                                                        <span>day-7</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Receive a proposal</v-card-title>
+                                                        <v-card-title class="fix headline">Receive a proposal</v-card-title>
                                                         <v-card-text>
                                                             Based on the pre-requisites that we are able to get from the 15min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
                                                         </v-card-text>
@@ -309,10 +306,10 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color="blue lighten-2" right fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>one week</span>
+                                                        <span>day-14</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Educational document</v-card-title>
+                                                        <v-card-title class="fix headline">Educational document</v-card-title>
                                                         <v-card-text>
                                                             We should work together to come up with a final document that is able to fulfill your educational needs. To move forward, we should agree, at least, on the following conditions:
                                                             <br>
@@ -328,10 +325,10 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color="blue lighten-2" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>one week</span>
+                                                        <span>day-21</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="headline">Final proposal and timelines</v-card-title>
+                                                        <v-card-title class="fix headline">Final proposal and timelines</v-card-title>
                                                         <v-card-text>
                                                             After the document suits everyone’s needs, we will deliver a final
                                                             proposal that all the above mentioned as well as:
@@ -342,6 +339,86 @@
                                                                 <li>Final fees - having into consideration the appropriate discounts</li>
                                                                 <li>Legal documents necessary from both parties</li>
                                                             </ul>
+                                                        </v-card-text>
+                                                    </v-card>
+                                                </v-timeline-item>
+                                            </v-timeline>
+                                            <v-timeline class="d-sm-none mr-4 ml-n4" dense>
+                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                    <v-card class="elevation-2">
+                                                        <v-card-title class="fix headline">Send us an email</v-card-title>
+                                                        <v-card-text>
+                                                            Talk to us via email and give us a brief explanation on what we could help you with.
+                                                            <br><br>
+                                                            <div class="text-right">
+                                                                <small>day 0</small>
+                                                            </div>
+                                                        </v-card-text>
+                                                    </v-card>
+                                                </v-timeline-item>
+                                                <v-timeline-item color="blue lighten-2" right fill-dot small>
+                                                    <v-card class="elevation-2">
+                                                        <v-card-title class="fix headline">Schedule a call</v-card-title>
+                                                        <v-card-text>
+                                                            We will get back to you within 48h and give you options to
+                                                            schedule a 15min call.
+                                                            <br><br>
+                                                            <div class="text-right">
+                                                                <small>day 2</small>
+                                                            </div>
+                                                        </v-card-text>
+
+                                                    </v-card>
+                                                </v-timeline-item>
+                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                    <v-card class="elevation-2">
+                                                        <v-card-title class="fix headline">Receive a proposal</v-card-title>
+                                                        <v-card-text>
+                                                            Based on the pre-requisites that we are able to get from the 15min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
+                                                            <br><br>
+                                                            <div class="text-right">
+                                                                <small>day 7</small>
+                                                            </div>
+                                                        </v-card-text>
+                                                    </v-card>
+                                                </v-timeline-item>
+                                                <v-timeline-item color="blue lighten-2" right fill-dot small>
+                                                    <v-card class="elevation-2">
+                                                        <v-card-title class="fix headline">Educational document</v-card-title>
+                                                        <v-card-text>
+                                                            We should work together to come up with a final document that is able to fulfill your educational needs. To move forward, we should agree, at least, on the following conditions:
+                                                            <br>
+                                                            <ul>
+                                                                <li>Venue</li>
+                                                                <li>Starting date</li>
+                                                                <li>Operations & Logistics</li>
+                                                                <li>Number of students</li>
+                                                                <li>Learning outcomes</li>
+                                                            </ul>
+                                                            <br><br>
+                                                            <div class="text-right">
+                                                                <small>day 14</small>
+                                                            </div>
+                                                        </v-card-text>
+                                                    </v-card>
+                                                </v-timeline-item>
+                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                    <v-card class="elevation-2">
+                                                        <v-card-title class="fix headline">Final proposal and timelines</v-card-title>
+                                                        <v-card-text>
+                                                            After the document suits everyone’s needs, we will deliver a final
+                                                            proposal that all the above mentioned as well as:
+                                                            <br>
+                                                            <ul>
+                                                                <li>Support hours</li>
+                                                                <li>In case there is any different from the curriculum proposed by Thorly we will also include the new curriculum</li>
+                                                                <li>Final fees - having into consideration the appropriate discounts</li>
+                                                                <li>Legal documents necessary from both parties</li>
+                                                            </ul>
+                                                            <br><br>
+                                                            <div class="text-right">
+                                                                <small>day 21</small>
+                                                            </div>
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
@@ -380,10 +457,10 @@
                                     </v-avatar>
                                   </v-card-text>
                                   <v-card-title primary-title class="layout justify-center">
-                                    <div class="headline text-center mb-n2">Nuno Reis</div>
+                                    <div class="fix headline text-center mb-n2">Nuno Reis</div>
                                   </v-card-title>
                                   <v-card-title class="layout justify-center">
-                                    <div class="text-center body-2 mb-4">Data Scientist & Python developer</div>
+                                    <div class="fix text-center body-2 mb-4">Data Scientist & Python developer</div>
                                   </v-card-title>
                                   <v-card-text class="text-justify">
                                     Nuno started his career as top student in Instituto Superior Técnico, where
@@ -404,10 +481,10 @@
                                     </v-avatar>
                                   </v-card-text>
                                   <v-card-title primary-title class="layout justify-center">
-                                    <div class="headline text-center mb-n2">Luís Sousa</div>
+                                    <div class="fix headline text-center mb-n2">Luís Sousa</div>
                                   </v-card-title>
                                   <v-card-title class="layout justify-center">
-                                    <div class="text-center body-2 mb-4">Mathematician, Data Scientist &<br>full-stack developer</div>
+                                    <div class="fix text-center body-2 mb-4">Mathematician, Data Scientist &<br>full-stack developer</div>
                                   </v-card-title>
                                   <v-card-text class="text-justify">
                                     Luís has been working with technology for more than 10 years. Currently he
@@ -427,10 +504,10 @@
                                     </v-avatar>
                                   </v-card-text>
                                   <v-card-title primary-title class="layout justify-center">
-                                    <div class="headline text-center mb-n2">Ricardo Pereira</div>
+                                    <div class="fix headline text-center mb-n2">Ricardo Pereira</div>
                                   </v-card-title>
                                   <v-card-title class="layout justify-center">
-                                    <div class="text-center body-2 mb-4">Data Scientist & Python developer</div>
+                                    <div class="fix text-center body-2 mb-4">Data Scientist & Python developer</div>
                                   </v-card-title>
                                   <v-card-text class="text-justify">
                                     Ricardo has co-founded different organisations and companies, to help
@@ -601,6 +678,13 @@ export default {
 
 .main-raised{
     margin: -60px 5px -30px;
+}
+
+.fix {
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
 }
 </style>
 

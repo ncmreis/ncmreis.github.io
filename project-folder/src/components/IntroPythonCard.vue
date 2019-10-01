@@ -1,5 +1,5 @@
 <template>
-    <v-card v-show="show1" class="transparent ml-3 mr-3">
+    <v-card class="transparent ml-3 mr-3">
         <v-card-text class="text-center">
             <v-icon x-large class="orange--text text--lighten-2">mdi-code-tags</v-icon>
         </v-card-text>
@@ -121,7 +121,7 @@
                         <h2>Universities</h2>
                         <br>
                         <p>
-                            375€* per student. We will be offering scholarships for students who are in need. Reach out to us
+                            350€* per student. We will be offering scholarships for students who are in need. Reach out to us
                             to know more about our support programs
                         </p>
                         <h2>Companies</h2>
@@ -130,12 +130,11 @@
                             600€* per participant.
                         </p>
                         <br>
-                    <v-container flat align="center">
-                        <small>We require a minimum of 10 participants to run the course. <br>
-                            (Both Companies and Universities should take care of catering and venue)</small><br><br>
-                        <small>(*) VAT excluded</small>
-                    </v-container>
-
+                        <div class="text-center">
+                            <small>We require a minimum of 10 participants to run the course. <br>
+                                (Both Companies and Universities should take care of catering and venue)</small><br><br>
+                            <small>(*) VAT excluded</small>
+                        </div>
                     </v-card-text>
                 </v-card>
             </v-stepper-content>
