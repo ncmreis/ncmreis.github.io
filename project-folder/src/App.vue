@@ -3,19 +3,21 @@
       <section>
           <v-parallax id="#home" src='./assets/header.jpg' :height="windowHeight">
               <v-toolbar flat class="transparent">
-                  <v-toolbar-title class="white--text">LOGO</v-toolbar-title>
-                  <v-spacer></v-spacer>
-                  <v-toolbar-items class="hidden-sm-and-down">
-                      <v-btn text color="white" @click="goToSection('#why')">About</v-btn>
-                      <v-btn text color="white" @click="goToSection('#courses')">Courses</v-btn>
-                      <v-btn text color="white" @click="goToSection('#apply')">Apply</v-btn>
-                      <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
-                      <v-btn text color="white" @click="goToSection('#contact')">Contact</v-btn>
-                  </v-toolbar-items>
-                  <div class="hidden-md-and-up text-center">
-                      <v-menu bottom offset-y>
+                  <v-container>
+                      <v-layout column align-center>
+                          <v-toolbar-items class="hidden-xs-only">
+                              <v-btn text color="white" @click="goToSection('#why')">About</v-btn>
+                              <v-btn text color="white" @click="goToSection('#courses')">Courses</v-btn>
+                              <v-btn text color="white" @click="goToSection('#apply')">Apply</v-btn>
+                              <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
+                              <v-btn text color="white" @click="goToSection('#contact')">Contact</v-btn>
+                          </v-toolbar-items>
+                      </v-layout>
+                  </v-container>
+                  <div class="hidden-sm-and-up text-center">
+                      <v-menu bottom left>
                           <template v-slot:activator="{ on }">
-                              <v-btn text flat fab class="transparent" v-on="on">
+                              <v-btn text flat class="transparent" v-on="on">
                                   <v-icon color="white">mdi-menu</v-icon>
                               </v-btn>
                           </template>
@@ -29,17 +31,6 @@
                       </v-menu>
                   </div>
               </v-toolbar>
-
-<!--                              <v-toolbar-items>
-                                  <v-btn text color="white" @click="goToSection('#why')">About</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#courses')">Courses</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#apply')">Apply</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#contact')">Contact</v-btn>
-                              </v-toolbar-items>-->
-
-
-
               <v-container class="fill-height mb-10">
                   <v-flex md10 offset-md1 xs12>
                       <v-layout
