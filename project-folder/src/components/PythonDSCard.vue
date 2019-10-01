@@ -1,11 +1,11 @@
 <template>
     <v-card class="transparent ml-3 mr-3">
         <v-card-text class="text-center">
-            <v-icon x-large class="purple--text text--lighten-2">mdi-code-tags</v-icon>
+
         </v-card-text>
         <v-stepper class="elevation-0" v-model="e6" vertical>
 
-            <v-stepper-step :complete="e6 > 1" step="1" editable >
+            <v-stepper-step color=grey :complete="e6 > 1" step="1" editable >
                 Course overview
             </v-stepper-step>
             <v-stepper-content step="1">
@@ -22,7 +22,7 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step :complete="e6 > 2" step="2" editable >
+            <v-stepper-step color=grey :complete="e6 > 2" step="2" editable >
                 Audience
             </v-stepper-step>
             <v-stepper-content step="2">
@@ -37,7 +37,7 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step :complete="e6 > 3" step="3" editable >
+            <v-stepper-step color=grey :complete="e6 > 3" step="3" editable >
                 Curriculum
             </v-stepper-step>
             <v-stepper-content step="3">
@@ -65,7 +65,7 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step :complete="e6 > 4" step="4" editable >
+            <v-stepper-step color=grey :complete="e6 > 4" step="4" editable >
                 Timeline, teaching methodology and support
             </v-stepper-step>
             <v-stepper-content step="4">
@@ -103,7 +103,7 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step :complete="e6 > 5" step="5" editable >
+            <v-stepper-step color="gray" :complete="e6 > 5" step="5" editable >
                 Price
             </v-stepper-step>
             <v-stepper-content step="5">

@@ -1,8 +1,9 @@
 <template>
   <v-app>
       <section>
-          <v-parallax id="#home" src='./assets/header.jpg' :height="windowHeight">
-              <v-toolbar flat class="transparent">
+          <v-parallax id="#home" src='./assets/blue.jpg' :height="windowHeight">
+
+              <v-toolbar flat class="transparent mt-5">
                   <v-container>
                       <v-layout column align-center>
                           <v-toolbar-items class="hidden-xs-only">
@@ -31,27 +32,26 @@
                       </v-menu>
                   </div>
               </v-toolbar>
-              <v-container class="fill-height mb-10">
-                  <v-flex md10 offset-md1 xs12>
+
+              <v-container class="justify-center fill-height mb-10">
+                  <v-flex md10 xs12>
                       <v-layout
                               column
                               align-center
                               justfy-center
                               class="white--text"
                       >
-                          <h1 class="white--text mb-2 display-3 text-center">Thorly</h1>
-                          <p class="font-italic overline">Hammer your fear of coding</p>
-                          <br>
-                          <p class="text-center">A fresh new concept of training teams and individuals with a focus on industry
-                              practicalities</p>
-                          <v-btn
-                                  class="mt-6"
-                                  color="warning"
-                                  large
-                                  @click="goToSection('#courses')"
-                          >
+                          <v-img contain class="mb-6" height="150px" src="./assets/thorly_logo_gray.png"></v-img>
+
+                          <h4 class="font-italic mb-12">Hammer your fear of coding</h4>
+
+                          <h3 class="text-center">A fresh concept for training teams and individuals with a focus on industry
+                              practicalities</h3>
+
+                          <v-btn class="mt-12 mb-10" color="warning" large @click="goToSection('#courses')">
                               BROWSE COURSES
                           </v-btn>
+
                       </v-layout>
                   </v-flex>
               </v-container>
@@ -111,16 +111,18 @@
                                             >
 
                                                 <v-card-text class="text-center">
-                                                    <v-icon x-large class="blue--text text--lighten-2">mdi-code-tags</v-icon>
+                                                    <v-icon x-large style="color:darkseagreen">mdi-code-tags</v-icon>
                                                 </v-card-text>
-                                                <v-card-title primary-title class="layout justify-center">
+                                                <v-card-title primary-title class="layout justify-center mb-2">
                                                     <div class="headline text-center ">For Universities</div>
                                                 </v-card-title>
                                                 <v-card-text class="text-center text-justify">
+                                                    <p class="text-center text-justify body-1">
                                                     One of our efforts is to bring Python to schools. We are making special prices
                                                     and partnerships with different Universities in Portugal. Our main goal is to help
                                                     with the gap between the offer and demand at this level. Our focus is currently
                                                     in the areas of Management and Economics, as this is where we found the biggest gap.
+                                                    </p>
                                                 </v-card-text>
                                             </v-card>
                                         </v-flex>
@@ -129,16 +131,18 @@
                                                     flat
                                                     class="transparent">
                                                 <v-card-text class="text-center">
-                                                    <v-icon x-large class="green--text text--lighten-2">mdi-code-tags</v-icon>
+                                                    <v-icon x-large style="color:indianred">mdi-code-tags</v-icon>
                                                 </v-card-text>
-                                                <v-card-title primary-title class="layout justify-center ">
+                                                <v-card-title primary-title class="layout justify-center mb-2">
                                                     <div class="headline">For companies</div>
                                                 </v-card-title>
                                                 <v-card-text class="text-center text-justify">
+                                                    <p class="text-center text-justify body-1">
                                                     Our team has experience in training both companies and organizations in different
                                                     countries and industries, with tailor-made programs, to make it faster to achieve
                                                     the company goals. We have our tested methodology to get the pre-requisites
                                                     necessary to build & start delivering the program in less than 2 weeks.
+                                                    </p>
                                                 </v-card-text>
                                             </v-card>
                                         </v-flex>
@@ -200,10 +204,10 @@
                                     >
 
                                       <v-card-text class="text-center">
-                                        <v-icon x-large class="orange--text text--lighten-2 mt-3">mdi-matrix</v-icon>
+                                        <v-img contain height="70px" src="./assets/thorly-symbol-blue.png"></v-img>
                                       </v-card-text>
                                       <v-card-title primary-title class="fix layout justify-center">
-                                        <div class="headline text-center mb-6">Introduction to Python</div>
+                                        <div class="headline text-center mb-6">Intro to Python</div>
                                       </v-card-title>
                                     </v-card>
                                   </v-flex>
@@ -215,7 +219,7 @@
                                             :color="show2 ? 'grey lighten-4' : ''"
                                             :class="show2 ? 'elevation-10' : ''">
                                       <v-card-text class="text-center">
-                                        <v-icon x-large class="purple--text text--lighten-2 mt-3">mdi-matrix</v-icon>
+                                          <v-img contain height="70px" src="./assets/thorly-symbol-orange.png"></v-img>
                                       </v-card-text>
                                       <v-card-title primary-title class="fix layout justify-center">
                                         <div class="headline text-center mb-6">Python for Data Science</div>
@@ -262,7 +266,7 @@
                                     <v-container grid-list-xl>
                                         <v-layout row wrap justify-center>
                                             <v-timeline class="d-none d-sm-block">
-                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <template v-slot:opposite>
                                                         <span>day-0</span>
                                                     </template>
@@ -273,7 +277,7 @@
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" right fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
                                                     <template v-slot:opposite>
                                                         <span>day-2</span>
                                                     </template>
@@ -284,7 +288,7 @@
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <template v-slot:opposite>
                                                         <span>day-7</span>
                                                     </template>
@@ -295,7 +299,7 @@
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" right fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
                                                     <template v-slot:opposite>
                                                         <span>day-14</span>
                                                     </template>
@@ -314,7 +318,7 @@
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <template v-slot:opposite>
                                                         <span>day-21</span>
                                                     </template>
@@ -335,7 +339,7 @@
                                                 </v-timeline-item>
                                             </v-timeline>
                                             <v-timeline class="d-sm-none mr-4 ml-n4" dense>
-                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Send us an email</v-card-title>
                                                         <v-card-text>
@@ -347,7 +351,7 @@
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" right fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Schedule a call</v-card-title>
                                                         <v-card-text>
@@ -361,7 +365,7 @@
 
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Receive a proposal</v-card-title>
                                                         <v-card-text>
@@ -373,7 +377,7 @@
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" right fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Educational document</v-card-title>
                                                         <v-card-text>
@@ -393,7 +397,7 @@
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
-                                                <v-timeline-item color="blue lighten-2" left fill-dot small>
+                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Final proposal and timelines</v-card-title>
                                                         <v-card-text>
@@ -545,26 +549,24 @@
                                           <v-list class="transparent">
                                               <v-list-item>
                                                   <v-list-item-action>
-                                                      <v-icon class="blue--text text--lighten-2">mdi-phone</v-icon>
+                                                      <v-icon color= "#2AB7CA">mdi-phone</v-icon>
+                                                  </v-list-item-action>
+                                                      <v-list-item-title class="grey--text">+351 918 548 827</v-list-item-title>
+                                              </v-list-item>
+                                              <v-list-item>
+                                                  <v-list-item-action>
+                                                      <v-icon color= "#2AB7CA">mdi-map-marker</v-icon>
                                                   </v-list-item-action>
                                                   <v-list-item-content>
-                                                      <v-list-item-title>+351 918 548 827</v-list-item-title>
+                                                          <v-list-item-title class="grey--text">Lisbon, Portugal</v-list-item-title>
                                                   </v-list-item-content>
                                               </v-list-item>
                                               <v-list-item>
                                                   <v-list-item-action>
-                                                      <v-icon class="blue--text text--lighten-2">mdi-map-marker</v-icon>
+                                                      <v-icon color= "#2AB7CA">mdi-email</v-icon>
                                                   </v-list-item-action>
                                                   <v-list-item-content>
-                                                      <v-list-item-title>Lisbon, Portugal</v-list-item-title>
-                                                  </v-list-item-content>
-                                              </v-list-item>
-                                              <v-list-item>
-                                                  <v-list-item-action>
-                                                      <v-icon class="blue--text text--lighten-2">mdi-email</v-icon>
-                                                  </v-list-item-action>
-                                                  <v-list-item-content>
-                                                      <v-list-item-title>ncmreis@gmail.com</v-list-item-title>
+                                                          <v-list-item-title class="grey--text">ncmreis@gmail.com</v-list-item-title>
                                                   </v-list-item-content>
                                               </v-list-item>
                                           </v-list>
@@ -581,7 +583,7 @@
             </v-container>
           </v-card>
 
-          <v-parallax src='./assets/header.jpg' height="100">
+          <v-parallax src='./assets/blue.jpg' height="100">
               <v-container>
                   <v-layout
                           column
@@ -653,7 +655,7 @@ export default {
     computed: {
         headerStyle() {
             return {
-                backgroundImage: 'url(./assets/header.jpg)'
+                backgroundImage: 'url(./assets/blue.jpg)'
             };
         }
     }
