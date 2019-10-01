@@ -43,7 +43,7 @@
                       >
                           <v-img contain class="mb-6" height="150px" src="./assets/thorly_logo_gray.png"></v-img>
 
-                          <h4 class="font-italic mb-12">Hammer your fear of coding</h4>
+                          <h4 class="mb-12">Hammer your fear of coding</h4>
 
                           <h3 class="text-center">A fresh concept for training teams and individuals with a focus on industry
                               practicalities</h3>
@@ -57,7 +57,7 @@
               </v-container>
           </v-parallax>
 
-          <v-card class="main main-raised" hover>
+          <v-card class="main main-raised clickable" hover>
             <v-container>
                 <v-content>
 
@@ -75,29 +75,32 @@
                                         flat
                                         class="transparent"
                                 >
-                                    <v-card-title primary-title class="layout justify-center mb-12 ">
+                                    <v-card-title primary-title class="fix layout justify-center mb-12 ">
                                         <div class="display-1">Why Thorly?</div>
                                     </v-card-title>
                                     <v-card-text>
                                         <p class="text-center text-justify body-1">
                                             We are a team of experienced Data Scientists & Developers and we are looking forward to
                                             bring the same tools to companies and individuals. We split our mission in three parts:
-                                            (1) Support Universities, by giving students these tools to allow them to stand out when
-                                            reaching the market; (2) Support companies: we all worked as consultants and contractors
-                                            and one of our focus is to empower non-technical teams to not rely so much on technical teams.
-                                            This should be a benefit for everyone; and (3) Support and engage communities: we believe this
-                                            achieved through real-world problems, industry related and solved together with friends,
-                                            mentors and a couple of beers.
+                                            <ul><br>
+                                                <li>Support Universities: giving students these tools to allow them to stand out when
+                                                    reaching the market;</li>
+                                                <li>Support Companies: we all worked as consultants and contractors
+                                                    and one of our focus is to empower non-technical teams to not
+                                                    rely so much on technical teams (this should be a benefit for everyone);</li>
+                                                <li>Support and engage communities: we believe this achieved through
+                                                    real-world problems, industry related and solved together with friends,
+                                                    mentors and a couple of beers.</li>
+                                            </ul>
                                         </p>
                                         <br>
                                         <p class="text-center text-justify body-1">
-                                            We thought about these offers to fulfill the main needs of: companies, professionals
+                                            We thought about these offers to fulfill the main needs of companies, professionals
                                             and students. Each one of our offers has different targets and therefore a different program
                                             and different goals. We know that studying should be a flexible, self-driven endeauvor, therefore
                                             we are using what we present as a base and adding a tailor-made part in each one of our courses
                                             to fit your specific needs.
                                         </p>
-
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
@@ -107,20 +110,20 @@
                                         <v-flex xs12 md6>
                                             <v-card
                                                     flat
-                                                    class="transparent"
+                                                    class="transparent mt-n10"
                                             >
 
                                                 <v-card-text class="text-center">
                                                     <v-icon x-large style="color:darkseagreen">mdi-code-tags</v-icon>
                                                 </v-card-text>
-                                                <v-card-title primary-title class="layout justify-center mb-2">
+                                                <v-card-title primary-title class="fix layout justify-center mb-2">
                                                     <div class="headline text-center ">For Universities</div>
                                                 </v-card-title>
                                                 <v-card-text class="text-center text-justify">
                                                     <p class="text-center text-justify body-1">
                                                     One of our efforts is to bring Python to schools. We are making special prices
                                                     and partnerships with different Universities in Portugal. Our main goal is to help
-                                                    with the gap between the offer and demand at this level. Our focus is currently
+                                                    bridge the gap between the offer and demand at this level. Our focus is currently
                                                     in the areas of Management and Economics, as this is where we found the biggest gap.
                                                     </p>
                                                 </v-card-text>
@@ -130,10 +133,10 @@
                                             <v-card
                                                     flat
                                                     class="transparent">
-                                                <v-card-text class="text-center">
+                                                <v-card-text class="text-center mt-n10">
                                                     <v-icon x-large style="color:indianred">mdi-code-tags</v-icon>
                                                 </v-card-text>
-                                                <v-card-title primary-title class="layout justify-center mb-2">
+                                                <v-card-title primary-title class="fix layout justify-center mb-2">
                                                     <div class="headline">For companies</div>
                                                 </v-card-title>
                                                 <v-card-text class="text-center text-justify">
@@ -186,7 +189,7 @@
                                         flat
                                         class="transparent"
                                 >
-                                  <v-card-title primary-title class="layout justify-center mb-8">
+                                  <v-card-title primary-title class="fix layout justify-center mb-8">
                                     <div class="display-1">Thorly Courses</div>
                                   </v-card-title>
                                 </v-card>
@@ -248,7 +251,7 @@
                             >
                                 <v-flex md10 xs12>
                                     <v-card flat class="transparent">
-                                        <v-card-title primary-title class="layout justify-center mb-12 ">
+                                        <v-card-title primary-title class="fix layout justify-center mb-12 ">
                                             <div class="display-1">Application process</div>
                                         </v-card-title>
                                         <v-card-text>
@@ -268,7 +271,7 @@
                                             <v-timeline class="d-none d-sm-block">
                                                 <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>day-0</span>
+                                                        <span>day 0</span>
                                                     </template>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Send us an email</v-card-title>
@@ -279,32 +282,32 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color= "#2AB7CA" right fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>day-2</span>
+                                                        <span>day 2</span>
                                                     </template>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Schedule a call</v-card-title>
                                                         <v-card-text>
-                                                            We will get back to you within 48h and give you options to schedule a 15min call.
+                                                            We will get back to you within 48h and give you options to schedule a 15 min call.
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
                                                 <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>day-7</span>
+                                                        <span>day 7</span>
                                                     </template>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Receive a proposal</v-card-title>
                                                         <v-card-text>
-                                                            Based on the pre-requisites that we are able to get from the 15min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
+                                                            Based on the pre-requisites that we are able to get from the 15 min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-timeline-item>
                                                 <v-timeline-item color= "#2AB7CA" right fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>day-14</span>
+                                                        <span>day 14</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Educational document</v-card-title>
+                                                        <v-card-title class="fix headline">Draft the agreement</v-card-title>
                                                         <v-card-text>
                                                             We should work together to come up with a final document that is able to fulfill your educational needs. To move forward, we should agree, at least, on the following conditions:
                                                             <br>
@@ -320,7 +323,7 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <template v-slot:opposite>
-                                                        <span>day-21</span>
+                                                        <span>day 21</span>
                                                     </template>
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Final proposal and timelines</v-card-title>
@@ -356,7 +359,7 @@
                                                         <v-card-title class="fix headline">Schedule a call</v-card-title>
                                                         <v-card-text>
                                                             We will get back to you within 48h and give you options to
-                                                            schedule a 15min call.
+                                                            schedule a 15 min call.
                                                             <br><br>
                                                             <div class="text-right">
                                                                 <small>day 2</small>
@@ -369,7 +372,7 @@
                                                     <v-card class="elevation-2">
                                                         <v-card-title class="fix headline">Receive a proposal</v-card-title>
                                                         <v-card-text>
-                                                            Based on the pre-requisites that we are able to get from the 15min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
+                                                            Based on the pre-requisites that we are able to get from the 15 min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
                                                             <br><br>
                                                             <div class="text-right">
                                                                 <small>day 7</small>
@@ -436,7 +439,7 @@
                       >
                         <v-flex md10 xs12>
                           <v-card flat class="transparent">
-                            <v-card-title primary-title class="layout justify-center mb-8 ">
+                            <v-card-title primary-title class="fix layout justify-center mb-8 ">
                               <div class="display-1">Our team</div>
                             </v-card-title>
                           </v-card>
@@ -451,10 +454,10 @@
                                       <img src="./assets/img/faces/nuno.jpeg" alt="Nuno">
                                     </v-avatar>
                                   </v-card-text>
-                                  <v-card-title primary-title class="layout justify-center">
+                                  <v-card-title primary-title class="fix layout justify-center">
                                     <div class="fix headline text-center mb-n2">Nuno Reis</div>
                                   </v-card-title>
-                                  <v-card-title class="layout justify-center">
+                                  <v-card-title class="fix layout justify-center">
                                     <div class="fix text-center body-2 mb-4">Data Scientist & Python developer</div>
                                   </v-card-title>
                                   <v-card-text class="text-justify">
@@ -475,10 +478,10 @@
                                       <img src="./assets/img/faces/luis.jpeg" alt="Luís">
                                     </v-avatar>
                                   </v-card-text>
-                                  <v-card-title primary-title class="layout justify-center">
+                                  <v-card-title primary-title class="fix layout justify-center">
                                     <div class="fix headline text-center mb-n2">Luís Sousa</div>
                                   </v-card-title>
-                                  <v-card-title class="layout justify-center">
+                                  <v-card-title class="fix layout justify-center">
                                     <div class="fix text-center body-2 mb-4">Mathematician, Data Scientist &<br>full-stack developer</div>
                                   </v-card-title>
                                   <v-card-text class="text-justify">
@@ -498,10 +501,10 @@
                                       <img src="./assets/img/faces/ricardo.jpeg" alt="Ricardo">
                                     </v-avatar>
                                   </v-card-text>
-                                  <v-card-title primary-title class="layout justify-center">
+                                  <v-card-title primary-title class="fix layout justify-center">
                                     <div class="fix headline text-center mb-n2">Ricardo Pereira</div>
                                   </v-card-title>
-                                  <v-card-title class="layout justify-center">
+                                  <v-card-title class="fix layout justify-center">
                                     <div class="fix text-center body-2 mb-4">Data Scientist & Python developer</div>
                                   </v-card-title>
                                   <v-card-text class="text-justify">
@@ -531,7 +534,7 @@
                                   class="mt-12">
                               <v-flex md10 xs12>
                                   <v-card flat class="transparent">
-                                      <v-card-title primary-title class="layout justify-center mb-12">
+                                      <v-card-title primary-title class="fix layout justify-center mb-12">
                                           <div class="display-1">Work with us</div>
                                       </v-card-title>
                                       <v-card-text>
@@ -678,6 +681,10 @@ export default {
     word-wrap: break-word;
     word-break: normal;
     hyphens: auto;
+}
+
+.clickable {
+    cursor: auto;
 }
 </style>
 

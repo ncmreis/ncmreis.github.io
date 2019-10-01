@@ -11,7 +11,7 @@
                 <v-card color="grey lighten-4" class="mb-2">
                     <v-card-text class="text-justify">
                         This course should teach you tools and the building blocks of Python and programming in general.
-                        The program was thought having into account the following deliverables:
+                        The program was thought having into account the following outcomes:
                         <br><br>
                         <ol>
                             <li>
@@ -23,7 +23,7 @@
                             </li>
                             <li>
                                 Teach you how to leverage your solutions by using open-source libraries and giving
-                                you hands-on experience on APIs, like Pandas, SkLearn, requests, Flask, among others;
+                                you hands-on experience on APIs, like Pandas, scikit-learn, requests, among others;
                             </li>
                         </ol>
                     </v-card-text>
@@ -36,10 +36,10 @@
             <v-stepper-content step="2">
                 <v-card color="grey lighten-4" class="mb-2">
                     <v-card-text class="text-justify">
-                        This course has no prerequisite. It is for everyone who wants to learn the basics of Python,
+                        This course has no prerequisites. It is for everyone who wants to learn the basics of Python,
                         covering the basis of programming languages and giving an hands-on experience on one of the
                         most requested skills from the market. Naturally, if you have experience with other programming
-                        languages this will be a smoother experience but our program is design for non-technical people
+                        languages this will be a smoother experience but our program is designed for non-technical people
                         so we confidently say this is a "no experience required".
                     </v-card-text>
                 </v-card>
@@ -52,14 +52,14 @@
                 <v-card color="grey lighten-4" class="mb-2">
                     <v-card-text class="text-justify">
                         <p>
-                            Our curriculum is design to get you as fast as possible with the basic principle of the Python
-                            language while giving you some understand on how programming works in general - not Python specific.
+                            Our curriculum is designed to get you as fast as possible with the basic principles of the Python
+                            language while giving you some understanding on how programming works in general.
                             Depending on your needs we can add other topics but we highly recommend not removing any of these as
                             we believe they constitute the building blocks of modern Python programming.
                         </p>
                         <ol>
-                            <li>Setup</li>
-                            <li>Variables and logical operators</li>
+                            <li>Environment Setup</li>
+                            <li>Operators</li>
                             <li>Data structures</li>
                             <li>Flow control</li>
                             <li>I/O</li>
@@ -81,10 +81,10 @@
                         <h3>Teaching methodology</h3>
                         <p>
                             We are all pro "hands-on" teaching. Therefore, we will do no more than 20-25min presentations
-                            and we will focus all our efforts into getting students with their hands on code while we help
+                            and we will focus all our efforts into getting students to get their hands on code while we help
                             them accomplish the tasks we have prepared.<br><br>
                             These tasks are created to guide students to problems they will encounter in their jobs. They are
-                            based on our own experience and other industry experts.
+                            based on our own experience and other industry experts'.
                         </p>
 
                         <h3>Timelines</h3>
@@ -99,8 +99,8 @@
                         <h3>Out of class support</h3>
 
                         <ol>
-                            <li>We will be using slack. Here is where we will answer questions as well as give weekly
-                                challenges for those willing to give the extra mile
+                            <li>We will be using slack, where we will answer questions as well as give weekly
+                                challenges for those willing to go the extra mile.
                             </li>
                             <li>Our team will provide continuous support throughout the training as well as pre-defined
                                 office hours, with a maximum of 5 hours per week.
