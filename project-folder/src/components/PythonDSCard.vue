@@ -103,7 +103,7 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color="gray" :complete="e6 > 5" step="5" editable >
+            <v-stepper-step color="grey" :complete="e6 > 5" step="5" editable >
                 Price
             </v-stepper-step>
             <v-stepper-content step="5">

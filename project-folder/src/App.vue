@@ -2,7 +2,6 @@
   <v-app>
       <section>
           <v-parallax id="#home" src='./assets/blue.jpg' :height="windowHeight">
-
               <v-toolbar flat class="transparent mt-5">
                   <v-container>
                       <v-layout column align-center>
@@ -18,7 +17,7 @@
                   <div class="hidden-sm-and-up text-center">
                       <v-menu bottom left>
                           <template v-slot:activator="{ on }">
-                              <v-btn text flat class="transparent" v-on="on">
+                              <v-btn fab text flat class="transparent" v-on="on">
                                   <v-icon color="white">mdi-menu</v-icon>
                               </v-btn>
                           </template>
@@ -32,7 +31,6 @@
                       </v-menu>
                   </div>
               </v-toolbar>
-
               <v-container class="justify-center fill-height mb-10">
                   <v-flex md10 xs12>
                       <v-layout
@@ -57,8 +55,17 @@
               </v-container>
           </v-parallax>
 
-          <v-card class="main main-raised clickable" hover>
-            <v-container>
+          <v-card class="main main-raised cursor" hover>
+
+              <v-toolbar v-if="scrolled" class="main nav">
+                  <v-toolbar-title class="justify-start">
+                      <v-img @click="goToSection('#home')" contain height="35px" width="140px" src="./assets/thorly_logo_gray.png"></v-img>
+                  </v-toolbar-title>
+                  <div class="flex-grow-1"></div>
+                  <v-btn elevation="5" color="warning" @click="goToSection('#contact')">Get in touch</v-btn>
+              </v-toolbar>
+
+
                 <v-content>
 
                   <section id="#why">
@@ -88,9 +95,9 @@
                                                 <li>Support Companies: we all worked as consultants and contractors
                                                     and one of our focus is to empower non-technical teams to not
                                                     rely so much on technical teams (this should be a benefit for everyone);</li>
-                                                <li>Support and engage communities: we believe this achieved through
-                                                    real-world problems, industry related and solved together with friends,
-                                                    mentors and a couple of beers.</li>
+                                                <li>Support and engage communities: we believe this is achieved through
+                                                    industry related problems, solved together by friends, mentors and
+                                                    a couple of beers.</li>
                                             </ul>
                                         </p>
                                         <br>
@@ -137,7 +144,7 @@
                                                     <v-icon x-large style="color:indianred">mdi-code-tags</v-icon>
                                                 </v-card-text>
                                                 <v-card-title primary-title class="fix layout justify-center mb-2">
-                                                    <div class="headline">For companies</div>
+                                                    <div class="headline">For Companies</div>
                                                 </v-card-title>
                                                 <v-card-text class="text-center text-justify">
                                                     <p class="text-center text-justify body-1">
@@ -149,25 +156,6 @@
                                                 </v-card-text>
                                             </v-card>
                                         </v-flex>
-                                        <!--<v-flex xs12 md4>
-                                            <v-card
-                                                    flat
-                                                    class="transparent">
-                                                <v-card-text class="text-center">
-                                                    <v-icon x-large class="red&#45;&#45;text text&#45;&#45;lighten-2">mdi-code-tags</v-icon>
-                                                </v-card-text>
-                                                <v-card-title primary-title class="layout justify-center">
-                                                    <div class="headline text-center">Workshops</div>
-                                                </v-card-title>
-                                                <v-card-text class="text-center text-justify">
-                                                    We are building a new concept of workshops in partnership with some
-                                                    Portuguese companies, where we will provide a crash course on the specific topics
-                                                    necessary to be able to work on the workshop. It will enable networking, developing
-                                                    new technical skills and solving real problems. There should be beginners and advanced
-                                                    workshops.
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-flex>-->
                                     </v-layout>
                                 </v-container>
                             </v-flex>
@@ -190,7 +178,7 @@
                                         class="transparent"
                                 >
                                   <v-card-title primary-title class="fix layout justify-center mb-8">
-                                    <div class="display-1">Thorly Courses</div>
+                                    <div class="display-1">Thorly courses</div>
                                   </v-card-title>
                                 </v-card>
                             </v-flex>
@@ -326,7 +314,7 @@
                                                         <span>day 21</span>
                                                     </template>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Final proposal and timelines</v-card-title>
+                                                        <v-card-title class="fix headline">Receive final proposal</v-card-title>
                                                         <v-card-text>
                                                             After the document suits everyone’s needs, we will deliver a final
                                                             proposal that all the above mentioned as well as:
@@ -382,9 +370,11 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color= "#2AB7CA" right fill-dot small>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Educational document</v-card-title>
+                                                        <v-card-title class="fix headline">Draft the agreement</v-card-title>
                                                         <v-card-text>
-                                                            We should work together to come up with a final document that is able to fulfill your educational needs. To move forward, we should agree, at least, on the following conditions:
+                                                            We should work together to come up with a final document that
+                                                            is able to fulfill your educational needs. To move forward,
+                                                            we should agree, at least, on the following conditions:
                                                             <br>
                                                             <ul>
                                                                 <li>Venue</li>
@@ -393,7 +383,7 @@
                                                                 <li>Number of students</li>
                                                                 <li>Learning outcomes</li>
                                                             </ul>
-                                                            <br><br>
+                                                            <br>
                                                             <div class="text-right">
                                                                 <small>day 14</small>
                                                             </div>
@@ -402,7 +392,7 @@
                                                 </v-timeline-item>
                                                 <v-timeline-item color= "#2AB7CA" left fill-dot small>
                                                     <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Final proposal and timelines</v-card-title>
+                                                        <v-card-title class="fix headline">Receive final proposal</v-card-title>
                                                         <v-card-text>
                                                             After the document suits everyone’s needs, we will deliver a final
                                                             proposal that all the above mentioned as well as:
@@ -583,7 +573,7 @@
                   </section>
 
                 </v-content>
-            </v-container>
+
           </v-card>
 
           <v-parallax src='./assets/blue.jpg' height="100">
@@ -631,7 +621,8 @@ export default {
         hashSection: null,
         windowHeight: 0,
         show1: true,
-        show2: false
+        show2: false,
+        scrolled: false
     }
   },
   methods: {
@@ -644,6 +635,9 @@ export default {
       },
       handleResize() {
           this.windowHeight = window.innerHeight;
+      },
+      handleScroll () {
+          this.scrolled = window.scrollY > (window.innerHeight-130);
       }
   },
     created: function() {
@@ -660,8 +654,14 @@ export default {
             return {
                 backgroundImage: 'url(./assets/blue.jpg)'
             };
-        }
-    }
+        },
+    },
+      beforeMount () {
+          window.addEventListener('scroll', this.handleScroll);
+      },
+      beforeDestroy () {
+          window.removeEventListener('scroll', this.handleScroll);
+      }
 };
 </script>
 
@@ -673,7 +673,7 @@ export default {
 }
 
 .main-raised{
-    margin: -60px 5px -30px;
+    margin: -60px 10px -30px;
 }
 
 .fix {
@@ -683,8 +683,18 @@ export default {
     hyphens: auto;
 }
 
-.clickable {
+.cursor {
     cursor: auto;
 }
+
+.nav {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    right: 10px;
+    z-index: 4 !important;
+    background-color: #2AB7CA;
+}
+
 </style>
 
