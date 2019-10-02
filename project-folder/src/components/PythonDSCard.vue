@@ -1,16 +1,13 @@
 <template>
-    <v-card class="transparent ml-3 mr-3">
-        <v-card-text class="text-center">
+    <v-card class="transparent ml-1 mr-1">
+        <v-stepper class="elevation-0" vertical>
 
-        </v-card-text>
-        <v-stepper class="elevation-0" v-model="e6" vertical>
-
-            <v-stepper-step color=grey :complete="e6 > 1" step="1" editable >
+            <v-stepper-step color=grey step="1" class="mt-1" editable >
                 Course overview
             </v-stepper-step>
             <v-stepper-content step="1">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         The main goal of this course is to leave students on the stage to become a junior data scientist, giving
                         an overview of specific tools of python to data science and helping students solving problems
                         with it during the lessons.<br><br> There is a possibility to create a tailor-made program that
@@ -22,12 +19,12 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color=grey :complete="e6 > 2" step="2" editable >
+            <v-stepper-step color=grey step="2" editable >
                 Audience
             </v-stepper-step>
             <v-stepper-content step="2">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         This course has a prerequisite of basic Python - our Introduction to Python course is the
                         foundation for this one. Python for Data Science aims to prepare participants for the Data
                         Science world that is ahead of us. <br><br>
@@ -37,12 +34,12 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color=grey :complete="e6 > 3" step="3" editable >
+            <v-stepper-step color=grey step="3" editable >
                 Curriculum
             </v-stepper-step>
             <v-stepper-content step="3">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         <p>
                             This program is composed by 9 lessons on a specific subject and it closes with a one-day
                             hackathon. The goal of this hackathon is to set teams and have students solving a real
@@ -65,13 +62,26 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color=grey :complete="e6 > 4" step="4" editable >
-                Timeline, teaching methodology and support
+            <v-stepper-step color=grey step="4" editable >
+                Timeline
             </v-stepper-step>
             <v-stepper-content step="4">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
-                        <h3>Teaching methodology</h3>
+                    <v-card-text>
+                        <ol>
+                            <li>Each one of the topics presented in the curriculum will take 1h30.</li>
+                            <li>For the final hackhathon we will reserve 8 hours in-class.</li>
+                        </ol>
+                    </v-card-text>
+                </v-card>
+            </v-stepper-content>
+
+            <v-stepper-step color=grey step="5" editable >
+                Teaching methodology
+            </v-stepper-step>
+            <v-stepper-content step="5">
+                <v-card color="grey lighten-4" class="mb-2">
+                    <v-card-text>
                         <p>
                             We are all pro "hands-on" teaching. Therefore, we will do no more than 20-25min presentations
                             and we will focus all our efforts into getting students with their hands on code while we help
@@ -79,18 +89,16 @@
                             These tasks are created to guide students to problems they will encounter in their jobs. They are
                             based on our own experience and other industry experts.
                         </p>
+                    </v-card-text>
+                </v-card>
+            </v-stepper-content>
 
-                        <h3>Timelines</h3>
-
-
-                        <ol>
-                            <li>Each one of the topics presented in the curriculum will take 1h30.</li>
-                            <li>For the final hackhathon we will reserve 8 hours in-class.</li>
-                        </ol>
-                        <br>
-
-                        <h3>Out of class support</h3>
-
+            <v-stepper-step color=grey step="6" editable >
+                Office hours
+            </v-stepper-step>
+            <v-stepper-content step="6">
+                <v-card color="grey lighten-4" class="mb-2">
+                    <v-card-text>
                         <ol>
                             <li>We will be using slack. Here is where we will answer questions as well as give weekly
                                 challenges for those willing to give the extra mile.
@@ -103,12 +111,12 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color="grey" :complete="e6 > 5" step="5" editable >
+            <v-stepper-step color=grey step="7" editable >
                 Price
             </v-stepper-step>
-            <v-stepper-content step="5">
+            <v-stepper-content step="7">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         <h2>Universities</h2>
                         <br>
                         <p>
@@ -135,12 +143,7 @@
 
 <script>
     export default {
-        name: "IntroPythonCard",
-        data () {
-            return {
-                e6: 1,
-            }
-        },
+        name: "IntroPythonCard"
     }
 </script>
 

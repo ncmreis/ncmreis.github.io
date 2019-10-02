@@ -1,15 +1,13 @@
 <template>
-    <v-card class="transparent ml-3 mr-3">
-        <v-card-text class="text-center">
-        </v-card-text>
-        <v-stepper class="elevation-0" v-model="e6" vertical>
+    <v-card class="transparent ml-1 mr-1">
+        <v-stepper class="elevation-0" vertical>
 
-            <v-stepper-step color=grey :complete="e6 > 1" step="1" editable >
+            <v-stepper-step color=grey step="1" class="mt-1" editable>
                 Course overview
             </v-stepper-step>
             <v-stepper-content step="1">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         This course should teach you tools and the building blocks of Python and programming in general.
                         The program was thought having into account the following outcomes:
                         <br><br>
@@ -30,12 +28,12 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color=grey :complete="e6 > 2" step="2" editable >
+            <v-stepper-step color=grey step="2" editable >
                 Audience
             </v-stepper-step>
             <v-stepper-content step="2">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         This course has no prerequisites. It is for everyone who wants to learn the basics of Python,
                         covering the basis of programming languages and giving an hands-on experience on one of the
                         most requested skills from the market. Naturally, if you have experience with other programming
@@ -45,12 +43,12 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color=grey :complete="e6 > 3" step="3" editable >
+            <v-stepper-step color=grey step="3" editable >
                 Curriculum
             </v-stepper-step>
             <v-stepper-content step="3">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         <p>
                             Our curriculum is designed to get you as fast as possible with the basic principles of the Python
                             language while giving you some understanding on how programming works in general.
@@ -72,13 +70,26 @@
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color=grey :complete="e6 > 4" step="4" editable >
-                Timeline, teaching methodology and support
+            <v-stepper-step color=grey step="4" editable >
+                Timeline
             </v-stepper-step>
             <v-stepper-content step="4">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
-                        <h3>Teaching methodology</h3>
+                    <v-card-text>
+                        <ol>
+                            <li>Each one of the topics presented in the curriculum will take 1h30.</li>
+                            <li>For the final assignment we will reserve 5 hours in-class and one week out of class.</li>
+                        </ol>
+                    </v-card-text>
+                </v-card>
+            </v-stepper-content>
+
+            <v-stepper-step color=grey step="5" editable >
+                Teaching methodology
+            </v-stepper-step>
+            <v-stepper-content step="5">
+                <v-card color="grey lighten-4" class="mb-2">
+                    <v-card-text>
                         <p>
                             We are all pro "hands-on" teaching. Therefore, we will do no more than 20-25min presentations
                             and we will focus all our efforts into getting students to get their hands on code while we help
@@ -86,18 +97,16 @@
                             These tasks are created to guide students to problems they will encounter in their jobs. They are
                             based on our own experience and other industry experts'.
                         </p>
+                    </v-card-text>
+                </v-card>
+            </v-stepper-content>
 
-                        <h3>Timelines</h3>
-
-
-                        <ol>
-                            <li>Each one of the topics presented in the curriculum will take 1h30.</li>
-                            <li>For the final assignment we will reserve 5 hours in-class and one week out of class.</li>
-                        </ol>
-                        <br>
-
-                        <h3>Out of class support</h3>
-
+            <v-stepper-step color=grey step="6" editable >
+                Office hours
+            </v-stepper-step>
+            <v-stepper-content step="6">
+                <v-card color="grey lighten-4" class="mb-2">
+                    <v-card-text>
                         <ol>
                             <li>We will be using slack, where we will answer questions as well as give weekly
                                 challenges for those willing to go the extra mile.
@@ -106,17 +115,16 @@
                                 office hours, with a maximum of 5 hours per week.
                             </li>
                         </ol>
-
                     </v-card-text>
                 </v-card>
             </v-stepper-content>
 
-            <v-stepper-step color=grey :complete="e6 > 5" step="5" editable >
+            <v-stepper-step color=grey step="7" editable >
                 Price
             </v-stepper-step>
-            <v-stepper-content step="5">
+            <v-stepper-content step="7">
                 <v-card color="grey lighten-4" class="mb-2">
-                    <v-card-text class="text-justify">
+                    <v-card-text>
                         <h2>Universities</h2>
                         <br>
                         <p>
@@ -143,12 +151,7 @@
 
 <script>
     export default {
-        name: "IntroPythonCard",
-        data () {
-            return {
-                e6: 1,
-            }
-        },
+        name: "IntroPythonCard"
     }
 </script>
 
