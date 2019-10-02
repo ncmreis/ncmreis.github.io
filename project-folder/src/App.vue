@@ -1,7 +1,7 @@
 <template>
   <v-app>
               <v-parallax id="#home" src='./assets/blue.jpg' :height="windowHeight">
-                  <v-toolbar flat class="transparent mt-5">
+                  <v-toolbar flat class="transparent mt-2">
                       <v-container>
                           <v-layout column align-center>
                               <v-toolbar-items class="hidden-xs-only">
@@ -38,14 +38,15 @@
                                   justfy-center
                                   class="white--text"
                           >
-                              <v-img contain class="mb-6" height="150px" src="./assets/thorly_logo_gray.png"></v-img>
+                              <v-img v-if="windowHeight>500" contain height="150px" src="./assets/thorly_logo_gray.png"></v-img>
+                              <v-img v-if="windowHeight<=500" contain height="90px" src="./assets/thorly_logo_gray.png"></v-img>
 
-                              <h4 class="mb-12">Hammer your fear of coding</h4>
+                              <h4 v-if="windowHeight>500" class="mt-8">Hammer your fear of coding</h4>
 
-                              <h3 class="text-center">A fresh concept for training teams and individuals with a focus on industry
-                                  practicalities</h3>
+                              <h3 class="text-center mt-8">A fresh concept for training teams and
+                                  individuals with a focus on industry practicalities</h3>
 
-                              <v-btn class="mt-12 mb-10" color="warning" large @click="goToSection('#courses')">
+                              <v-btn v-if="windowHeight>500" class="mt-5 mb-10" color="warning" large @click="goToSection('#courses')">
                                   BROWSE COURSES
                               </v-btn>
 
@@ -675,7 +676,7 @@ export default {
 }
 
 .main-raised-xs{
-    margin: -60px 0px -30px;
+    margin: -30px 0px -30px;
 }
 
 .fix {
