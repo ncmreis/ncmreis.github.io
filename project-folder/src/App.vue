@@ -46,7 +46,7 @@
                               <h3 class="text-center mt-8">A fresh concept for training teams and
                                   individuals with a focus on industry practicalities</h3>
 
-                              <v-btn v-if="windowHeight>500" class="mt-5 mb-10" color="warning" large @click="goToSection('#courses')">
+                              <v-btn v-if="windowHeight>500" class="mt-8 mb-10" color="warning" large @click="goToSection('#courses')">
                                   BROWSE COURSES
                               </v-btn>
 
