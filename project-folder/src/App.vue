@@ -67,10 +67,14 @@
                           contain
                           height="35px"
                           width="140px"
-                          src="./assets/thorly_logo_gray.png"></v-img>
+                          src="./assets/thorly_logo_gray.png"
+                          class="v-img-cursor"></v-img>
                       </v-toolbar-title>
                       <div class="flex-grow-1"></div>
-                      <v-btn elevation="5" color="warning" @click="goToSection('#contact')">Get in touch</v-btn>
+                      <v-btn elevation="5" class="d-none d-sm-block" color="warning" @click="goToSection('#contact')">Get in touch</v-btn>
+                      <v-btn small fab color="warning" class="d-sm-none"@click="goToSection('#contact')">
+                          <v-icon>mdi-email</v-icon>
+                      </v-btn>
                   </v-toolbar>
 
                   <section id="#why">
@@ -701,6 +705,10 @@ export default {
     right: 0px;
     z-index: 4 !important;
     background-color: #2AB7CA;
+}
+
+.v-img-cursor{
+    cursor:pointer;
 }
 
 </style>
