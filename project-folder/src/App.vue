@@ -41,12 +41,12 @@
                               <v-img v-if="windowHeight>500" contain height="150px" src="./assets/thorly_logo_gray.png"></v-img>
                               <v-img v-if="windowHeight<=500" contain height="90px" src="./assets/thorly_logo_gray.png"></v-img>
 
-                              <h4 v-if="windowHeight>500" class="mt-8">Hammer your fear of coding</h4>
+                              <h4 v-if="windowHeight>500" class="mt-2 subtitle-1">Hammer your fear of coding</h4>
 
-                              <h3 class="text-center mt-8">A fresh concept for training teams and
+                              <h3 class="text-center mt-12 title">A fresh concept for training teams and
                                   individuals with a focus on industry practicalities</h3>
 
-                              <v-btn v-if="windowHeight>500" class="mt-8 mb-10" color="warning" large @click="goToSection('#courses')">
+                              <v-btn v-if="windowHeight>500" class="mt-4 mb-10 body-1" color="warning" large @click="goToSection('#courses')">
                                   BROWSE COURSES
                               </v-btn>
 
@@ -72,8 +72,8 @@
                           class="v-img-cursor"></v-img>
                       </v-toolbar-title>
                       <div class="flex-grow-1"></div>
-                      <v-btn elevation="5" class="d-none d-sm-block" color="warning" @click="goToSection('#contact')">Get in touch</v-btn>
-                      <v-btn small fab color="warning" class="d-sm-none"@click="goToSection('#contact')">
+                      <v-btn elevation="5" class="d-none d-sm-block justify-end" color="warning" @click="openForm()">Get in touch</v-btn>
+                      <v-btn small fab color="warning" class="d-sm-none" @click="openForm()">
                           <v-icon>mdi-email</v-icon>
                       </v-btn>
                   </v-toolbar>
@@ -611,12 +611,6 @@ export default {
   },
   data () {
     return {
-        items: [
-            { title: 'Click Me' },
-            { title: 'Click Me' },
-            { title: 'Click Me' },
-            { title: 'Click Me 2' },
-        ],
         hashSection: null,
         windowHeight: 0,
         show1: true,
@@ -637,6 +631,9 @@ export default {
       },
       handleScroll () {
           this.scrolled = window.scrollY > (window.innerHeight-130);
+      },
+      openForm: function () {
+          window.open("https://share.hsforms.com/1YATh4nJpRzGRDOpSyNdhaQ3vi5m", "_blank");
       }
   },
     created: function() {

@@ -151,7 +151,13 @@
 
 <script>
     export default {
-        name: "IntroPythonCard"
+        name: "IntroPythonCard",
+        methods: {
+            goToSection(hashSection) {
+                var elmnt = document.getElementById(hashSection);
+                elmnt.scrollIntoView({behavior: 'smooth'});
+            },
+        }
     }
 </script>
 
