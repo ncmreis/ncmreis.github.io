@@ -38,8 +38,18 @@
                                   justfy-center
                                   class="white--text"
                           >
-                              <v-img v-if="windowHeight>500" contain height="150px" src="./assets/thorly_logo_gray.png"></v-img>
-                              <v-img v-if="windowHeight<=500" contain height="90px" src="./assets/thorly_logo_gray.png"></v-img>
+                              <v-img v-if="windowHeight>500"
+                                     contain
+                                     height="150px"
+                                     src="./assets/thorly_logo_gray.png"
+                                     alt="Thorly"
+                              ></v-img>
+                              <v-img v-if="windowHeight<=500"
+                                     contain
+                                     height="90px"
+                                     src="./assets/thorly_logo_gray.png"
+                                     alt="Thorly"
+                              ></v-img>
 
                               <h1 v-if="windowHeight>500" class="mt-2 subtitle-1">Hammer your fear of coding</h1>
 
