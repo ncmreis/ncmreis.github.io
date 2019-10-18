@@ -79,6 +79,7 @@
                           height="35px"
                           width="140px"
                           src="./assets/thorly_logo_gray.png"
+                          alt="Thorly"
                           class="v-img-cursor"></v-img>
                       </v-toolbar-title>
                       <div class="flex-grow-1"></div>
