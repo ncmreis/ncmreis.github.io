@@ -41,7 +41,7 @@
                               <v-img v-if="windowHeight>500" contain height="150px" src="./assets/thorly_logo_gray.png"></v-img>
                               <v-img v-if="windowHeight<=500" contain height="90px" src="./assets/thorly_logo_gray.png"></v-img>
 
-                              <h4 v-if="windowHeight>500" class="mt-2 subtitle-1">Hammer your fear of coding</h4>
+                              <h1 v-if="windowHeight>500" class="mt-2 subtitle-1">Hammer your fear of coding</h1>
 
                               <h3 class="text-center mt-12 title">A fresh concept for training teams and
                                   individuals with a focus on industry practicalities</h3>
@@ -257,7 +257,7 @@
                                                 After reaching out to us, we have a well-defined timeline that will let
                                                 you get a final proposal of any of our courses in less than 4 weeks, even if you want a
                                                 tailor-made program. This application process can change in case your
-                                                organisation feel there is a need to. Some of the following processes might take more time
+                                                organisation feels there is a need to. Some of the following processes might take more time
                                                 depending on your organisation's complexity and how many layers of approval our proposal has to go.
                                             </p>
                                         </v-card-text>
@@ -410,7 +410,7 @@
                                                             <ul>
                                                                 <li>Support hours</li>
                                                                 <li>In case there is any different from the curriculum proposed by Thorly we will also include the new curriculum</li>
-                                                                <li>Final fees - having into consideration the appropriate discounts</li>
+                                                                <li>Final fees - taking into consideration the appropriate discounts</li>
                                                                 <li>Legal documents necessary from both parties</li>
                                                             </ul>
                                                             <br><br>

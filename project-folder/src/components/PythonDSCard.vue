@@ -84,7 +84,7 @@
                     <v-card-text>
                         <p>
                             We are all pro "hands-on" teaching. Therefore, we will do no more than 20-25min presentations
-                            and we will focus all our efforts into getting students with their hands on code while we help
+                            and we will focus all our efforts into getting students to get their hands on code while we help
                             them accomplish the tasks we have prepared.<br><br>
                             These tasks are created to guide students to problems they will encounter in their jobs. They are
                             based on our own experience and other industry experts.
@@ -100,8 +100,8 @@
                 <v-card color="grey lighten-4" class="mb-2">
                     <v-card-text>
                         <ol>
-                            <li>We will be using slack. Here is where we will answer questions as well as give weekly
-                                challenges for those willing to give the extra mile.
+                            <li>We will be using slack, where we will answer questions as well as give weekly
+                                challenges for those willing to go the extra mile.
                             </li>
                             <li>Our team will provide continuous support throughout the training as well as pre-defined
                                 office hours, with a maximum of 5 hours per week.

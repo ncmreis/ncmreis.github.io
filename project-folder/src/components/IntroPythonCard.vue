@@ -9,7 +9,7 @@
                 <v-card color="grey lighten-4" class="mb-2">
                     <v-card-text>
                         This course should teach you tools and the building blocks of Python and programming in general.
-                        The program was thought having into account the following outcomes:
+                        The program was thought taking into account the following outcomes:
                         <br><br>
                         <ol>
                             <li>
