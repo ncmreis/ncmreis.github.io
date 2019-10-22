@@ -578,11 +578,11 @@
                               </v-flex>
                               </v-layout>
                               <v-layout row wrap align-start>
-                                  <v-flex md4 offset-md1 xs12>
+                                  <v-flex md4 offset-md2 xs12>
                                       <v-card flat class="transparent">
                                           <v-card-text class="text-center">
                                               <v-avatar size="150">
-                                                  <img src="./assets/img/faces/luis.jpeg" alt="Fabian">
+                                                  <img src="./assets/img/faces/fabian.png" alt="Fabian">
                                               </v-avatar>
                                           </v-card-text>
                                           <v-card-title primary-title class="fix layout justify-center">
@@ -601,11 +601,11 @@
                                           </v-card-text>
                                       </v-card>
                                   </v-flex>
-                                  <v-flex md4 offset-md2 xs12 >
+                                  <v-flex md4 xs12 >
                                       <v-card flat class="transparent">
                                           <v-card-text class="text-center">
                                               <v-avatar size="150">
-                                                  <img src="./assets/img/faces/luis.jpeg" alt="Moritz">
+                                                  <img src="./assets/img/faces/moritz.jpg" alt="Moritz">
                                               </v-avatar>
                                           </v-card-text>
                                           <v-card-title primary-title class="fix layout justify-center">
@@ -615,7 +615,14 @@
                                               <div class="fix text-center body-2 mb-4">Business Developer</div>
                                           </v-card-title>
                                           <v-card-text>
-                                              Moritz
+                                              Moritz studied in industrial engineering while working full-time at
+                                              Allianz, Germany’s market leader in the insurance industry. Supporting
+                                              microfinance institutions like Grameen Costa Rica and Nobel Peace Prize
+                                              winning Grameen Bank, he strategized a novel credit scoring approach with
+                                              psychometric data. During his master in economics at Católica-Lisbon SBE,
+                                              he interned at a private equity company and he worked as a full-time
+                                              researcher quantifying the abnormal returns of lobbyism. He is currently
+                                              a Data Analyst at IQVIA.
                                           </v-card-text>
                                       </v-card>
                                   </v-flex>
