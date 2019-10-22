@@ -8,6 +8,7 @@
                                   <v-btn text color="white" @click="goToSection('#why')">About</v-btn>
                                   <v-btn text color="white" @click="goToSection('#courses')">Courses</v-btn>
                                   <v-btn text color="white" @click="goToSection('#apply')">Apply</v-btn>
+                                  <v-btn text color="white" @click="goToSection('#future')">Future</v-btn>
                                   <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
                                   <v-btn text color="white" @click="goToSection('#contact')">Contact</v-btn>
                               </v-toolbar-items>
@@ -24,6 +25,7 @@
                                   <v-list-item @click="goToSection('#why')">About</v-list-item>
                                   <v-list-item @click="goToSection('#courses')">Courses</v-list-item>
                                   <v-list-item @click="goToSection('#apply')">Apply</v-list-item>
+                                  <v-list-item @click="goToSection('#future')">Future</v-list-item>
                                   <v-list-item @click="goToSection('#team')">Team</v-list-item>
                                   <v-list-item @click="goToSection('#contact')">Contact</v-list-item>
                               </v-list>
@@ -53,8 +55,8 @@
 
                               <h1 v-if="windowHeight>500" class="mt-2 subtitle-1">Hammer your fear of coding</h1>
 
-                              <h3 class="text-center mt-12 title">A fresh concept for training teams and
-                                  individuals with a focus on industry practicalities</h3>
+                              <h3 class="text-center mt-12 title">An innovative concept for training teams and
+                                  individuals in Data Science with a focus on real-life problems</h3>
 
                               <v-btn v-if="windowHeight>500" class="mt-4 mb-10 body-1" color="warning" large @click="goToSection('#courses')">
                                   BROWSE COURSES
@@ -108,26 +110,23 @@
                                     </v-card-title>
                                     <v-card-text>
                                         <p class="body-1">
-                                            We are a team of experienced Data Scientists & Developers and we are looking forward to
-                                            bring the same tools to companies and individuals. We split our mission in three parts:
-                                            <ul><br>
-                                                <li>Support Universities: giving students these tools to allow them to stand out when
-                                                    reaching the market;</li>
-                                                <li>Support Companies: we all worked as consultants and contractors
-                                                    and one of our focus is to empower non-technical teams to not
-                                                    rely so much on technical teams (this should be a benefit for everyone);</li>
-                                                <li>Support and engage communities: we believe this is achieved through
-                                                    industry related problems, solved together by friends, mentors and
-                                                    a couple of beers.</li>
-                                            </ul>
+                                            Thorly is a team of experienced Data Scientists & Developers offering an
+                                            <b>innovative concept</b> for training teams and individuals on Data
+                                            Science, <b>increasing data literacy</b>.<br><br>
+                                            Based on <b>personalized teaching</b>, our learning framework incorporates <b>AI in
+                                            education</b>, changing the way education is done and thought.<br><br>
+                                            Our method aims to teach in a <b>tailor-made manner for each student</b>,
+                                            regardless of interests, abilities, skills, or social and intellectual
+                                            background to create an <b>inclusive environment</b>.<br><br>
                                         </p>
-                                        <br>
+                                        <div class="title font-italic text-center mb-9">
+                                            Rethinking education
+                                        </div>
                                         <p class="body-1">
-                                            We thought about these offers to fulfill the main needs of companies, professionals
-                                            and students. Each one of our offers has different targets and therefore a different program
-                                            and different goals. We know that studying should be a flexible, self-driven endeauvor, therefore
-                                            we are using what we present as a base and adding a tailor-made part in each one of our courses
-                                            to fit your specific needs.
+                                            Thorly’s framework was created to fulfill the main needs of companies,
+                                            professionals and students as we believe that studying should be a flexible,
+                                            self-driven and individualized endeavor. Hence, we are using our lecture
+                                            material as a basis and add a customized part in each one of our courses.
                                         </p>
                                     </v-card-text>
                                 </v-card>
@@ -148,10 +147,12 @@
                                                 </v-card-title>
                                                 <v-card-text>
                                                     <p class="body-1">
-                                                    One of our efforts is to bring Python to schools. We are making special prices
-                                                    and partnerships with different Universities in Portugal. Our main goal is to help
-                                                    bridge the gap between the offer and demand at this level. Our focus is currently
-                                                    in the areas of Management and Economics, as this is where we found the biggest gap.
+                                                        We believe that data literacy and coding skills are some of the
+                                                        most important abilities to compete in the job market of the
+                                                        future. Our main goal is to help bridge the gap between the
+                                                        current offers at universities and demands of students. Our
+                                                        focus is currently on the areas of Management, Finance and
+                                                        Economics, as this is where we found the biggest gap.
                                                     </p>
                                                 </v-card-text>
                                             </v-card>
@@ -168,10 +169,12 @@
                                                 </v-card-title>
                                                 <v-card-text>
                                                     <p class="body-1">
-                                                    Our team has experience in training both companies and organizations in different
-                                                    countries and industries, with tailor-made programs, to make it faster to achieve
-                                                    the company goals. We have our tested methodology to get the pre-requisites
-                                                    necessary to build & start delivering the program in less than 2 weeks.
+                                                        Our team has extensive experience in training organizations in
+                                                        different countries and industries with tailor-made programs to
+                                                        fulfill specific company needs. These programs aim to empower
+                                                        companies to achieve their goals in a more efficient way and
+                                                        increase data literacy among non-technical departments. Thereby,
+                                                        we decrease these departments’ dependency on technical teams.
                                                     </p>
                                                 </v-card-text>
                                             </v-card>
@@ -439,6 +442,50 @@
                         </v-container>
                     </section>
 
+                  <section id="#future">
+                      <v-container>
+                          <v-layout
+                                  row
+                                  wrap
+                                  class="mt-12"
+                                  align-center
+                                  justify-center
+                          >
+                              <v-flex sm10 xs12>
+                                  <v-card
+                                          flat
+                                          class="transparent"
+                                  >
+                                      <v-card-title primary-title class="fix layout justify-center mb-12 ">
+                                          <div class="display-1">Thorly's Future</div>
+                                      </v-card-title>
+                                      <v-card-text>
+                                          <p class="body-1">
+                                              We are currently developing and testing the <b>most innovative and
+                                              personalized</b> way of teaching coding and increasing data literacy among
+                                              students and professionals. With this <b>AI-centered approach</b> built in
+                                              cooperation with Católica Lisbon School of Business & Economics we want
+                                              to ensure that each participant of our courses receives the specific way
+                                              of teaching that is best suitable for him or her. Thus, we will provide
+                                              our students with a personalized curriculum tailor-made to the individual
+                                              needs and interests of each participant based on an initial AI-supported
+                                              <b>diagnostic test</b>.<br><br>
+                                              Nonetheless, we will retain the connection of our course content to
+                                              <b>real-life working problems</b> and empower our students to gain an edge in an
+                                              increasingly competitive professional world. We believe that our
+                                              innovative approach to education will be the best way to <b>increase data
+                                              literacy and coding knowledge</b> among students and professionals.<br><br>
+                                          </p>
+                                          <div class="title font-italic text-center">
+                                              Stay tuned and rethink education with us!
+                                          </div>
+                                      </v-card-text>
+                                  </v-card>
+                              </v-flex>
+                          </v-layout>
+                      </v-container>
+                  </section>
+
                   <section id="#team">
                     <v-container>
                       <v-layout
@@ -457,8 +504,32 @@
                         </v-flex>
                         <v-flex md10 xs12>
                           <v-container>
-                            <v-layout row wrap align-start>
-                              <v-flex md4 xs12>
+                              <v-layout row wrap align-start class="mb-8">
+                                <v-flex md4 xs12>
+                                    <v-card flat class="transparent">
+                                        <v-card-text class="text-center">
+                                            <v-avatar size="150">
+                                                <img src="./assets/img/faces/ricardo.jpeg" alt="Ricardo">
+                                            </v-avatar>
+                                        </v-card-text>
+                                        <v-card-title primary-title class="fix layout justify-center">
+                                            <div class="fix headline text-center mb-n2">Ricardo Pereira</div>
+                                        </v-card-title>
+                                        <v-card-title class="fix layout justify-center">
+                                            <div class="fix text-center body-2 mb-4">CEO, Data Scientist &<br>Python developer</div>
+                                        </v-card-title>
+                                        <v-card-text>
+                                            Ricardo has co-founded different organisations and companies, to help
+                                            solving problems that are data related and enhancing different communities.
+                                            Currently teaching Python at Nova SBE (Portugal), Machine Learning at European Leadership University (Holland)
+                                            and Data Collection at Rumos, Ricardo has experienced different crowds and
+                                            tested different teaching methodologies. On the industry, Ricardo has been
+                                            contracting for two years, working closely with some of the biggest tech companies in
+                                            Portugal.
+                                        </v-card-text>
+                                    </v-card>
+                                </v-flex>
+                                <v-flex md4 xs12>
                                 <v-card flat class="transparent">
                                   <v-card-text class="text-center">
                                     <v-avatar size="150">
@@ -469,7 +540,7 @@
                                     <div class="fix headline text-center mb-n2">Nuno Reis</div>
                                   </v-card-title>
                                   <v-card-title class="fix layout justify-center">
-                                    <div class="fix text-center body-2 mb-4">Data Scientist &<br>Python developer</div>
+                                    <div class="fix text-center body-2 mb-4">COO, Data Scientist &<br>Python developer</div>
                                   </v-card-title>
                                   <v-card-text>
                                     Nuno started his career as top student in Instituto Superior Técnico, where
@@ -482,7 +553,7 @@
                                   </v-card-text>
                                 </v-card>
                               </v-flex>
-                              <v-flex md4 xs12 >
+                                <v-flex md4 xs12 >
                                 <v-card flat class="transparent">
                                   <v-card-text class="text-center">
                                     <v-avatar size="150">
@@ -493,7 +564,7 @@
                                     <div class="fix headline text-center mb-n2">Luís Sousa</div>
                                   </v-card-title>
                                   <v-card-title class="fix layout justify-center">
-                                    <div class="fix text-center body-2 mb-4">Data Scientist &<br>full-stack developer</div>
+                                    <div class="fix text-center body-2 mb-4">CTO, Data Scientist &<br>full-stack developer</div>
                                   </v-card-title>
                                   <v-card-text>
                                     Luís has been working with technology for more than 10 years. Currently he
@@ -505,31 +576,50 @@
                                   </v-card-text>
                                 </v-card>
                               </v-flex>
-                              <v-flex md4 xs12>
-                                <v-card flat class="transparent">
-                                  <v-card-text class="text-center">
-                                    <v-avatar size="150">
-                                      <img src="./assets/img/faces/ricardo.jpeg" alt="Ricardo">
-                                    </v-avatar>
-                                  </v-card-text>
-                                  <v-card-title primary-title class="fix layout justify-center">
-                                    <div class="fix headline text-center mb-n2">Ricardo Pereira</div>
-                                  </v-card-title>
-                                  <v-card-title class="fix layout justify-center">
-                                    <div class="fix text-center body-2 mb-4">Data Scientist &<br>Python developer</div>
-                                  </v-card-title>
-                                  <v-card-text>
-                                    Ricardo has co-founded different organisations and companies, to help
-                                    solving problems that are data related and enhancing different communities.
-                                    Currently teaching Python at Nova SBE (Portugal), Machine Learning at European Leadership University (Holland)
-                                    and Data Collection at Rumos, Ricardo has experienced different crowds and
-                                    tested different teaching methodologies. On the industry, Ricardo has been
-                                    contracting for two years, working closely with some of the biggest tech companies in
-                                    Portugal.
-                                  </v-card-text>
-                                </v-card>
-                              </v-flex>
-                            </v-layout>
+                              </v-layout>
+                              <v-layout row wrap align-start>
+                                  <v-flex md4 offset-md1 xs12>
+                                      <v-card flat class="transparent">
+                                          <v-card-text class="text-center">
+                                              <v-avatar size="150">
+                                                  <img src="./assets/img/faces/luis.jpeg" alt="Fabian">
+                                              </v-avatar>
+                                          </v-card-text>
+                                          <v-card-title primary-title class="fix layout justify-center">
+                                              <div class="fix headline text-center mb-n2">Fabian Hähn</div>
+                                          </v-card-title>
+                                          <v-card-title class="fix layout justify-center">
+                                              <div class="fix text-center body-2 mb-4">Business Developer</div>
+                                          </v-card-title>
+                                          <v-card-text>
+                                              Fabian has been working for several companies and state agencies in
+                                              Germany reaching from banking over experienced placement to financial
+                                              regulation. He has experienced Thorly’s teaching concept himself as a
+                                              student and is a prime example for the success of our courses. He uses
+                                              his strategic experience from his former jobs and his education from Nova
+                                              SBE in Portugal to develop Thorly’s business opportunities.
+                                          </v-card-text>
+                                      </v-card>
+                                  </v-flex>
+                                  <v-flex md4 offset-md2 xs12 >
+                                      <v-card flat class="transparent">
+                                          <v-card-text class="text-center">
+                                              <v-avatar size="150">
+                                                  <img src="./assets/img/faces/luis.jpeg" alt="Moritz">
+                                              </v-avatar>
+                                          </v-card-text>
+                                          <v-card-title primary-title class="fix layout justify-center">
+                                              <div class="fix headline text-center mb-n2">Moritz Vetter</div>
+                                          </v-card-title>
+                                          <v-card-title class="fix layout justify-center">
+                                              <div class="fix text-center body-2 mb-4">Business Developer</div>
+                                          </v-card-title>
+                                          <v-card-text>
+                                              Moritz
+                                          </v-card-text>
+                                      </v-card>
+                                  </v-flex>
+                              </v-layout>
                           </v-container>
                         </v-flex>
                       </v-layout>
