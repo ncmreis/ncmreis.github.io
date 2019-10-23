@@ -113,9 +113,9 @@
                                             Thorly is a team of experienced Data Scientists & Developers offering an
                                             <b>innovative concept</b> for training teams and individuals on Data
                                             Science, <b>increasing data literacy</b>.<br><br>
-                                            Based on <b>personalized teaching</b>, our learning framework incorporates <b>AI in
+                                            Based on <b>personalized teaching</b>, our learning framework is about to incorporate <b>AI in
                                             education</b>, changing the way education is done and thought.<br><br>
-                                            Our method aims to teach in a <b>tailor-made manner for each student</b>,
+                                            We educate each student in a <b>tailored manner</b>,
                                             regardless of interests, abilities, skills, or social and intellectual
                                             background to create an <b>inclusive environment</b>.<br><br>
                                         </p>
@@ -123,10 +123,9 @@
                                             Rethinking education
                                         </div>
                                         <p class="body-1">
-                                            Thorly’s framework was created to fulfill the main needs of companies,
-                                            professionals and students as we believe that studying should be a flexible,
-                                            self-driven and individualized endeavor. Hence, we are using our lecture
-                                            material as a basis and add a customized part in each one of our courses.
+                                            We created Thorly's framework to <b>fulfill the core needs of companies,
+                                            professionals and students</b>. We firmly believe that any type of skill-acquisition should be a flexible,
+                                            self-driven and individualized endeavor.
                                         </p>
                                     </v-card-text>
                                 </v-card>
@@ -147,11 +146,11 @@
                                                 </v-card-title>
                                                 <v-card-text>
                                                     <p class="body-1">
-                                                        We believe that data literacy and coding skills are some of the
-                                                        most important abilities to compete in the job market of the
+                                                        We believe that data literacy and coding skills are among the
+                                                        most important abilities to participate in the job market of the
                                                         future. Our main goal is to help bridge the gap between the
-                                                        current offers at universities and demands of students. Our
-                                                        focus is currently on the areas of Management, Finance and
+                                                        current offers at universities and needs of students. We are primarly focused
+                                                        on the areas of Management, Finance and
                                                         Economics, as this is where we found the biggest gap.
                                                     </p>
                                                 </v-card-text>
@@ -171,8 +170,8 @@
                                                     <p class="body-1">
                                                         Our team has extensive experience in training organizations in
                                                         different countries and industries with tailor-made programs to
-                                                        fulfill specific company needs. These programs aim to empower
-                                                        companies to achieve their goals in a more efficient way and
+                                                        fulfill specific company needs. These programs empower your employees to achieve
+                                                        your company's goals more efficiently way and
                                                         increase data literacy among non-technical departments. Thereby,
                                                         we decrease these departments’ dependency on technical teams.
                                                     </p>
@@ -268,11 +267,8 @@
                                         </v-card-title>
                                         <v-card-text>
                                             <p class="body-1">
-                                                After reaching out to us, we have a well-defined timeline that will let
-                                                you get a final proposal of any of our courses in less than 4 weeks, even if you want a
-                                                tailor-made program. This application process can change in case your
-                                                organisation feels there is a need to. Some of the following processes might take more time
-                                                depending on your organisation's complexity and how many layers of approval our proposal has to go.
+                                                Check our application process guide. Usually, we can offer a tailor-made
+                                                program within less than hour weeks.
                                             </p>
                                         </v-card-text>
                                     </v-card>
@@ -519,11 +515,11 @@
                                             <div class="fix text-center body-2 mb-4">CEO, Data Scientist &<br>Python developer</div>
                                         </v-card-title>
                                         <v-card-text>
-                                            Ricardo has co-founded different organisations and companies, to help
+                                            Ricardo has co-founded several organisations and companies, to help
                                             solving problems that are data related and enhancing different communities.
                                             Currently teaching Python at Nova SBE (Portugal), Machine Learning at European Leadership University (Holland)
                                             and Data Collection at Rumos, Ricardo has experienced different crowds and
-                                            tested different teaching methodologies. On the industry, Ricardo has been
+                                            tested different teaching methodologies. In the industry, Ricardo has been
                                             contracting for two years, working closely with some of the biggest tech companies in
                                             Portugal.
                                         </v-card-text>
@@ -543,11 +539,11 @@
                                     <div class="fix text-center body-2 mb-4">COO, Data Scientist &<br>Python developer</div>
                                   </v-card-title>
                                   <v-card-text>
-                                    Nuno started his career as top student in Instituto Superior Técnico, where
+                                    Nuno started his career as top student at Instituto Superior Técnico, where
                                     he did research for two years and later decided to move to the industry.
-                                    Worked for three years as consultant at Teixeira Duarte, developing several
+                                    He worked for three years as consultant at Teixeira Duarte. Meanwhile, he developed several
                                     open source projects in-between for real-estate investment and commercial trades.
-                                    Currently with his own startup, focused on building a product to fight churn for
+                                    His former startup was focused on building a product to fight churn for
                                     the financial industry as well as providing consulting in the areas of data science,
                                     development and data architecture.
                                   </v-card-text>
@@ -568,11 +564,11 @@
                                   </v-card-title>
                                   <v-card-text>
                                     Luís has been working with technology for more than 10 years. Currently he
-                                    is a Data Scientist at OutSystems and he is teaching Python, in a post-graduation
+                                    is a Data Scientist at OutSystems and he is teaching Python, at post-graduate level
                                     at Rumos. Besides Mathematics, Luís has been evolved with Physics and radiation
                                     for the last 4 years, where he developed software to be deployed in Africa for
-                                    the oil and gas industry. Luís has been teaching since he left college, helping in
-                                    several Master's and PhD thesis, teaching different stacks and nationalities.
+                                    the oil and gas industry. Luís has been teaching since he left college, supervising students in
+                                    several Master's and PhD thesis and teaching different stacks and nationalities.
                                   </v-card-text>
                                 </v-card>
                               </v-flex>
@@ -620,7 +616,7 @@
                                               microfinance institutions like Grameen Costa Rica and Nobel Peace Prize
                                               winning Grameen Bank, he strategized a novel credit scoring approach with
                                               psychometric data. During his master in economics at Católica-Lisbon SBE,
-                                              he interned at a private equity company and he worked as a full-time
+                                              he interned at a private equity company Odewald and he worked as a full-time
                                               researcher quantifying the abnormal returns of lobbyism. He is currently
                                               a Data Analyst at IQVIA.
                                           </v-card-text>
