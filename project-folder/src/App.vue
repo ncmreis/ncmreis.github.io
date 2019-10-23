@@ -267,8 +267,8 @@
                                         </v-card-title>
                                         <v-card-text>
                                             <p class="body-1">
-                                                Check our application process guide. Usually, we can offer a tailor-made
-                                                program within less than hour weeks.
+                                                Check our application process guide below. Usually, we can offer you a tailor-made
+                                                program within less than four weeks.
                                             </p>
                                         </v-card-text>
                                     </v-card>
