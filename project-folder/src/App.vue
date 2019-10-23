@@ -171,7 +171,7 @@
                                                         Our team has extensive experience in training organizations in
                                                         different countries and industries with tailor-made programs to
                                                         fulfill specific company needs. These programs empower your employees to achieve
-                                                        your company's goals more efficiently way and
+                                                        your company's goals more efficiently and
                                                         increase data literacy among non-technical departments. Thereby,
                                                         we decrease these departments’ dependency on technical teams.
                                                     </p>
@@ -463,7 +463,7 @@
                                               cooperation with Católica Lisbon School of Business & Economics we want
                                               to ensure that each participant of our courses receives the specific way
                                               of teaching that is best suitable for him or her. Thus, we will provide
-                                              our students with a personalized curriculum tailor-made to the individual
+                                              our students with a <b>personalized curriculum</b> tailor-made to the individual
                                               needs and interests of each participant based on several <b>AI-supported
                                               diagnostic tests</b> along the course.<br><br>
 
