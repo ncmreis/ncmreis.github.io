@@ -464,8 +464,9 @@
                                               to ensure that each participant of our courses receives the specific way
                                               of teaching that is best suitable for him or her. Thus, we will provide
                                               our students with a personalized curriculum tailor-made to the individual
-                                              needs and interests of each participant based on an initial AI-supported
-                                              <b>diagnostic test</b>.<br><br>
+                                              needs and interests of each participant based on several <b>AI-supported
+                                              diagnostic tests</b> along the course.<br><br>
+
                                               Nonetheless, we will retain the connection of our course content to
                                               <b>real-life working problems</b> and empower our students to gain an edge in an
                                               increasingly competitive professional world. We believe that our
