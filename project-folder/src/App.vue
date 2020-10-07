@@ -1,705 +1,402 @@
 <template>
-  <v-app>
-              <v-parallax id="#home" src='./assets/blue.jpg' :height="windowHeight">
-                  <v-toolbar flat class="transparent mt-2">
-                      <v-container>
-                          <v-layout column align-center>
-                              <v-toolbar-items class="hidden-xs-only">
-                                  <v-btn text color="white" @click="goToSection('#why')">About</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#courses')">Courses</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#apply')">Apply</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#future')">Future</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
-                                  <v-btn text color="white" @click="goToSection('#contact')">Contact</v-btn>
-                              </v-toolbar-items>
-                          </v-layout>
-                      </v-container>
-                      <div class="hidden-sm-and-up text-center">
-                          <v-menu bottom left>
-                              <template v-slot:activator="{ on }">
-                                  <v-btn fab text flat class="transparent" v-on="on">
-                                      <v-icon color="white">mdi-menu</v-icon>
-                                  </v-btn>
-                              </template>
-                              <v-list>
-                                  <v-list-item @click="goToSection('#why')">About</v-list-item>
-                                  <v-list-item @click="goToSection('#courses')">Courses</v-list-item>
-                                  <v-list-item @click="goToSection('#apply')">Apply</v-list-item>
-                                  <v-list-item @click="goToSection('#future')">Future</v-list-item>
-                                  <v-list-item @click="goToSection('#team')">Team</v-list-item>
-                                  <v-list-item @click="goToSection('#contact')">Contact</v-list-item>
-                              </v-list>
-                          </v-menu>
-                      </div>
-                  </v-toolbar>
-                  <v-container class="justify-center fill-height mb-10">
-                      <v-flex md10 xs12>
-                          <v-layout
-                                  column
-                                  align-center
-                                  justfy-center
-                                  class="white--text"
-                          >
-                              <v-img v-if="windowHeight>500"
-                                     contain
-                                     height="150px"
-                                     src="./assets/thorly_logo_gray.png"
-                                     alt="Thorly"
-                              ></v-img>
-                              <v-img v-if="windowHeight<=500"
-                                     contain
-                                     height="90px"
-                                     src="./assets/thorly_logo_gray.png"
-                                     alt="Thorly"
-                              ></v-img>
+    <v-app>
+        <v-parallax src='./assets/back_4.png'  id="#home" :height="windowHeight">
+            <v-toolbar flat class="transparent mt-4">
+                <v-toolbar-title>
+                    <v-img @click="goToSection('#home')"
+                    contain
+                    height="70px"
+                    width="210px"
+                    src="./assets/thorly_logo_white.png"
+                    alt="Thorly"
+                    class="v-img-cursor ml-n2 hidden-xs-only"></v-img>
+                    <v-img @click="goToSection('#home')"
+                           contain
+                           height= "35px"
+                           width= "120px"
+                           src="./assets/thorly_logo_white.png"
+                           alt="Thorly"
+                           class="v-img-cursor hidden-sm-and-up"></v-img>
+                </v-toolbar-title>
+                <div class="flex-grow-1"></div>
+                <v-toolbar-items class="hidden-sm-and-down">
+                    <v-btn text color="white" @click="goToSection('#manifesto')">Manifesto</v-btn>
+                    <v-btn text color="white" @click="goToSection('#services')">Services</v-btn>
+                    <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
+                    <v-btn text color="white" @click="goToSection('#contacts')">Contacts</v-btn>
+                </v-toolbar-items>
+                <div class="hidden-md-and-up text-center">
+                    <v-menu bottom left>
+                        <template v-slot:activator="{ on }">
+                            <v-btn fab text flat class="transparent" v-on="on">
+                              <v-icon color="white">mdi-menu</v-icon>
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item @click="goToSection('#manifesto')">Manifesto</v-list-item>
+                            <v-list-item @click="goToSection('#services')">Services</v-list-item>
+                            <v-list-item @click="goToSection('#team')">Team</v-list-item>
+                            <v-list-item @click="goToSection('#contacts')">Contacts</v-list-item>
+                        </v-list>
+                    </v-menu>
+                </div>
+            </v-toolbar>
 
-                              <h1 v-if="windowHeight>500" class="mt-2 subtitle-1">Hammer your fear of coding</h1>
+            <v-container class="justify-center fill-height mb-0">
+                <v-flex md8 xs12>
+                    <v-layout
+                          column
+                          align-start
+                          justify-center
+                          class="white--text d-flex flex-grow-1"
+                    >
+                        <h1 style="font-size:350%; font-weight: 600" class="hidden-xs-only">
+                            Rapid ML/AI solutions to take value from your data</h1>
 
-                              <h3 class="text-center mt-12 title">An innovative concept for training teams and
-                                  individuals in Data Science with a focus on real-life problems</h3>
+                        <h2 class="mt-10 hidden-xs-only" style="font-weight:400">
+                            Thorly provides <b style="color: #2C81D6">Data Science & Data Engineering</b>
+                            services to help companies increase their data potential</h2>
 
-                              <v-btn v-if="windowHeight>500" class="mt-4 mb-10 body-1" color="warning" large @click="goToSection('#courses')">
-                                  BROWSE COURSES
-                              </v-btn>
+                        <v-btn align-center class="hidden-xs-only body-1 mt-10" color="primary" x-large @click="goToSection('#contacts')">
+                            GET IN TOUCH
+                        </v-btn>
 
-                          </v-layout>
-                      </v-flex>
-                  </v-container>
-              </v-parallax>
+                        <h1 style="font-size:225%; font-weight: 600" class="hidden-sm-and-up">
+                            Rapid ML/AI solutions to take value from your data</h1>
 
-              <v-card class="main cursor"
-                      :class="{'main-raised':$vuetify.breakpoint.smAndUp,
-                             'main-raised-xs':$vuetify.breakpoint.xs}"
-                      hover>
+                        <v-col class="d-flex align-stretch"></v-col>
 
-                  <v-toolbar v-if="scrolled"
-                             :class="{'nav':$vuetify.breakpoint.smAndUp,
-                             'nav-xs':$vuetify.breakpoint.xs}">
-                      <v-toolbar-title>
-                          <v-img @click="goToSection('#home')"
-                          contain
-                          height="35px"
-                          width="140px"
-                          src="./assets/thorly_logo_gray.png"
-                          alt="Thorly"
-                          class="v-img-cursor"></v-img>
-                      </v-toolbar-title>
-                      <div class="flex-grow-1"></div>
-                      <v-btn elevation="5" class="d-none d-sm-block justify-end" color="warning" @click="openForm()">Get in touch</v-btn>
-                      <v-btn small fab color="warning" class="d-sm-none" @click="openForm()">
-                          <v-icon>mdi-email</v-icon>
-                      </v-btn>
-                  </v-toolbar>
+                        <h2 class="body-1 hidden-sm-and-up">
+                            Thorly provides <b style="color: #2C81D6">Data Science & Data Engineering</b>
+                            services to help companies increase their data potential</h2>
 
-                  <section id="#why">
-                    <v-container>
-                        <v-layout
-                                row
-                                wrap
-                                class="mt-12"
-                                align-center
-                                justify-center
+                        <v-col class="d-flex align-stretch"></v-col>
+
+                        <v-btn align-center class="hidden-sm-and-up" color="primary" small @click="goToSection('#contacts')">
+                            GET IN TOUCH
+                        </v-btn>
+
+                    </v-layout>
+                </v-flex>
+            </v-container>
+
+        </v-parallax>
+
+        <v-card class="main cursor"
+              :class="{'main-raised':$vuetify.breakpoint.smAndUp,
+                     'main-raised-xs':$vuetify.breakpoint.xs}"
+              >
+
+            <v-toolbar v-if="scrolled"
+                     :class="{'nav':$vuetify.breakpoint.smAndUp,
+                     'nav-xs':$vuetify.breakpoint.xs}"
+                     height="70"
+                     src = "./assets/back_4.png"
+                     flat>
+              <v-toolbar-title>
+                  <v-img @click="goToSection('#home')"
+                  contain
+                  height="50px"
+                  width="160px"
+                  src="./assets/thorly_logo_white.png"
+                  alt="Thorly"
+                  class="v-img-cursor"></v-img>
+              </v-toolbar-title>
+              <div class="flex-grow-1"></div>       <v-toolbar-items class="hidden-xs-only">
+                  <v-btn text color="white" @click="goToSection('#manifesto')">Manifesto</v-btn>
+                  <v-btn text color="white" @click="goToSection('#services')">Services</v-btn>
+                  <v-btn text color="white" @click="goToSection('#team')">Team</v-btn>
+                  <v-btn text color="white" @click="goToSection('#contacts')">Contacts</v-btn>
+              </v-toolbar-items>
+              <v-btn elevation="5" class="ml-4 d-none d-sm-block justify-end" color="primary" @click="goToSection('#contacts')">Get in touch</v-btn>
+              <v-btn small fab color="primary" class="d-sm-none" @click="goToSection('#contacts')">
+                  <v-icon>mdi-email</v-icon>
+              </v-btn>
+            </v-toolbar>
+
+            <section id="#manifesto" style="background-color: #fafafa">
+            <v-container>
+                <v-layout
+                        row
+                        wrap
+                        class="my-12"
+                        align-center
+                        justify-center
+                >
+                    <v-flex md8 xs12 class="mb-12">
+                        <v-card
+                                flat
+                                class="transparent justify-center text-center"
                         >
-                            <v-flex sm10 xs12>
-                                <v-card
-                                        flat
-                                        class="transparent"
-                                >
-                                    <v-card-title primary-title class="fix layout justify-center mb-12 ">
-                                        <div class="display-1">Why Thorly?</div>
-                                    </v-card-title>
-                                    <v-card-text>
-                                        <p class="body-1">
-                                            Thorly is a team of experienced Data Scientists & Developers offering an
-                                            <b>innovative concept</b> for training teams and individuals on Data
-                                            Science, <b>increasing data literacy</b>.<br><br>
-                                            Based on <b>personalized teaching</b>, our learning framework is about to incorporate <b>AI in
-                                            education</b>, changing the way education is done and thought.<br><br>
-                                            We educate each student in a <b>tailored manner</b>,
-                                            regardless of interests, abilities, skills, or social and intellectual
-                                            background to create an <b>inclusive environment</b>.<br><br>
-                                        </p>
-                                        <div class="title font-italic text-center mb-9">
-                                            Rethinking education
-                                        </div>
-                                        <p class="body-1">
-                                            We created Thorly's framework to <b>fulfill the core needs of companies,
-                                            professionals and students</b>. We firmly believe that any type of skill-acquisition should be a flexible,
-                                            self-driven and individualized endeavor.
-                                        </p>
-                                    </v-card-text>
-                                </v-card>
-                            </v-flex>
-                            <v-flex sm10 xs12>
-                                <v-container>
-                                    <v-layout row wrap>
-                                        <v-flex xs12 sm6>
-                                            <v-card
-                                                    flat
-                                                    class="transparent mt-n5"
-                                            >
-                                                <v-card-text class="text-center">
-                                                    <v-icon x-large style="color:darkseagreen">mdi-code-tags</v-icon>
-                                                </v-card-text>
-                                                <v-card-title primary-title class="fix layout justify-center mb-2">
-                                                    <div class="headline text-center ">For Universities</div>
-                                                </v-card-title>
-                                                <v-card-text>
-                                                    <p class="body-1">
-                                                        We believe that data literacy and coding skills are among the
-                                                        most important abilities to participate in the job market of the
-                                                        future. Our main goal is to help bridge the gap between the
-                                                        current offers at universities and needs of students. We are primarly focused
-                                                        on the areas of Management, Finance and
-                                                        Economics, as this is where we found the biggest gap.
-                                                    </p>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-flex>
-                                        <v-flex xs12 sm6>
-                                            <v-card
-                                                    flat
-                                                    class="transparent">
-                                                <v-card-text class="text-center mt-n5">
-                                                    <v-icon x-large style="color:indianred">mdi-code-tags</v-icon>
-                                                </v-card-text>
-                                                <v-card-title primary-title class="fix layout justify-center mb-2">
-                                                    <div class="headline">For Companies</div>
-                                                </v-card-title>
-                                                <v-card-text>
-                                                    <p class="body-1">
-                                                        Our team has extensive experience in training organizations in
-                                                        different countries and industries with tailor-made programs to
-                                                        fulfill specific company needs. These programs empower your employees to achieve
-                                                        your company's goals more efficiently and
-                                                        increase data literacy among non-technical departments. Thereby,
-                                                        we decrease these departments’ dependency on technical teams.
-                                                    </p>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-flex>
-                                    </v-layout>
-                                </v-container>
-                            </v-flex>
-                        </v-layout>
-                    </v-container>
-                </section>
+                            <v-card-title primary-title class="justify-center fix layout mt-6 mb-12 ">
+                                <p class="display-2 text-center" style="font-weight: 600">Get your job done in 4 weeks</p>
+                            </v-card-title>
+                            <v-card-text>
+                                <p class="text-center headline mb-6">
+                                    Our services were designed to help you developing efficient & scalable solutions
+                                    <b style="color: #2C81D6">without future reliance on us or other external parties</b>
+                                </p>
+                                <p class="text-center headline">
+                                    We work with your team on <b style="color: #2C81D6">sprints of 2 to 4 weeks</b> with short iteration
+                                    cycles and hand over fully-documented deliverables deployed on your side
+                                </p>
+                            </v-card-text>
 
-                  <section id="#courses">
-                    <v-container>
-                        <v-layout
-                              row
-                              wrap
-                              class="mt-12"
-                              align-center
-                              justify-center
-                      >
-                            <v-flex sm10 xs12>
-                                <v-card
-                                        flat
-                                        class="transparent"
-                                >
-                                  <v-card-title primary-title class="fix layout justify-center mb-8">
-                                    <div class="display-1">Thorly courses</div>
-                                  </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex sm10 xs12>
-                              <v-container>
-                                <v-layout row wrap>
-                                  <v-flex xs6>
-                                    <v-card
-                                            @click="show1=true, show2=false"
-                                            hover
-                                            height="100%"
-                                            class="transparent ml-1 mr-1"
-                                            :color="show1 ? 'grey lighten-3' : ''"
-                                            :class="show1 ? 'elevation-5' : ''"
-                                    >
-                                      <v-card-text class="text-center">
-                                        <v-img contain height="70px" src="./assets/thorly-symbol-blue.png"></v-img>
-                                      </v-card-text>
-                                      <v-card-title primary-title class="fix layout justify-center">
-                                        <div class="headline text-center mb-6">Intro to Python</div>
-                                      </v-card-title>
-                                    </v-card>
-                                  </v-flex>
-                                  <v-flex xs6>
-                                    <v-card
-                                            @click="show1=false, show2=true"
-                                            hover
-                                            class="transparent mr-1 ml-1"
-                                            height="100%"
-                                            :color="show2 ? 'grey lighten-4' : ''"
-                                            :class="show2 ? 'elevation-5' : ''">
-                                      <v-card-text class="text-center">
-                                          <v-img contain height="70px" src="./assets/thorly-symbol-orange.png"></v-img>
-                                      </v-card-text>
-                                      <v-card-title primary-title class="fix layout justify-center">
-                                        <div class="headline text-center mb-6">Python for Data Science</div>
-                                      </v-card-title>
-                                    </v-card>
-                                  </v-flex>
-                                </v-layout>
-                              </v-container>
-                            </v-flex>
-                            <v-flex sm10 xs12>
-                              <IntroPythonCard v-show="show1"/>
-                              <PythonDSCard v-show="show2"/>
-                            </v-flex>
-                        </v-layout>
-                    </v-container>
-                  </section>
+                            <v-btn align-center v-if="windowHeight>500" class="body-1 mt-12" color="primary" x-large @click="goToSection('#contacts')">
+                                I want to leverage my data
+                            </v-btn>
+                        </v-card>
+                    </v-flex>
 
-                  <section id="#apply">
-                        <v-container>
-                            <v-layout
-                                    row
-                                    wrap
-                                    class="mt-12"
-                                    align-center
-                                    justify-center
-                            >
-                                <v-flex sm10 xs12>
-                                    <v-card flat class="transparent">
-                                        <v-card-title primary-title class="fix layout text-center justify-center mb-12 ">
-                                            <div class="display-1">Application process</div>
+                </v-layout>
+            </v-container>
+            </section>
+
+            <v-parallax id="#services" src='./assets/back_4.png' height="100%">
+              <v-container class="text-center">
+                  <v-layout
+                          row
+                          wrap
+                          class="my-12 white--text"
+                          align-center
+                          justify-center
+                  >
+
+                    <v-flex md8 xs12 class="mt-12">
+                        <v-card flat class="transparent white--text">
+                            <v-card-title primary-title class="justify-center fix layout mb-12">
+                                <p class="display-2 text-center" style="font-weight: 600">From our services to your value</p>
+                            </v-card-title>
+                            <v-card-text>
+                                <p class="text-center headline mb-6 white--text">
+                                    <b style="color: #2C81D6">Our full-stack data know-how</b> allows us to develop end-to-end data services.
+                                    From <u><b>strategy</b></u> definition to <u><b>implementation</b></u> of innovative solutions.
+                                </p>
+                            </v-card-text>
+                        </v-card>
+                    </v-flex>
+
+                    <v-flex md10 xs12 >
+                        <v-container grid-list-xl>
+                            <v-layout row wrap align-start>
+
+                                <v-flex sm4 xs12>
+                                    <v-card>
+                                        <v-card-text class="text-center">
+                                            <v-icon color="#2C81D6" size="100" class="mt-6">mdi-arrow-decision</v-icon>
+                                        </v-card-text>
+                                        <v-card-title primary-title class="fix layout justify-center mb-6">
+                                            <div class="fix display-1 text-center">Data Strategy</div>
                                         </v-card-title>
                                         <v-card-text>
-                                            <p class="body-1">
-                                                Check our application process guide below. Usually, we can offer you a tailor-made
-                                                program within less than four weeks.
-                                            </p>
+                                                <v-list
+                                                        three-line
+                                                        class="transparent"
+                                                >
+                                                    <v-list-item>
+                                                        <v-list-item-content>
+                                                            <v-list-item-title>Content filtering</v-list-item-title>
+                                                            <v-list-item-subtitle>Set the content filtering level to restrict appts that can be downloaded</v-list-item-subtitle>
+                                                        </v-list-item-content>
+                                                    </v-list-item>
+
+                                                    <v-list-item>
+                                                        <v-list-item-content>
+                                                            <v-list-item-title>Password</v-list-item-title>
+                                                            <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
+                                                        </v-list-item-content>
+                                                    </v-list-item>
+                                                </v-list>
+
                                         </v-card-text>
                                     </v-card>
                                 </v-flex>
-                                <v-flex sm10 xs12>
-                                    <v-container>
-                                        <v-layout row wrap justify-center>
-                                            <v-timeline class="d-none d-md-block">
-                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
-                                                    <template v-slot:opposite>
-                                                        <span>day 0</span>
-                                                    </template>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Send us an email</v-card-title>
-                                                        <v-card-text>
-                                                            Talk to us via email and give us a brief explanation on what we could help you with.
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
-                                                    <template v-slot:opposite>
-                                                        <span>day 2</span>
-                                                    </template>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Schedule a call</v-card-title>
-                                                        <v-card-text>
-                                                            We will get back to you within 48h and give you options to schedule a 15 min call.
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
-                                                    <template v-slot:opposite>
-                                                        <span>day 7</span>
-                                                    </template>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Receive a proposal</v-card-title>
-                                                        <v-card-text>
-                                                            Based on the pre-requisites that we are able to get from the 15 min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
-                                                    <template v-slot:opposite>
-                                                        <span>day 14</span>
-                                                    </template>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Draft the agreement</v-card-title>
-                                                        <v-card-text>
-                                                            We should work together to come up with a final document that is able to fulfill your educational needs. To move forward, we should agree, at least, on the following conditions:
-                                                            <br>
-                                                            <ul>
-                                                                <li>Venue</li>
-                                                                <li>Starting date</li>
-                                                                <li>Operations & Logistics</li>
-                                                                <li>Number of students</li>
-                                                                <li>Learning outcomes</li>
-                                                            </ul>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
-                                                    <template v-slot:opposite>
-                                                        <span>day 21</span>
-                                                    </template>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Receive final proposal</v-card-title>
-                                                        <v-card-text>
-                                                            After the document suits everyone’s needs, we will deliver a final
-                                                            proposal that all the above mentioned as well as:
-                                                            <br>
-                                                            <ul>
-                                                                <li>Support hours</li>
-                                                                <li>In case there is any different from the curriculum proposed by Thorly we will also include the new curriculum</li>
-                                                                <li>Final fees - having into consideration the appropriate discounts</li>
-                                                                <li>Legal documents necessary from both parties</li>
-                                                            </ul>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                            </v-timeline>
-                                            <v-timeline class="d-md-none mr-2 ml-n5" dense>
-                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Send us an email</v-card-title>
-                                                        <v-card-text>
-                                                            Talk to us via email and give us a brief explanation on what we could help you with.
-                                                            <br><br>
-                                                            <div class="text-right">
-                                                                <small>day 0</small>
-                                                            </div>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Schedule a call</v-card-title>
-                                                        <v-card-text>
-                                                            We will get back to you within 48h and give you options to
-                                                            schedule a 15 min call.
-                                                            <br><br>
-                                                            <div class="text-right">
-                                                                <small>day 2</small>
-                                                            </div>
-                                                        </v-card-text>
 
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Receive a proposal</v-card-title>
-                                                        <v-card-text>
-                                                            Based on the pre-requisites that we are able to get from the 15 min call we will send you a draft of an educational proposal to be iterated between your Thorly and your organisation.
-                                                            <br><br>
-                                                            <div class="text-right">
-                                                                <small>day 7</small>
-                                                            </div>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" right fill-dot small>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Draft the agreement</v-card-title>
-                                                        <v-card-text>
-                                                            We should work together to come up with a final document that
-                                                            is able to fulfill your educational needs. To move forward,
-                                                            we should agree, at least, on the following conditions:
-                                                            <br>
-                                                            <ul>
-                                                                <li>Venue</li>
-                                                                <li>Starting date</li>
-                                                                <li>Operations & Logistics</li>
-                                                                <li>Number of students</li>
-                                                                <li>Learning outcomes</li>
-                                                            </ul>
-                                                            <br>
-                                                            <div class="text-right">
-                                                                <small>day 14</small>
-                                                            </div>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                                <v-timeline-item color= "#2AB7CA" left fill-dot small>
-                                                    <v-card class="elevation-2">
-                                                        <v-card-title class="fix headline">Receive final proposal</v-card-title>
-                                                        <v-card-text>
-                                                            After the document suits everyone’s needs, we will deliver a final
-                                                            proposal that all the above mentioned as well as:
-                                                            <br>
-                                                            <ul>
-                                                                <li>Support hours</li>
-                                                                <li>In case there is any different from the curriculum proposed by Thorly we will also include the new curriculum</li>
-                                                                <li>Final fees - taking into consideration the appropriate discounts</li>
-                                                                <li>Legal documents necessary from both parties</li>
-                                                            </ul>
-                                                            <br><br>
-                                                            <div class="text-right">
-                                                                <small>day 21</small>
-                                                            </div>
-                                                        </v-card-text>
-                                                    </v-card>
-                                                </v-timeline-item>
-                                            </v-timeline>
-                                        </v-layout>
-                                    </v-container>
+                                <v-flex sm4 xs12>
+                                    <v-card>
+                                        <v-card-text class="text-center">
+                                            <v-icon color="#2C81D6" size="100" class="mt-6">mdi-database</v-icon>
+                                        </v-card-text>
+                                        <v-card-title primary-title class="fix layout justify-center mb-6">
+                                            <div class="fix display-1 text-center">Data Engineering</div>
+                                        </v-card-title>
+                                        <v-card-text>
+                                            <v-list
+                                                    three-line
+                                                    class="transparent"
+                                            >
+                                                <v-list-item>
+                                                    <v-list-item-content>
+                                                        <v-list-item-title>Content filtering</v-list-item-title>
+                                                        <v-list-item-subtitle>Set the content filtering level to restrict appts that can be downloaded</v-list-item-subtitle>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+
+                                                <v-list-item>
+                                                    <v-list-item-content>
+                                                        <v-list-item-title>Password</v-list-item-title>
+                                                        <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-list>
+
+                                        </v-card-text>
+                                    </v-card>
                                 </v-flex>
+
+                                <v-flex sm4 xs12>
+                                    <v-card>
+                                        <v-card-text class="text-center">
+                                            <v-icon color="#2C81D6" size="100" class="mt-6">mdi-chart-gantt</v-icon>
+                                        </v-card-text>
+                                        <v-card-title primary-title class="fix layout justify-center mb-6">
+                                            <div class="fix display-1 text-center">Data Science</div>
+                                        </v-card-title>
+                                        <v-card-text>
+                                            <v-list
+                                                    three-line
+                                                    class="transparent"
+                                            >
+                                                <v-list-item>
+                                                    <v-list-item-content>
+                                                        <v-list-item-title>Content filtering</v-list-item-title>
+                                                        <v-list-item-subtitle>Set the content filtering level to restrict appts that can be downloaded</v-list-item-subtitle>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+
+                                                <v-list-item>
+                                                    <v-list-item-content>
+                                                        <v-list-item-title>Password</v-list-item-title>
+                                                        <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-list>
+
+                                        </v-card-text>
+                                    </v-card>
+                                </v-flex>
+
                             </v-layout>
                         </v-container>
-                    </section>
+                    </v-flex>
 
-                  <section id="#future">
-                      <v-container>
-                          <v-layout
-                                  row
-                                  wrap
-                                  class="mt-12"
-                                  align-center
-                                  justify-center
-                          >
-                              <v-flex sm10 xs12>
-                                  <v-card
-                                          flat
-                                          class="transparent"
-                                  >
-                                      <v-card-title primary-title class="fix layout justify-center mb-12 ">
-                                          <div class="display-1">Thorly's Future</div>
-                                      </v-card-title>
-                                      <v-card-text>
-                                          <p class="body-1">
-                                              We are currently developing and testing the <b>most innovative and
-                                              personalized</b> way of teaching coding and increasing data literacy among
-                                              students and professionals. With this <b>AI-centered approach</b> built in
-                                              cooperation with Católica Lisbon School of Business & Economics we want
-                                              to ensure that each participant of our courses receives the specific way
-                                              of teaching that is best suitable for him or her. Thus, we will provide
-                                              our students with a <b>personalized curriculum</b> tailor-made to the individual
-                                              needs and interests of each participant based on several <b>AI-supported
-                                              diagnostic tests</b> along the course.<br><br>
+                </v-layout>
+                <v-btn v-if="windowHeight>500" class="body-1 mb-12" color="primary" x-large @click="goToSection('#contacts')">
+                  I need your services
+                </v-btn>
+            </v-container>
+            </v-parallax>
 
-                                              Nonetheless, we will retain the connection of our course content to
-                                              <b>real-life working problems</b> and empower our students to gain an edge in an
-                                              increasingly competitive professional world. We believe that our
-                                              innovative approach to education will be the best way to <b>increase data
-                                              literacy and coding knowledge</b> among students and professionals.<br><br>
-                                          </p>
-                                          <div class="title font-italic text-center">
-                                              Stay tuned and rethink education with us!
-                                          </div>
-                                      </v-card-text>
-                                  </v-card>
-                              </v-flex>
-                          </v-layout>
-                      </v-container>
-                  </section>
-
-                  <section id="#team">
-                    <v-container>
-                      <v-layout
-                              row
-                              wrap
-                              class="mt-12"
-                              align-center
-                              justify-center
+            <section id="#team">
+            <v-container class="text-center">
+                <v-layout
+                      row
+                      wrap
+                      class="my-12"
+                      align-center
+                      justify-center
+                >
+                    <v-flex md8 xs12>
+                        <v-card
+                              flat
+                              class="transparent justify-center text-center"
                       >
-                        <v-flex sm10 xs12>
-                          <v-card flat class="transparent">
-                            <v-card-title primary-title class="fix layout justify-center mb-8 ">
-                              <div class="display-1">Our team</div>
-                            </v-card-title>
-                          </v-card>
-                        </v-flex>
-                        <v-flex md10 xs12>
-                          <v-container>
-                              <v-layout row wrap align-start class="mb-8">
-                                <v-flex md4 xs12>
-                                    <v-card flat class="transparent">
-                                        <v-card-text class="text-center">
-                                            <v-avatar size="150">
-                                                <img src="./assets/img/faces/ricardo.jpeg" alt="Ricardo">
-                                            </v-avatar>
+                          <v-card-title primary-title class="justify-center fix layout mt-6 mb-12 ">
+                              <p class="display-2 text-center" style="font-weight: 600">Meet the team</p>
+                          </v-card-title>
+                          <v-card-text>
+                              <p class="text-center headline mb-6">
+                                  We are a mix of <b><u>business-oriented geeks & data-driven entrepreneurs</u></b> with a
+                                  <b style="color: #2C81D6">focus on technology, data, AI & education</b>.
+                                  These are the stories behind us. Nice to e-meet you.
+                              </p>
+                          </v-card-text>
+                      </v-card>
+                    </v-flex>
+                    <v-flex md10 xs12>
+                        <v-container grid-list-xl>
+                          <v-layout row wrap align-start>
+                            <v-flex v-for="person in people" md4 xs12>
+                                <v-hover
+                                        v-slot:default="{ hover }"
+                                        open-delay="200"
+                                >
+                                <v-card flat class="transparent pb-6">
+                                    <v-card-text class="text-center">
+                                        <v-avatar size="150">
+                                            <img :src="getImgUrl(person.photo)" :alt="person.photo">
+                                        </v-avatar>
+                                    </v-card-text>
+                                    <v-card-title primary-title class="fix layout justify-center">
+                                        <div class="fix headline text-center"> {{ person.name }}</div>
+                                    </v-card-title>
+                                    <div class="text-center">
+                                        <v-btn class="mr-1" icon color="#2C81D6"><v-icon size="24px">mdi-linkedin</v-icon></v-btn>
+                                        <v-btn class="mr-1" icon color="#2C81D6"><v-icon size="24px">mdi-instagram</v-icon></v-btn>
+                                        <v-btn icon color="#2C81D6"><v-icon size="24px">mdi-facebook</v-icon></v-btn>
+                                    </div>
+                                    <v-overlay
+                                            absolute
+                                            opacity=0.80
+                                            :value="hover"
+                                    >
+                                        <v-card-text class="text-center px-6">
+                                            {{ person.description }}
                                         </v-card-text>
-                                        <v-card-title primary-title class="fix layout justify-center">
-                                            <div class="fix headline text-center mb-n2">Ricardo Pereira</div>
-                                        </v-card-title>
-                                        <v-card-title class="fix layout justify-center">
-                                            <div class="fix text-center body-2 mb-4">CEO, Data Scientist &<br>Python developer</div>
-                                        </v-card-title>
-                                        <v-card-text>
-                                            Ricardo has co-founded several organisations and companies, to help
-                                            solving problems that are data related and enhancing different communities.
-                                            Currently teaching Python at Nova SBE (Portugal), Machine Learning at European Leadership University (Holland)
-                                            and Data Collection at Rumos, Ricardo has experienced different crowds and
-                                            tested different teaching methodologies. In the industry, Ricardo has been
-                                            contracting for two years, working closely with some of the biggest tech companies in
-                                            Portugal.
-                                        </v-card-text>
-                                    </v-card>
-                                </v-flex>
-                                <v-flex md4 xs12>
-                                <v-card flat class="transparent">
-                                  <v-card-text class="text-center">
-                                    <v-avatar size="150">
-                                      <img src="./assets/img/faces/nuno.jpeg" alt="Nuno">
-                                    </v-avatar>
-                                  </v-card-text>
-                                  <v-card-title primary-title class="fix layout justify-center">
-                                    <div class="fix headline text-center mb-n2">Nuno Reis</div>
-                                  </v-card-title>
-                                  <v-card-title class="fix layout justify-center">
-                                    <div class="fix text-center body-2 mb-4">COO, Data Scientist &<br>Python developer</div>
-                                  </v-card-title>
-                                  <v-card-text>
-                                    Nuno started his career as top student at Instituto Superior Técnico, where
-                                    he did research for two years and later decided to move to the industry.
-                                    He worked for three years as consultant at Teixeira Duarte. Meanwhile, he developed several
-                                    open source projects in-between for real-estate investment and commercial trades.
-                                    His former startup was focused on building a product to fight churn for
-                                    the financial industry as well as providing consulting in the areas of data science,
-                                    development and data architecture.
-                                  </v-card-text>
+                                    </v-overlay>
                                 </v-card>
-                              </v-flex>
-                                <v-flex md4 xs12 >
-                                <v-card flat class="transparent">
-                                  <v-card-text class="text-center">
-                                    <v-avatar size="150">
-                                      <img src="./assets/img/faces/luis.jpeg" alt="Luís">
-                                    </v-avatar>
-                                  </v-card-text>
-                                  <v-card-title primary-title class="fix layout justify-center">
-                                    <div class="fix headline text-center mb-n2">Luís Sousa</div>
-                                  </v-card-title>
-                                  <v-card-title class="fix layout justify-center">
-                                    <div class="fix text-center body-2 mb-4">CTO, Data Scientist &<br>full-stack developer</div>
-                                  </v-card-title>
-                                  <v-card-text>
-                                    Luís has been working with technology for more than 10 years. Currently he
-                                    is a Data Scientist at OutSystems and he is teaching Python, at post-graduate level
-                                    at Rumos. Besides Mathematics, Luís has been evolved with Physics and radiation
-                                    for the last 4 years, where he developed software to be deployed in Africa for
-                                    the oil and gas industry. Luís has been teaching since he left college, supervising students in
-                                    several Master's and PhD thesis and teaching different stacks and nationalities.
-                                  </v-card-text>
-                                </v-card>
-                              </v-flex>
-                              </v-layout>
-                              <v-layout row wrap align-start>
-                                  <v-flex md4 offset-md2 xs12>
-                                      <v-card flat class="transparent">
-                                          <v-card-text class="text-center">
-                                              <v-avatar size="150">
-                                                  <img src="./assets/img/faces/fabian.png" alt="Fabian">
-                                              </v-avatar>
-                                          </v-card-text>
-                                          <v-card-title primary-title class="fix layout justify-center">
-                                              <div class="fix headline text-center mb-n2">Fabian Hähn</div>
-                                          </v-card-title>
-                                          <v-card-title class="fix layout justify-center">
-                                              <div class="fix text-center body-2 mb-4">Business Developer</div>
-                                          </v-card-title>
-                                          <v-card-text>
-                                              Fabian has been working for several companies and state agencies in
-                                              Germany reaching from banking over experienced placement to financial
-                                              regulation. He has experienced Thorly’s teaching concept himself as a
-                                              student and is a prime example for the success of our courses. He uses
-                                              his strategic experience from his former jobs and his education from Nova
-                                              SBE in Portugal to develop Thorly’s business opportunities.
-                                          </v-card-text>
-                                      </v-card>
-                                  </v-flex>
-                                  <v-flex md4 xs12 >
-                                      <v-card flat class="transparent">
-                                          <v-card-text class="text-center">
-                                              <v-avatar size="150">
-                                                  <img src="./assets/img/faces/moritz.jpg" alt="Moritz">
-                                              </v-avatar>
-                                          </v-card-text>
-                                          <v-card-title primary-title class="fix layout justify-center">
-                                              <div class="fix headline text-center mb-n2">Moritz Vetter</div>
-                                          </v-card-title>
-                                          <v-card-title class="fix layout justify-center">
-                                              <div class="fix text-center body-2 mb-4">Business Developer</div>
-                                          </v-card-title>
-                                          <v-card-text>
-                                              Moritz studied in industrial engineering while working full-time at
-                                              Allianz, Germany’s market leader in the insurance industry. Supporting
-                                              microfinance institutions like Grameen Costa Rica and Nobel Peace Prize
-                                              winning Grameen Bank, he strategized a novel credit scoring approach with
-                                              psychometric data. During his master in economics at Católica-Lisbon SBE,
-                                              he interned at a private equity company Odewald and he worked as a full-time
-                                              researcher quantifying the abnormal returns of lobbyism. He is currently
-                                              a Data Analyst at IQVIA.
-                                          </v-card-text>
-                                      </v-card>
-                                  </v-flex>
-                              </v-layout>
-                          </v-container>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </section>
-
-                  <section id="#contact">
-                      <v-container>
-                          <v-layout
-                                  wrap
-                                  justify-center
-                                  class="mt-12">
-                              <v-flex sm10 xs12>
-                                  <v-card flat class="transparent">
-                                      <v-card-title primary-title class="fix layout justify-center mb-12">
-                                          <div class="display-1">Work with us</div>
-                                      </v-card-title>
-                                      <v-card-text>
-                                          <p class="text-center body-1">
-                                              Reach out and let us know what your needs are. We will get back to you and schedule a
-                                              call with your team ASAP.
-                                          </p>
-                                      </v-card-text>
-                                      <v-layout
-                                              row
-                                              wrap
-                                              justify-center>
-                                          <v-flex lg3 md5 sm7 xs10>
-                                              <v-card flat class="text-right transparent mt-n5">
-                                                  <v-list class="transparent">
-                                                      <v-list-item>
-                                                          <v-list-item-action>
-                                                              <v-icon color= "#2AB7CA">mdi-map-marker</v-icon>
-                                                          </v-list-item-action>
-                                                          <v-list-item-content>
-                                                                  <v-list-item-title class="grey--text">Lisbon, Portugal</v-list-item-title>
-                                                          </v-list-item-content>
-                                                      </v-list-item>
-                                                      <v-list-item>
-                                                          <v-list-item-action>
-                                                              <v-icon color= "#2AB7CA">mdi-email</v-icon>
-                                                          </v-list-item-action>
-                                                          <v-list-item-content>
-                                                                  <v-list-item-title class="grey--text">info@thorly.education</v-list-item-title>
-                                                          </v-list-item-content>
-                                                      </v-list-item>
-                                                  </v-list>
-                                              </v-card>
-                                          </v-flex>
-                                      </v-layout>
-                                  </v-card>
-                              </v-flex>
+                                </v-hover>
+                            </v-flex>
                           </v-layout>
-                      </v-container>
-                  </section>
+                        </v-container>
+                    </v-flex>
 
-              </v-card>
+                </v-layout>
+                <v-btn align-center v-if="windowHeight>500" class="body-1 mb-12" color="primary" x-large @click="goToSection('#contacts')">
+                    I want to meet the team
+                </v-btn>
+            </v-container>
+            </section>
 
-              <v-parallax src='./assets/blue.jpg' height="100">
-                  <v-container>
-                      <v-layout
-                              column
-                              align-center
-                              class="white--text"
-                      >
-                          <v-app-bar flat class="transparent">
-                              <v-toolbar-items>
-                                  <v-btn text color="white" @click="goToSection('#home')" class="mt-4">
-                                      Thorly<v-icon small>mdi-copyright</v-icon>2019
-                                  </v-btn>
-                              </v-toolbar-items>
-                          </v-app-bar>
-                      </v-layout>
-                  </v-container>
-              </v-parallax>
-  </v-app>
+        </v-card>
+
+        <v-parallax id="#contacts" src='./assets/back_4.png' height="100%">
+            <v-container class="text-center mt-4" grid-list-xl>
+                <v-layout row wrap align-start class="text-center text-md-left mb-4">
+                    <v-flex sm12 md3>
+                      <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Our status</p>
+                      <p>Currently working remote. We love to brainstrom, have good conversations and discuss
+                          new ideas. Feel free to get in touch. </p>
+                    </v-flex>
+                    <v-flex xs6 sm4 md2>
+                      <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">About</p>
+                      <p><a href="#!" style="color: inherit; text-decoration: none">Work with us</a></p>
+                      <p><a href="#!" style="color: inherit; text-decoration: none">Join the team</a></p>
+                      <p><a href="#!" style="color: inherit; text-decoration: none">Read our blog</a></p>
+                    </v-flex>
+                    <v-flex xs6 sm4 md2>
+                        <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Office</p>
+                        <p>Rua da Prata, 80<br>1100-420 Lisboa<br>Portugal</p>
+                    </v-flex>
+                    <v-flex xs12 sm4 md3>
+                      <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Contact</p>
+                      <p>info@thorly.co</p>
+                      <p>+ 351 918 548 827</p>
+                      <p>
+                          <v-btn class="white--text mr-1" icon><v-icon size="24px">mdi-linkedin</v-icon></v-btn>
+                          <v-btn class="white--text mr-1" icon><v-icon size="24px">mdi-instagram</v-icon></v-btn>
+                          <v-btn class="white--text mr-1" icon><v-icon size="24px">mdi-facebook</v-icon></v-btn>
+                      </p>
+                    </v-flex>
+                </v-layout>
+                <hr />
+                <v-row class="justify-center">
+                      <v-btn color="white" text class="text-center mt-2">THORLY &copy; 2020 - Privacy policy</v-btn>
+                </v-row>
+            </v-container>
+        </v-parallax>
+
+    </v-app>
 </template>
 
 <script>
@@ -720,7 +417,12 @@ export default {
         windowHeight: 0,
         show1: true,
         show2: false,
-        scrolled: false
+        scrolled: false,
+        people: [
+            {name: 'Ricardo Pereira', photo: "ricardo", description: 'Ricardo has co-founded several organisations and companies, to help solving problems that are data related and enhancing different communities. Currently he is teaching Python at Nova SBE and Data science at ELU and Rumos. Ricardo has been contracting for two years, working closely with some of the biggest tech companies in PT.'},
+            {name: 'Nuno Reis', photo: "nuno", description: 'Nuno started his career as top student at Técnico Lisboa, where he did research before working for 3 years at Teixeira Duarte. Then he moved on to Data Science and has already founded a fintech and an edtech startup while he was doing Data Science & Data Architecture consultancy. He is currently teaching Data Science fundamentals at EDIT.'},
+            {name: 'Luís Sousa', photo: "luis", description: 'Luís has been working as a full-stack developer for more than 10 years. Besides Mathematics, he has been evolved with Physics and radiation for the last 4 years, where he developed software to be deployed in Africa for the oil and gas industry. Lately, he was a Lead Data Scientist at OutSystems and he is teaching Python at Rumos.'}
+        ]
     }
   },
   methods: {
@@ -735,10 +437,14 @@ export default {
           this.windowHeight = window.innerHeight;
       },
       handleScroll () {
-          this.scrolled = window.scrollY > (window.innerHeight-130);
+          this.scrolled = window.scrollY > (window.innerHeight-100);
       },
       openForm: function () {
           window.open("https://share.hsforms.com/1YATh4nJpRzGRDOpSyNdhaQ3vi5m", "_blank");
+      },
+      getImgUrl(pet) {
+          var images = require.context('./assets/img/faces/', false, /\.jpeg$/)
+          return images('./' + pet + ".jpeg")
       }
   },
     created: function() {
@@ -767,6 +473,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-card--reveal {
+    align-items: center;
+    bottom: 0;
+    justify-content: center;
+    opacity: .9;
+    position: center;
+    width: 100%;
+}
 .main{
     background: #FFFFFF;
     position: relative;
@@ -774,11 +488,11 @@ export default {
 }
 
 .main-raised{
-    margin: -60px 10px -30px;
+    margin: 0px 0px -0px;
 }
 
 .main-raised-xs{
-    margin: -30px 0px -30px;
+    margin: -0px 0px -0px;
 }
 
 .fix {
@@ -795,8 +509,8 @@ export default {
 .nav {
     position: fixed;
     top: 0px;
-    left: 10px;
-    right: 10px;
+    left: 0px;
+    right: 0px;
     z-index: 4 !important;
     background-color: #2AB7CA;
 }
