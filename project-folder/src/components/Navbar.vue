@@ -18,15 +18,16 @@
                         alt="Thorly"
                         class="v-img-cursor hidden-sm-and-up"></v-img>
             </router-link>
+
         </v-toolbar-title>
         <div class="flex-grow-1"></div>
         <v-toolbar-items class="hidden-sm-and-down align-center">
             <router-link to="/"><v-btn text color="white">Home</v-btn></router-link>
             <router-link to="/services"><v-btn text color="white">Services</v-btn></router-link>
             <router-link to="/about"><v-btn text color="white">About</v-btn></router-link>
-            <router-link to="/contact"><v-btn color="primary" class="ml-4">
-                <v-icon color="white" class="mr-2">mdi-email</v-icon>Get in touch
-            </v-btn></router-link>
+            <router-link to="/contact">
+                <v-btn color="primary" class="ml-4"><v-icon color="white" class="mr-2">mdi-email</v-icon>Get in touch</v-btn>
+            </router-link>
         </v-toolbar-items>
         <div class="hidden-md-and-up text-center">
             <v-menu bottom left>
@@ -52,6 +53,7 @@
 </template>
 
 <script>
+
     export default {
         name: "Navbar",
         props: ['background','height'],
@@ -59,7 +61,7 @@
             getBackUrl(pet) {
                 var images = require.context('../assets/', false, /\.png$/)
                 return images('./' + pet + ".png")
-            },
+            }
         }
     }
 </script>

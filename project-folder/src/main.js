@@ -7,6 +7,9 @@ import Home from './views/Home';
 import About from './views/About';
 import Services from './views/Services';
 import Strategy from './views/Strategy';
+import Consulting from './views/Consulting';
+import Development from './views/Development';
+import Training from './views/Training';
 
 Vue.use(VueRouter);
 
@@ -30,6 +33,21 @@ const routes = [
     path: '/services/strategy',
     component: Strategy,
     name: "strategy"
+  },
+  {
+    path: '/services/consulting',
+    component: Consulting,
+    name: "consulting"
+  },
+  {
+    path: '/services/development',
+    component: Development,
+    name: "development"
+  },
+  {
+    path: '/services/training',
+    component: Training,
+    name: "training"
   }
 ];
 

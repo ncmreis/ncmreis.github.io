@@ -74,11 +74,11 @@
       <section id="process" style="background-color: #F6F9FD" >
         <v-container class="text-center">
           <v-layout
-                  row
-                  wrap
-                  class="my-12 white--text"
-                  align-center
-                  justify-center
+              row
+              wrap
+              class="my-12 white--text"
+              align-center
+              justify-center
           >
 
             <v-flex md10 xs12 class="mt-12">
@@ -99,18 +99,16 @@
               <v-container grid-list-xl>
                 <v-layout row wrap align-start>
                   <v-flex v-for="challenge in challenges" md4 sm6 xs12>
-                      <v-card hover outlined class="transparent">
-                          <v-responsive :aspect-ratio="7/6">
-                        <v-card-text class="overline pb-0 red--text" style="opacity: 0.5">
+                      <v-card hover outlined class="transparent py-6">
+                        <v-card-title class="headline fix layout justify-center pb-0">
+                          <b style='color: #2C81D6'>{{ challenge.solution }}</b>
+                        </v-card-title>
+                        <v-card-text class="overline py-0 red--text" style="opacity: 0.5">
                           <s>{{ challenge.name }}</s>
                         </v-card-text>
-                          <v-card-title class="headline fix layout justify-center pt-0">
-                              <b style='color: #2C81D6'>{{ challenge.solution }}</b>
-                          </v-card-title>
-                        <v-card-text class="body-2 text-left text-justify">
+                        <v-card-text fill-height class="subtitle-1 text-left text-justify">
                           {{ challenge.description }}
                         </v-card-text>
-                          </v-responsive>
                       </v-card>
                   </v-flex>
                 </v-layout>
@@ -134,12 +132,12 @@
                     <v-flex md10 xs12 class="mt-12">
                         <v-card flat class="transparent">
                             <v-card-title primary-title class="justify-center fix layout mb-12">
-                                <p class="display-2 text-center" style="font-weight: 600">Just another project...</p>
+                                <p class="display-2 text-center" style="font-weight: 600">Yet another project...</p>
                             </v-card-title>
                             <v-card-text>
                                 <p class="text-center headline my-12">
                                     We have experience on working for multiple domains, <b style='color: #2C81D6'>independently on the industry, department, data, techniques or tools</b>.
-                                    We believe <b><u>this approach sets us apart</u></b> as we can cross-apply the best practices between all of them.
+                                    We believe <b><u>this sets us apart</u></b> as we can cross-apply the best practices between all of them.
                                 </p>
                             </v-card-text>
                         </v-card>
@@ -197,7 +195,7 @@
         challenges: [
             {name: 'One size fits all', solution: 'Customized', description: 'We do believe in products or mass solutions but we know these are not efficient on improving companies\' life. We just work on tailored solutions bearing in mind your problems, needs, team and business goals.'},
             {name: 'Big & over-planned', solution: 'Short iteration cycles', description: 'Our methodology goes against any waterfall or big & over-planned models, because we don\'t believe on blind and non-deep decisions. Our short & iterative process allows us to constantly reflect and adapt the solution.'},
-            {name: 'End product obsession', solution: 'Prototyping first', description: 'We go against any mindset obsession with the final product. We start by working on a POC and constantly test it instead of spending time with a massive solution that can lead to misuse and waste of time and money.'},
+            {name: 'End product obsession', solution: 'Prototyping first', description: 'We run away from any mindset obsession with the final product. We start by working on a POC and constantly test it instead of spending time with a massive solution that can lead to misuse and waste of time and money.'},
             {name: 'Complex & jargonized', solution: 'Simple & explainable', description: 'We know Data Scientists often sins by opting for black-box, jargon-filled and complex over low hanging-fruit, explainable and simple. Our experience takes us for usable and comprehensible solutions for anyone.'},
             {name: 'Outsource dependency', solution: 'In-house knowledge', description: 'As independent people, we believe companies should be free to manage on their own our work after we leave. That\'s why we work close to your team, passing along our knowledge, and deploy fully-documented solutions on your side.'},
             {name: 'For decision makers', solution: 'User-centered design', description: 'Our startup world experience showed us how people fails miserably on building tools based on "feelings and thoughts". It makes us state that any product or tool we get hands on are designed with end-users consumed on the process.'},

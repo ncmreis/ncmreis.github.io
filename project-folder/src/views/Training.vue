@@ -157,7 +157,7 @@
         <Footer/>
 
     </div>
-    
+
 </template>
 
 <script>
@@ -166,7 +166,7 @@
     import Footer from '../components/Footer';
 
     export default {
-        name: 'Strategy',
+        name: 'Training',
         components: {
             Header,
             Navbar,
@@ -186,10 +186,10 @@
                     {name: 'For decision makers', solution: 'User-centered design', description: 'Our startup world experience showed us how people fails miserably on building tools based on "feelings and thoughts". It makes us state that any product or tool we get hands on are designed with end-users consumed on the process.'},
                 ],
                 services: [
-                    //{name: 'Strategy', photo: 'strategy', description: 'Define a plan for your data considering multiple approaches', largeDescription: 'You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business.'},
+                    {name: 'Strategy', photo: 'strategy', description: 'Define a plan for your data considering multiple approaches', largeDescription: 'You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business.'},
                     {name: 'Consulting', photo: 'consulting', description: 'Build data-driven insights to speed up your business potential', largeDescription: 'Are you looking to solve a specific business problem or make a better informed decision with data? We work with Data Science & Visualizations most modern techniques to get data-insights and help you solve those challenges with data.'},
                     {name: 'Development', photo: 'development', description: 'Design a tool/product to take advantage from your data', largeDescription: 'Do you have an idea to design and build an end-to-end tool or product with data science or engineering needs? We have experience on it using a fast, iterative and "prototype first" mindset to build it for the end-users together with your team '},
-                    {name: 'Training', photo: 'training', description: "Increase your team's data know-how with a tailored academy", largeDescription: "Are you willing to increase your team's data literacy and you believe data should be in the heart of your team decisions? As programming & data science professors, we have already create tailored academies and workshops for our partners."}
+                    //{name: 'Training', photo: 'training', description: "Increase your team's data know-how with a tailored academy", largeDescription: "Are you willing to increase your team's data literacy and you believe data should be in the heart of your team decisions? As programming & data science professors, we have already create tailored academies and workshops for our partners."}
                 ],
                 types: [
                     {name: 'Industry or Department', photo: 'industry_department', description: 'We worked for multiple industries and/or across many departments. This allows us to cross best knowledge & practices between all.'},
