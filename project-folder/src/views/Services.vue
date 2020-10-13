@@ -95,20 +95,22 @@
               </v-card>
             </v-flex>
 
-            <v-flex md12 xs12>
+            <v-flex md10 sm12 xs12>
               <v-container grid-list-xl>
                 <v-layout row wrap align-start>
                   <v-flex v-for="challenge in challenges" md4 sm6 xs12>
-                      <v-card flat class="transparent">
-                        <v-card-text class="overline py-0">
+                      <v-card hover outlined class="transparent">
+                          <v-responsive :aspect-ratio="7/6">
+                        <v-card-text class="overline pb-0 red--text" style="opacity: 0.5">
                           <s>{{ challenge.name }}</s>
                         </v-card-text>
                           <v-card-title class="headline fix layout justify-center pt-0">
                               <b style='color: #2C81D6'>{{ challenge.solution }}</b>
                           </v-card-title>
-                        <v-card-text class="subtitle-1">
+                        <v-card-text class="body-2 text-left text-justify">
                           {{ challenge.description }}
                         </v-card-text>
+                          </v-responsive>
                       </v-card>
                   </v-flex>
                 </v-layout>
@@ -132,7 +134,7 @@
                     <v-flex md10 xs12 class="mt-12">
                         <v-card flat class="transparent">
                             <v-card-title primary-title class="justify-center fix layout mb-12">
-                                <p class="display-2 text-center" style="font-weight: 600">Our competitive advantage</p>
+                                <p class="display-2 text-center" style="font-weight: 600">Just another project...</p>
                             </v-card-title>
                             <v-card-text>
                                 <p class="text-center headline my-12">
@@ -193,23 +195,23 @@
         windowHeight: 0,
         scrolled: false,
         challenges: [
-            {name: 'One size fits all', solution: 'Costumized', description: 'Boost the data literacy of your internal team'},
-            {name: 'Big & over-planned', solution: 'Short iteration cycles', description: 'Boost the data literacy of your internal team'},
-            {name: 'Final product obsession', solution: 'Prototyping first', description: 'Boost the data literacy of your internal team'},
-            {name: 'Complex & jargonized', solution: 'Simple and explainable', description: 'Boost the data literacy of your internal team'},
-            {name: 'Outsource dependency', solution: 'In-house knowledge', description: 'Boost the data literacy of your internal team'},
-            {name: 'For decision makers', solution: 'User-centered design', description: 'Boost the data literacy of your internal team'},
+            {name: 'One size fits all', solution: 'Customized', description: 'We do believe in products or mass solutions but we know these are not efficient on improving companies\' life. We just work on tailored solutions bearing in mind your problems, needs, team and business goals.'},
+            {name: 'Big & over-planned', solution: 'Short iteration cycles', description: 'Our methodology goes against any waterfall or big & over-planned models, because we don\'t believe on blind and non-deep decisions. Our short & iterative process allows us to constantly reflect and adapt the solution.'},
+            {name: 'End product obsession', solution: 'Prototyping first', description: 'We go against any mindset obsession with the final product. We start by working on a POC and constantly test it instead of spending time with a massive solution that can lead to misuse and waste of time and money.'},
+            {name: 'Complex & jargonized', solution: 'Simple & explainable', description: 'We know Data Scientists often sins by opting for black-box, jargon-filled and complex over low hanging-fruit, explainable and simple. Our experience takes us for usable and comprehensible solutions for anyone.'},
+            {name: 'Outsource dependency', solution: 'In-house knowledge', description: 'As independent people, we believe companies should be free to manage on their own our work after we leave. That\'s why we work close to your team, passing along our knowledge, and deploy fully-documented solutions on your side.'},
+            {name: 'For decision makers', solution: 'User-centered design', description: 'Our startup world experience showed us how people fails miserably on building tools based on "feelings and thoughts". It makes us state that any product or tool we get hands on are designed with end-users consumed on the process.'},
         ],
         services: [
-          {name: 'Strategy', photo: 'strategy', description: 'Define a plan for your data by consider different approaches', largeDescription: 'You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business data.'},
-          {name: 'Consulting', photo: 'consulting', description: 'Build data-driven insights to speed up your business potential', largeDescription: ''},
-          {name: 'Development', photo: 'development', description: 'Design a tool/product to take advantage from your data', largeDescription: ''},
-          {name: 'Training', photo: 'training', description: "Increase your team's data know-how with a tailored academy", largeDescription: ''}
+          {name: 'Strategy', photo: 'strategy', description: 'Define a plan for your data considering multiple approaches', largeDescription: 'You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business.'},
+          {name: 'Consulting', photo: 'consulting', description: 'Build data-driven insights to speed up your business potential', largeDescription: 'Are you looking to solve a specific business problem or make a better informed decision with data? We work with Data Science & Visualizations most modern techniques to get data-insights and help you solve those challenges with data.'},
+          {name: 'Development', photo: 'development', description: 'Design a tool/product to take advantage from your data', largeDescription: 'Do you have an idea to design and build an end-to-end tool or product with data science or engineering needs? We have experience on it using a fast, iterative and "prototype first" mindset to build it for the end-users together with your team '},
+          {name: 'Training', photo: 'training', description: "Increase your team's data know-how with a tailored academy", largeDescription: "Are you willing to increase your team's data literacy and you believe data should be in the heart of your team decisions? As programming & data science professors, we have already create tailored academies and workshops for our partners."}
         ],
           types: [
-              {name: 'Industries or Departments', photo: 'industry_department', description: 'We work for any industry and/or across multiple departments. This allows us to cross knowledge and best practices between these.'},
-              {name: 'Data types or sizes', photo: 'data', description: 'As we have experienced many kinds of data, we are able to work with any size or type of data you have.'},
-              {name: 'Techniques or Tools', photo: 'techniques_tools', description: 'As experts on data science techniques used to deal with problems where no tools exists, we have experience developing our own tools & techniques  '},
+              {name: 'Industry or Department', photo: 'industry_department', description: 'We worked for multiple industries and/or across many departments. This allows us to cross best knowledge & practices between all.'},
+              {name: 'Data type or size', photo: 'data', description: 'We have experienced many kinds of data in multiple situations which allows us to work with any size or type of data you have.'},
+              {name: 'Technique or Tool', photo: 'techniques_tools', description: 'As data experts used to deal with problems where no tools exists, we have experience developing our own tools & techniques.'},
               ],
 
       };

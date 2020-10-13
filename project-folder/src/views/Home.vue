@@ -206,7 +206,7 @@
                 windowHeight: 0,
                 scrolled: false,
                 services: [
-                    {name: 'Strategy', photo: 'strategy', description: 'Define a plan for your data by consider different approaches'},
+                    {name: 'Strategy', photo: 'strategy', description: 'Define a plan for your data considering multiple approaches'},
                     {name: 'Consulting', photo: 'consulting', description: 'Build data-driven insights to speed up your business potential'},
                     {name: 'Development', photo: 'development', description: 'Design a tool/product to take advantage from your data'},
                     {name: 'Training', photo: 'training', description: "Increase your team's data know-how with a tailored academy"}
