@@ -252,29 +252,6 @@
     </v-card>
 
     <Footer />
-
-    <v-flex md10 sm12 xs12>
-      <v-container grid-list-xl>
-        <v-layout row wrap align-start>
-          <v-flex v-for="challenge in challenges" md4 sm6 xs12>
-            <v-card hover outlined class="transparent py-6">
-              <v-card-title class="headline fix layout justify-center pb-0">
-                <b style="color: #2C81D6">{{ challenge.solution }}</b>
-              </v-card-title>
-              <v-card-text class="overline py-0 red--text" style="opacity: 0.5">
-                <s>{{ challenge.name }}</s>
-              </v-card-text>
-              <v-card-text
-                fill-height
-                class="subtitle-1 text-left text-justify"
-              >
-                {{ challenge.description }}
-              </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-flex>
   </div>
 </template>
 

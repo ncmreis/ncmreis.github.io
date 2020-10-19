@@ -16,7 +16,41 @@
                     height="70"
             ></Navbar>
 
-            <section id="#1">
+            <section id="#lisbon">
+                <v-container class="text-center">
+                    <v-layout
+                            row
+                            wrap
+                            class="my-12 white--text"
+                            align-center
+                            justify-center
+                    >
+                        <v-flex md10 xs12 class="mt-12">
+                            <v-card flat class="transparent">
+                                <v-card-title primary-title class="justify-center fix layout mb-6">
+                                    <p class="display-2 text-center" style="font-weight: 600">From Lisbon to the World</p>
+                                </v-card-title>
+                                <v-img max-height="250" contain src="../assets/lisbon.png" class="text-center align-end"></v-img>
+                                <v-card-text>
+                                    <p class="text-center headline">
+                                        Born and raised in Lisbon, <b style="color: #2C81D6">we studied in the top universities and launched our previous companies in town</b>
+                                        but have already <b>worked for USA, Macao, Brazil, Peru, Algeria, Angola and many others</b>.
+                                        Currently working remote, we have our office in the Downtown and remain proudly a <b>Lisbon-based company</b>. Be welcome to visit us!
+
+                                    </p>
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+                    <div class=" mb-12">
+                        <v-btn class="body-1" color="primary" x-large to="/about">
+                            Reach out
+                        </v-btn>
+                    </div>
+                </v-container>
+            </section>
+
+            <section id="#1" style="background-color: #F6F9FD">
                 <v-container class="text-center">
                     <v-layout
                             row
@@ -31,7 +65,54 @@
                                     class="transparent justify-center text-center"
                             >
                                 <v-card-title primary-title class="justify-center fix layout mt-6 mb-12 ">
-                                    <p class="display-2 text-center" style="font-weight: 600">The DNA behind business</p>
+                                    <p class="display-2 text-center" style="font-weight: 600">The DNA behind Thorly</p>
+                                </v-card-title>
+                                <v-card-text>
+                                    <p class="text-center headline mb-6">
+                                        We believe a team is all about <b style="color: #2C81D6">people with the right values</b> and it is the key-factor
+                                        to create the <b>open-minded, friendly and creative environment</b> we have.
+                                        These are our <b>North stars</b>.
+                                    </p>
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                        <v-flex md10 xs12>
+                            <v-container grid-list-xl>
+                                <v-layout row wrap class="d-flex align-stretch">
+                                    <v-flex v-for="value in values" md4 sm6 xs12 >
+                                        <v-card dark style="background-color: #2C81D6" class="fill-height elevation-5">
+                                            <v-card-title class="fix text-left">
+                                                {{ value.name }}
+                                            </v-card-title>
+                                            <v-card-text class="text-left subtitle-1">
+                                                {{ value.description }}
+                                            </v-card-text>
+                                        </v-card>
+                                    </v-flex>
+                                </v-layout>
+                            </v-container>
+                        </v-flex>
+
+                    </v-layout>
+                </v-container>
+            </section>
+
+            <section id="#team">
+                <v-container class="text-center">
+                    <v-layout
+                            row
+                            wrap
+                            class="my-12"
+                            align-center
+                            justify-center
+                    >
+                        <v-flex md10 xs12>
+                            <v-card
+                                    flat
+                                    class="transparent justify-center text-center"
+                            >
+                                <v-card-title primary-title class="justify-center fix layout mt-6 mb-12 ">
+                                    <p class="display-2 text-center" style="font-weight: 600">The people behind the DNA</p>
                                 </v-card-title>
                                 <v-card-text>
                                     <p class="text-center headline mb-6">
@@ -89,40 +170,6 @@
                 </v-container>
             </section>
 
-            <section id="#lisbon" style="background-color: #F6F9FD">
-                <v-container class="text-center">
-                    <v-layout
-                            row
-                            wrap
-                            class="my-12 white--text"
-                            align-center
-                            justify-center
-                    >
-                        <v-flex md10 xs12 class="mt-12">
-                            <v-card flat class="transparent">
-                                <v-card-title primary-title class="justify-center fix layout mb-6">
-                                    <p class="display-2 text-center" style="font-weight: 600">From Lisbon to the World</p>
-                                </v-card-title>
-                                <v-img max-height="250" contain src="../assets/lisbon.png" class="text-center align-end"></v-img>
-                                <v-card-text>
-                                    <p class="text-center headline">
-                                        Born and raised in Lisbon, <b style="color: #2C81D6">we studied in the top notch universities and launched our previous companies in the town</b>.
-                                        Currently working remote, we have our office in the Downtown and remain proudly a <b>Lisbon-based company</b>. Be welcome to visit us!
-
-                                    </p>
-                                </v-card-text>
-                            </v-card>
-                        </v-flex>
-                    </v-layout>
-                    <div class=" mb-12">
-                        <v-btn class="body-1" color="primary" x-large to="/about">
-                            Reach out to us
-                        </v-btn>
-                    </div>
-                </v-container>
-            </section>
-
-
         </v-card>
 
         <Footer/>
@@ -151,6 +198,14 @@
                         {name: 'Ricardo Pereira', position: 'The pragmatic strategist', photo: "ricardo", description: 'Ricardo has co-founded several organisations and companies, to help solving problems that are data related and enhancing different communities. Now he is teaching Python at Nova SBE and Data science at ELU and Rumos. Ricardo has been contracting for two years, working closely with some of the biggest tech companies in PT.'},
                         {name: 'Nuno Reis', position: 'The outgoing salesman', photo: "nuno", description: 'Nuno started his career as top student at Técnico Lisboa, where he did research before working for 3 years in the industry. Then he moved on to Data Science and has already founded two startups while he was doing Data Science & Data Architecture consultancy. He is currently teaching Data Science fundamentals at EDIT.'},
                         {name: 'Luís Sousa', position: 'The no-filter developer', photo: "luis", description: 'Luís has been working as a full-stack developer for more than 10 years. Besides Mathematics, he has been evolved with Physics and Radiation in the last years, where he developed software to be deployed in Africa for the oil and gas industry. Lately, he was a Lead Data Scientist at OutSystems and he is teaching Python at Rumos.'}
+                    ],
+                    values: [
+                        {name: 'No hard feelings', description: 'Transparency, transparency and... Transparency with constructive criticism is allowed and welcome!'},
+                        {name: 'We love troubles', description: 'Which means we need to be open-minded and flexible to be constantly unconfortable chasing solutions.'},
+                        {name: "You'll never walk alone", description: 'Nothing more correct! "Not my problem" is not in our dictionary. Be a helper and you will be Thorly loved.'},
+                        {name: 'Be a student forever', description: 'But for every student, a professor is needed... One said: True love is knowledge sharing!'},
+                        {name: 'Brainstormers', description: 'New ideas are key to go bigger so to be an idiot is very much blessed and appreciated in our team.'},
+                        {name: 'Optimists only', description: 'The world is colorful, color means life and life means... Yeah, this is rubbish but we get bored with pessimism.'}
                     ]
                 };
             },
