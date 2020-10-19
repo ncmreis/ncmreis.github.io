@@ -16,7 +16,7 @@
                     height="70"
             ></Navbar>
 
-            <section id="#team">
+            <section id="#1">
                 <v-container class="text-center">
                     <v-layout
                             row
@@ -31,13 +31,13 @@
                                     class="transparent justify-center text-center"
                             >
                                 <v-card-title primary-title class="justify-center fix layout mt-6 mb-12 ">
-                                    <p class="display-2 text-center" style="font-weight: 600">The brains behind business</p>
+                                    <p class="display-2 text-center" style="font-weight: 600">The DNA behind business</p>
                                 </v-card-title>
                                 <v-card-text>
                                     <p class="text-center headline mb-6">
-                                        We are a mix of <b><u>business-oriented geeks & data-driven entrepreneurs</u></b> with a
-                                        <b style="color: #2C81D6">focus on tech, data, AI & education</b>.
-                                        These are the stories behind us. Nice to e-meet you.
+                                        We are a mix of <b>data-driven ex-startup founders</b> and
+                                        <b>business-oriented top talent in Engineering & Data Science</b>,
+                                        with a focus on <b style="color: #2C81D6">tech, data, AI & education</b>. Nice to e-meet you.
                                     </p>
                                 </v-card-text>
                             </v-card>
@@ -84,8 +84,41 @@
 
                     </v-layout>
                     <v-btn align-center class="body-1 mb-12" color="primary" x-large to="/about">
-                        Know more about us
+                        Join us!
                     </v-btn>
+                </v-container>
+            </section>
+
+            <section id="#lisbon" style="background-color: #F6F9FD">
+                <v-container class="text-center">
+                    <v-layout
+                            row
+                            wrap
+                            class="my-12 white--text"
+                            align-center
+                            justify-center
+                    >
+                        <v-flex md10 xs12 class="mt-12">
+                            <v-card flat class="transparent">
+                                <v-card-title primary-title class="justify-center fix layout mb-6">
+                                    <p class="display-2 text-center" style="font-weight: 600">From Lisbon to the World</p>
+                                </v-card-title>
+                                <v-img max-height="250" contain src="../assets/lisbon.png" class="text-center align-end"></v-img>
+                                <v-card-text>
+                                    <p class="text-center headline">
+                                        Born and raised in Lisbon, <b style="color: #2C81D6">we studied in the top notch universities and launched our previous companies in the town</b>.
+                                        Currently working remote, we have our office in the Downtown and remain proudly a <b>Lisbon-based company</b>. Be welcome to visit us!
+
+                                    </p>
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+                    <div class=" mb-12">
+                        <v-btn class="body-1" color="primary" x-large to="/about">
+                            Reach out to us
+                        </v-btn>
+                    </div>
                 </v-container>
             </section>
 

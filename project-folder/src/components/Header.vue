@@ -1,7 +1,7 @@
 <template>
     <v-parallax src='../assets/back_4.png'  id="#home" :height="windowHeight">
 
-        <Navbar height="80"></Navbar>
+        <Navbar height="70"></Navbar>
 
         <v-container class="justify-center fill-height mb-0">
             <v-flex md8 xs12>
@@ -11,29 +11,32 @@
                         justify-center
                         class="white--text d-flex flex-grow-1"
                 >
-                    <h1 style="font-size:350%; font-weight: 600" class="hidden-xs-only">
-                        {{ title }}</h1>
 
-                    <h2 class="mt-10 hidden-xs-only" style="font-weight:400">
-                        {{ descriptionInitial }}<b style='color: #2C81D6'>{{' ' + descriptionBlue + ' '}}</b> {{ descriptionFinal }}</h2>
+                    <div v-if="windowHeight<500 | $vuetify.breakpoint.xs">
+                        <h1 style="font-size:225%; font-weight: 600">{{ title }}</h1>
 
-                    <v-btn align-center class="hidden-xs-only body-1 mt-10" color="primary" x-large @click="goToSection('#1')">
-                        {{ button }}
-                    </v-btn>
+                        <v-col class="d-flex align-stretch"></v-col>
 
-                    <h1 style="font-size:225%; font-weight: 600" class="hidden-sm-and-up">
-                        {{ title }}</h1>
+                        <h2 class="body-1">
+                            {{ descriptionInitial }}<b style='color: #2C81D6'>{{' ' + descriptionBlue + ' '}}</b> {{ descriptionFinal }}</h2>
 
-                    <v-col class="d-flex align-stretch"></v-col>
+                        <v-col v-if="windowHeight>400" class="d-flex align-stretch"></v-col>
 
-                    <h2 class="body-1 hidden-sm-and-up">
-                        {{ descriptionInitial }}<b style='color: #2C81D6'>{{' ' + descriptionBlue + ' '}}</b> {{ descriptionFinal }}</h2>
+                        <v-btn v-if="windowHeight>400" align-center color="primary" small @click="goToSection('#1')">
+                            {{ button }}
+                        </v-btn>
+                    </div>
 
-                    <v-col class="d-flex align-stretch"></v-col>
+                    <div v-else>
+                        <h1 style="font-size:350%; font-weight: 600">{{ title }}</h1>
 
-                    <v-btn align-center class="hidden-sm-and-up" color="primary" small @click="goToSection('#1')">
-                        {{ button }}
-                    </v-btn>
+                        <h2 class="mt-10" style="font-weight:400">
+                            {{ descriptionInitial }}<b style='color: #2C81D6'>{{' ' + descriptionBlue + ' '}}</b> {{ descriptionFinal }}</h2>
+
+                        <v-btn align-center class="body-1 mt-10" color="primary" x-large @click="goToSection('#1')">
+                            {{ button }}
+                        </v-btn>
+                    </div>
 
                 </v-layout>
             </v-flex>
