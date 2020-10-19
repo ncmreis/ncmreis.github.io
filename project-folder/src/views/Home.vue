@@ -1,10 +1,10 @@
 <template>
   <div>
     <Header
-      title="Rapid prototyping for ML/AI solutions"
-      descriptionInitial="Thorly provides"
-      descriptionBlue="Data Science & Data Engineering"
-      descriptionFinal="services to help companies increase their data potential"
+      title="Rapid prototyping for Data Science solutions"
+      descriptionInitial=""
+      descriptionBlue="Thorly is a Data Science & Engineering team for hire. "
+      descriptionFinal="We provide services to help organizations increase their data potential"
       button="Know more"
     ></Header>
 
@@ -35,24 +35,21 @@
                   class="justify-center fix layout mb-12"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    Get your job done in 4 weeks
+                    Iterating as quickly as possible
                   </p>
                 </v-card-title>
                 <v-card-text>
-                  <p class="text-center headline mt-12 mb-6">
-                    Our services were designed to develop scalable solutions on
-                    <b style="color: #2C81D6">sprints of 2-4 weeks</b>. together
-                    with your team and
-                    <b style="color: #2C81D6"
-                      >without future reliance on us or other external
-                      parties</b
-                    >.
-                  </p>
                   <p class="text-center headline">
-                    Our<b style="color: #2C81D6"> full-stack data know-how</b>
-                    allows us to develop end-to-end projects. From
-                    <b>strategy</b> definition to <b>implementation</b> of
-                    innovative solutions.
+                    We believe in short iterations of well planned sprints. This
+                    mindset keeps us closer to you and your organization's
+                    goals.
+                    <b
+                      >Our services are designed to keep a small loop between
+                      planing, building and testing
+                    </b>
+                    whenever this is possible. We work with you on
+                    <b>outside of the box thinking sessions</b>
+                    to come up with creative solutions for your problems.
                   </p>
                 </v-card-text>
               </v-card>
