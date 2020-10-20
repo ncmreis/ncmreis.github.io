@@ -1,65 +1,68 @@
 import Vue from "vue";
 import App from "./App.vue";
-import VueRouter from 'vue-router';
+import VueRouter from "vue-router";
 import vuetify from "./plugins/vuetify";
 
-import Home from './views/Home';
-import About from './views/About';
-import Services from './views/Services';
-import Strategy from './views/Strategy';
-import Consulting from './views/Consulting';
-import Development from './views/Development';
-import Training from './views/Training';
+import Home from "./views/Home";
+import About from "./views/About";
+import Services from "./views/Services";
+import Strategy from "./views/Strategy";
+import Consulting from "./views/Consulting";
+import Development from "./views/Development";
+import Training from "./views/Training";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     component: Home,
-    name: 'home'
+    name: "home",
   },
   {
-    path: '/about',
+    path: "/about",
     component: About,
-    name: "about"
+    name: "about",
   },
   {
-    path: '/services',
+    path: "/services",
     component: Services,
-    name: "services"
+    name: "services",
   },
   {
-    path: '/services/strategy',
+    path: "/services/strategy",
     component: Strategy,
-    name: "strategy"
+    name: "strategy",
   },
   {
-    path: '/services/consulting',
+    path: "/services/consulting",
     component: Consulting,
-    name: "consulting"
+    name: "consulting",
   },
   {
-    path: '/services/development',
+    path: "/services/development",
     component: Development,
-    name: "development"
+    name: "development",
   },
   {
-    path: '/services/training',
+    path: "/services/training",
     component: Training,
-    name: "training"
-  }
+    name: "training",
+  },
 ];
 
 const router = new VueRouter({
-  mode: 'history',
-  routes
-})
+  mode: "history",
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  },
+});
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   vuetify,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");
