@@ -43,13 +43,14 @@
                     We believe in short iterations of well planned sprints. This
                     mindset keeps us closer to you and your organization's
                     goals.
-                    <b
-                      >Our services are designed to keep a small loop between
-                      planing, building and testing
-                    </b>
-                    whenever this is possible. We work with you on
+                  </p>
+
+                  <p class="text-center headline">
+                    We work with you on
                     <b>outside of the box thinking sessions</b>
-                    to come up with creative solutions for your problems.
+                    to come up with creative solutions for your problems and
+                    implement them in small loops of planing, building and
+                    testing.
                   </p>
                 </v-card-text>
               </v-card>
@@ -110,17 +111,13 @@
                   class="justify-center fix layout mb-12"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    The companies that trust us
+                    Organizations we have a history with
                   </p>
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    Get to know some of the
-                    <b style="color: #2C81D6"
-                      >great & innovative organizations</b
-                    >
-                    that make us grow everyday. More than clients, these are
-                    <b>our partners</b>.
+                    Get to know some of the organizations our team has
+                    contributed in the last years
                   </p>
                 </v-card-text>
               </v-card>
@@ -160,9 +157,21 @@
                   class="justify-center fix layout mb-6"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    Some non-confidential projects
+                    Jumpstart your data culture
                   </p>
                 </v-card-title>
+                <v-card-text>
+                  <p class="text-center headline">
+                    We built a set of sessions that could positively contribute
+                    to your data culture in different ways. These particular
+                    events are a Thorly initiative to get closer to your team
+                    and
+                    <b
+                      >show you some of the work we can do together, without the
+                      hassle of multiple rounds of email.</b
+                    >
+                  </p>
+                </v-card-text>
               </v-card>
             </v-flex>
 
@@ -191,9 +200,14 @@
               </v-container>
             </v-flex>
           </v-layout>
-          <v-btn class="body-1 mb-12" color="primary" x-large to="/services">
-            Ready for your project?
-          </v-btn>
+          <div class=" mb-12">
+            <v-btn class="body-1" color="primary" @click="typeform()" x-large>
+              I want to jumpstart
+            </v-btn>
+            <p class="caption mt-1" style="opacity: 0.4">
+              Get the right option for your organization
+            </p>
+          </div>
         </v-container>
       </section>
 
@@ -227,10 +241,8 @@
                     We are a community of
                     <b style="color: #2C81D6">friendly and creative people</b>
                     with a
-                    <b
-                      >flexible lifestyle, eager to be challenged everyday and
-                      make good money</b
-                    >. If this is for you, consider to join and grow along us!
+                    <b>flexible lifestyle, eager to be challenged everyday</b>.
+                    If this is for you, consider joining and growing along us!
                   </p>
                 </v-card-text>
               </v-card>
@@ -279,6 +291,7 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import * as typeformEmbed from "@typeform/embed";
 
 export default {
   name: "Home",
@@ -349,29 +362,25 @@ export default {
       ],
       useCases: [
         {
-          title: "Gamification 4 universities",
-          tags: "Development, data engineering",
-          photo: "nova",
-          description:
-            "Ricardo has co-founded several organisations and companies, to help solving problems that are data related and enhancing different communities. Now he is teaching Python at Nova SBE and Data science at ELU and Rumos. Ricardo has been contracting for two years, working closely with some of the biggest tech companies in PT."
+          title: "Storytelling with Data 101",
+          tags: "Storytelling, Data Visualization, 1 hour",
+          photo: "nova"
         },
         {
-          title: "Personalize education w/ AI",
-          tags: "Development, data science & engineering",
-          photo: "loki",
-          description:
-            "Nuno started his career as top student at Técnico Lisboa, where he did research before working for 3 years in the industry. Then he moved on to Data Science and has already founded two startups while he was doing Data Science & Data Architecture consultancy. He is currently teaching Data Science fundamentals at EDIT."
+          title: "Data Science for Managers",
+          tags: "Data Science, Data literacy, 1 hour",
+          photo: "loki"
         },
         {
-          title: "Churn prediction",
-          tags: "Consulting, data science & engineering",
+          title: "Live demo prototyping an analytics tool",
+          tags: "Consulting, Prototype, Engineering, 2 hours",
           photo: "chartyn",
           description:
             "Luís has been working as a full-stack developer for more than 10 years. Besides Mathematics, he has been evolved with Physics and Radiation in the last years, where he developed software to be deployed in Africa for the oil and gas industry. Lately, he was a Lead Data Scientist at OutSystems and he is teaching Python at Rumos."
         },
         {
           title: "Data Science Hackathon",
-          tags: "Training, data science",
+          tags: "Training, data science, 1 day",
           photo: "catolica",
           description:
             "Luís has been working as a full-stack developer for more than 10 years. Besides Mathematics, he has been evolved with Physics and Radiation in the last years, where he developed software to be deployed in Africa for the oil and gas industry. Lately, he was a Lead Data Scientist at OutSystems and he is teaching Python at Rumos."
@@ -380,6 +389,15 @@ export default {
     };
   },
   methods: {
+    typeform() {
+      //eslint-disable-next-line
+      console.log("function call");
+      const url = "https://developerplatform.typeform.com/to/Xc7NMh";
+      const options = {
+        mode: "drawer_right"
+      };
+      typeformEmbed.makePopup(url, options).open();
+    },
     goToSection(hashSection) {
       var elmnt = document.getElementById(hashSection);
       elmnt.scrollIntoView({ behavior: "smooth" });
