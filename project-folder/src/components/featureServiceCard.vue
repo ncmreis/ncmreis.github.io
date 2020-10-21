@@ -1,6 +1,11 @@
 <template>
     <v-card>
-        <v-img v-if="Header" max-height="150" contain :src="getWayImgUrl(avatar)"></v-img>
+        <v-img
+                max-height="125"
+                contain
+                v-if="Header"
+                :src="getWayImgUrl(avatar)">
+        </v-img>
         <v-card-title v-if="Header" v-bind:style="{ color: color }" class="headline justify-center">
             {{ title }}
         </v-card-title>

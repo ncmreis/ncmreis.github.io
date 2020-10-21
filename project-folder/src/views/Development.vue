@@ -1,10 +1,10 @@
 <template>
   <div>
     <Header
-      title="Want to build an analytics tool?"
+      title="Planning to build a tool or product around data?"
       descriptionInitial="We can help you"
-      descriptionBlue="building this in small, incremental and cost-effective steps."
-      descriptionFinal="The result will be tailored for your organization and customers."
+      descriptionBlue="building it in small, incremental and cost-effective steps,"
+      descriptionFinal="specifically tailored for your organization and customers."
       button="Explore our development services"
     ></Header>
 
@@ -35,19 +35,19 @@
                   class="justify-center fix layout mb-12"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    Crafting an analytics tool
+                    Crafting a data-centered tool
                   </p>
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline my-12">
-                    You may feel like an analytics tool could help your
+                    You may feel like a tool around data could help your
                     organization or your customers. You may also feel this is a
-                    hard, complicated and hard-to-navigate problem for you. We
-                    have done this, we have been here.
+                    complicated and hard-to-navigate problem for you. We
+                    have been here, we have done this.
                     <b style="color: #2C81D6"
                       >With a prototype first approach,</b
                     >
-                    we can help you demonstrate the value to your stakeholders
+                    we can build it and help you demonstrate it's value to your stakeholders
                     through small and incremental steps.
                   </p>
                 </v-card-text>
@@ -76,64 +76,13 @@
               </v-container>
             </v-flex>
           </v-layout>
+          <v-btn class="body-1 mb-12" color="primary" x-large to="/services">
+            Let's talk about this
+          </v-btn>
         </v-container>
       </section>
 
-      <section id="why us" style="background-color: #F6F9FD">
-        <v-container class="text-center">
-          <v-layout
-            row
-            wrap
-            class="my-12 white--text"
-            align-center
-            justify-center
-          >
-            <v-flex md10 xs12 class="mt-12">
-              <v-card flat class="transparent">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-2"
-                >
-                  <p class="display-2 text-center" style="font-weight: 600">
-                    The reasons to hire us
-                  </p>
-                </v-card-title>
-                <v-card-text>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </section>
-
-      <section id="other services">
+      <section style="background-color: #F6F9FD" id="other services">
         <v-container class="text-center">
           <v-layout
             row
@@ -176,14 +125,15 @@
                           {{ service.description }}
                         </v-card-text>
                         <v-overlay absolute opacity="0.95" :value="hover">
-                          <v-card-text class="subtitle-1 text-center">
+                          <v-card-text class="subtitle-1 text-center pt-0">
+                            <b style="color: #2C81D6">{{ service.target }}</b>
+                            <br />
                             {{ service.largeDescription }}
                           </v-card-text>
                           <v-btn
-                            color="primary"
-                            outlined
-                            :to="'/services/' + service.photo + '/'"
-                            >Explore more</v-btn
+                                  color="primary"
+                                  :to="'/services/' + service.photo + '/'"
+                          >Explore more</v-btn
                           >
                         </v-overlay>
                       </v-card>
@@ -261,63 +211,56 @@ export default {
           name: "Strategy",
           photo: "strategy",
           description:
-            "Define a plan for your data considering multiple approaches",
+                  "Define a plan for your data considering multiple approaches",
+          target:
+                  "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business."
+                  "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs.",
         },
         {
           name: "Consulting",
           photo: "consulting",
           description:
-            "Build data-driven insights to speed up your business potential",
+                  "Build data-driven insights to speed up your business potential",
+          target: "Do you want to improve your decision making with data?",
           largeDescription:
-            "Are you looking to solve a specific business problem or make a better informed decision with data? We work with Data Science & Visualizations most modern techniques to get data-insights and help you solve those challenges with data."
+                  "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
         },
-        //{name: 'Development', photo: 'development', description: 'Design a tool/product to take advantage from your data', largeDescription: 'Do you have an idea to design and build an end-to-end tool or product with data science or engineering needs? We have experience on it using a fast, iterative and "prototype first" mindset to build it for the end-users together with your team '},
+        // {
+        //   name: "Development",
+        //   photo: "development",
+        //   description: "Design a tool/product to take advantage from your data",
+        //   target:
+        //           "Do you have plan to develop an internal tool or product using your data?",
+        //   largeDescription:
+        //           'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
+        // },
         {
           name: "Training",
           photo: "training",
           description:
-            "Increase your team's data know-how with a tailored academy",
+                  "Increase your team's data know-how with a tailored academy",
+          target:
+                  "Do you want to increase your team's data literacy and culture?",
           largeDescription:
-            "Are you willing to increase your team's data literacy and you believe data should be in the heart of your team decisions? As programming & data science professors, we have already create tailored academies and workshops for our partners."
-        }
-      ],
-      types: [
-        {
-          name: "Industry or Department",
-          photo: "industry_department",
-          description:
-            "We worked for multiple industries and/or across many departments. This allows us to cross best knowledge & practices between all."
+                  "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
         },
-        {
-          name: "Data type or size",
-          photo: "data",
-          description:
-            "We have experienced many kinds of data in multiple situations which allows us to work with any size or type of data you have."
-        },
-        {
-          name: "Technique or Tool",
-          photo: "techniques_tools",
-          description:
-            "As data experts used to deal with problems where no tools exists, we have experience developing our own tools & techniques."
-        }
       ],
       specificServices: [
         {
           name: "Prototyping",
           description:
-            "Our favourite offer and place to work is where we take you from an idea to a product first version, in a few weeks! To make this a reality, we force ourselves some hard deadlines, priotize and choose what can deliver more value to your business."
+            "Our favourite offer and place to work is where we take you from an idea to a product first version, in a few weeks! To make this a reality, we force ourselves some hard deadlines, prioritize and choose what can deliver more value to your business."
         },
         {
           name: "Pilot",
           description:
-            "Test your analytics tool in the real world. Either with a subset of clients or your own people, we always aim to develop for the end users and test close to them. We usually take advantage of a technological that allows for fast development."
+            "Test your analytics tool in the real world. Either with a subset of clients or your own people, we always aim to develop for the end users and test close to them. We usually take advantage of a technological stack that allows a fast development."
         },
         {
           name: "Production Tool",
           description:
-            "After several iterations and tests with the end user, we can build it for production. In here, we deploy the best software engineering practices. We take into account scalability, maintenance costs, tests, continuous integrations, etc."
+            "After several iterations and tests with the end user, we can build it for production. In here, we deploy the best software engineering practices, taking into account scalability, maintenance costs, tests, continuous integrations, etc."
         }
       ]
     };

@@ -1,10 +1,10 @@
 <template>
   <div>
     <Header
-      title="The services behind your ML/AI prototypes"
-      descriptionInitial="Our services was thought to help you"
-      descriptionBlue="saving costs and increase revenues"
-      descriptionFinal="through data science and digital technologies"
+      title="The services behind your Data Science solutions"
+      descriptionInitial=""
+      descriptionBlue="From strategic consulting to development and training"
+      descriptionFinal="we designed our services to help you using data science & digital technologies"
       button="know more"
     ></Header>
 
@@ -35,16 +35,14 @@
                   class="justify-center fix layout mb-12"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    Been there, done that
+                    We've probably been there...
                   </p>
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline my-12">
                     We have experience on working for multiple domains,
-                    <b style="color: #2C81D6"
-                      >independently on the industry, department, data,
-                      techniques or tools</b
-                    >. We believe <b>this sets us apart</b> as we can
+                    <b style="color: #2C81D6">including different industries, departments, data,
+                      techniques or tools</b>. We believe this sets us apart as we can
                     cross-apply the best practices between all of them.
                   </p>
                 </v-card-text>
@@ -74,9 +72,6 @@
               </v-container>
             </v-flex>
           </v-layout>
-          <v-btn class="body-1 mb-12" color="primary" x-large>
-            Work with us
-          </v-btn>
         </v-container>
       </section>
 
@@ -96,17 +91,15 @@
                   class="justify-center fix layout mb-2"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    How we do it
+                    Reasons to hire us
                   </p>
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline my-12">
-                    Thorly is by far the <b>most fun and difficult</b> thing we
-                    faced in our professional lives so far. But we are building
+                    Thorly is by far the most fun and difficult thing we
+                    faced in our professional lives so far but we are building
                     it everyday with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
+                    <b style="color: #2C81D6">this is the right way to do it.</b>
                   </p>
                 </v-card-text>
               </v-card>
@@ -131,7 +124,7 @@
                       <v-card flat class="transparent text-center">
                         <v-card-text
                           class="display-2 justify-center"
-                          style="margin-top: 150px"
+                          style="margin-top: 115px"
                         >
                           vs.
                         </v-card-text>
@@ -174,9 +167,6 @@
               </v-container>
             </v-flex>
           </v-layout>
-          <v-btn class="body-1 mb-12" color="primary" x-large>
-            Explore our process
-          </v-btn>
         </v-container>
       </section>
 
@@ -356,41 +346,40 @@ export default {
           name: "Strategy",
           photo: "strategy",
           description:
-            "Define a plan for your data considering multiple approaches",
+                  "Define a plan for your data considering multiple approaches",
           target:
-            "You are a business leader wondering to take value from your data?",
+                  "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business."
+                  "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs.",
         },
         {
           name: "Consulting",
           photo: "consulting",
           description:
-            "Build data-driven insights to speed up your business potential",
-          target:
-            "Are you looking to make a better informed decision with data? ",
+                  "Build data-driven insights to speed up your business potential",
+          target: "Do you want to improve your decision making with data?",
           largeDescription:
-            "We work with Data Science & Visualizations most modern techniques to get data-insights and help you solve those challenges with data."
+                  "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
         },
         {
           name: "Development",
           photo: "development",
           description: "Design a tool/product to take advantage from your data",
           target:
-            "Do you have an idea for tool or product with data science or engineering needs?",
+                  "Do you have plan to develop an internal tool or product using your data?",
           largeDescription:
-            'We have experience on it using a fast, iterative and "prototype first" mindset to build it for the end-users together with your team '
+                  'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
         },
         {
           name: "Training",
           photo: "training",
           description:
-            "Increase your team's data know-how with a tailored academy",
+                  "Increase your team's data know-how with a tailored academy",
           target:
-            "Are you willing to increase your team's data literacy and insert data in the heart of your decisions?",
+                  "Do you want to increase your team's data literacy and culture?",
           largeDescription:
-            "As programming & data science professors, we have already create tailored academies and workshops for our partners."
-        }
+                  "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
+        },
       ],
       types: [
         {

@@ -40,7 +40,7 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline my-12">
-                    When you want to move from an idea to a product, sometimes
+                    When you want to move from an idea to a product or
                     you feel you want to do something with your data but you are
                     not sure of what and how to do it.
                     <b style="color: #2C81D6">
@@ -76,64 +76,13 @@
               </v-container>
             </v-flex>
           </v-layout>
+          <v-btn class="body-1 mb-12" color="primary" x-large to="/services">
+            Let's talk about this
+          </v-btn>
         </v-container>
       </section>
 
-      <section id="why us" style="background-color: #F6F9FD">
-        <v-container class="text-center">
-          <v-layout
-            row
-            wrap
-            class="my-12 white--text"
-            align-center
-            justify-center
-          >
-            <v-flex md10 xs12 class="mt-12">
-              <v-card flat class="transparent">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-2"
-                >
-                  <p class="display-2 text-center" style="font-weight: 600">
-                    The reasons to hire us
-                  </p>
-                </v-card-title>
-                <v-card-text>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </section>
-
-      <section id="other services">
+      <section id="services" style="background-color: #F6F9FD">
         <v-container class="text-center">
           <v-layout
             row
@@ -176,14 +125,15 @@
                           {{ service.description }}
                         </v-card-text>
                         <v-overlay absolute opacity="0.95" :value="hover">
-                          <v-card-text class="subtitle-1 text-center">
+                          <v-card-text class="subtitle-1 text-center pt-0">
+                            <b style="color: #2C81D6">{{ service.target }}</b>
+                            <br />
                             {{ service.largeDescription }}
                           </v-card-text>
                           <v-btn
-                            color="primary"
-                            outlined
-                            :to="'/services/' + service.photo + '/'"
-                            >Explore more</v-btn
+                                  color="primary"
+                                  :to="'/services/' + service.photo + '/'"
+                          >Explore more</v-btn
                           >
                         </v-overlay>
                       </v-card>
@@ -218,89 +168,45 @@ export default {
       hashSection: null,
       windowHeight: 0,
       scrolled: false,
-      challenges: [
-        {
-          name: "One size fits all",
-          solution: "Customized",
-          description:
-            "We do believe in products or mass solutions but we know these are not efficient on improving companies' life. We just work on tailored solutions bearing in mind your problems, needs, team and business goals."
-        },
-        {
-          name: "Big & over-planned",
-          solution: "Short iteration cycles",
-          description:
-            "Our methodology goes against any waterfall or big & over-planned models, because we don't believe on blind and non-deep decisions. Our short & iterative process allows us to constantly reflect and adapt the solution."
-        },
-        {
-          name: "End product obsession",
-          solution: "Prototyping first",
-          description:
-            "We run away from any mindset obsession with the final product. We start by working on a POC and constantly test it instead of spending time with a massive solution that can lead to misuse and waste of time and money."
-        },
-        {
-          name: "Complex & jargonized",
-          solution: "Simple & explainable",
-          description:
-            "We know Data Scientists often sins by opting for black-box, jargon-filled and complex over low hanging-fruit, explainable and simple. Our experience takes us for usable and comprehensible solutions for anyone."
-        },
-        {
-          name: "Outsource dependency",
-          solution: "In-house knowledge",
-          description:
-            "As independent people, we believe companies should be free to manage on their own our work after we leave. That's why we work close to your team, passing along our knowledge, and deploy fully-documented solutions on your side."
-        },
-        {
-          name: "For decision makers",
-          solution: "User-centered design",
-          description:
-            'Our startup world experience showed us how people fails miserably on building tools based on "feelings and thoughts". It makes us state that any product or tool we get hands on are designed with end-users consumed on the process.'
-        }
-      ],
       services: [
-        //{name: 'Strategy', photo: 'strategy', description: 'Define a plan for your data considering multiple approaches', largeDescription: 'You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business.'},
+        // {
+        //   name: "Strategy",
+        //   photo: "strategy",
+        //   description:
+        //           "Define a plan for your data considering multiple approaches",
+        //   target:
+        //           "Do you have data but you are struggling to establish a plan to solve your business problems?",
+        //   largeDescription:
+        //           "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs.",
+        // },
         {
           name: "Consulting",
           photo: "consulting",
           description:
-            "Build data-driven insights to speed up your business potential",
+                  "Build data-driven insights to speed up your business potential",
+          target: "Do you want to improve your decision making with data?",
           largeDescription:
-            "Are you looking to solve a specific business problem or make a better informed decision with data? We work with Data Science & Visualizations most modern techniques to get data-insights and help you solve those challenges with data."
+                  "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
         },
         {
           name: "Development",
           photo: "development",
           description: "Design a tool/product to take advantage from your data",
+          target:
+                  "Do you have plan to develop an internal tool or product using your data?",
           largeDescription:
-            'Do you have an idea to design and build an end-to-end tool or product with data science or engineering needs? We have experience on it using a fast, iterative and "prototype first" mindset to build it for the end-users together with your team '
+                  'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
         },
         {
           name: "Training",
           photo: "training",
           description:
-            "Increase your team's data know-how with a tailored academy",
+                  "Increase your team's data know-how with a tailored academy",
+          target:
+                  "Do you want to increase your team's data literacy and culture?",
           largeDescription:
-            "Are you willing to increase your team's data literacy and you believe data should be in the heart of your team decisions? As programming & data science professors, we have already create tailored academies and workshops for our partners."
-        }
-      ],
-      types: [
-        {
-          name: "Industry or Department",
-          photo: "industry_department",
-          description:
-            "We worked for multiple industries and/or across many departments. This allows us to cross best knowledge & practices between all."
+                  "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
         },
-        {
-          name: "Data type or size",
-          photo: "data",
-          description:
-            "We have experienced many kinds of data in multiple situations which allows us to work with any size or type of data you have."
-        },
-        {
-          name: "Technique or Tool",
-          photo: "techniques_tools",
-          description:
-            "As data experts used to deal with problems where no tools exists, we have experience developing our own tools & techniques."
-        }
       ],
       specificServices: [
         {
@@ -316,7 +222,7 @@ export default {
         {
           name: "Strategic Mentoring",
           description:
-            "We can help you getting started, working on an hourly basis, in close collaboration with your team, allowing you to optimize your finacial resources."
+            "We can help you getting started, working on an hourly basis in close collaboration with your team, allowing you to optimize your financial resources."
         }
       ]
     };

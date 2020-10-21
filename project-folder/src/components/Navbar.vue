@@ -22,11 +22,14 @@
         </v-toolbar-title>
         <div class="flex-grow-1"></div>
         <v-toolbar-items class="hidden-sm-and-down align-center">
-            <router-link to="/"><v-btn text color="white">Home</v-btn></router-link>
-            <router-link to="/services"><v-btn text color="white">Services</v-btn></router-link>
-            <router-link to="/about"><v-btn text color="white">About</v-btn></router-link>
+            <router-link style="text-decoration: none" to="/"><v-btn text color="white">Home</v-btn></router-link>
+            <router-link style="text-decoration: none" to="/services"><v-btn text color="white">Services</v-btn></router-link>
+            <router-link style="text-decoration: none" to="/about"><v-btn text color="white">About</v-btn></router-link>
             <router-link to="/contact">
-                <v-btn color="primary" class="ml-4"><v-icon color="white" class="mr-2">mdi-email</v-icon>Get in touch</v-btn>
+                <v-btn color="primary" class="ml-4">
+                    <v-icon color="white" class="ml-n1 mr-2">mdi-phone</v-icon>
+                    Schedule a call
+                </v-btn>
             </router-link>
         </v-toolbar-items>
         <div class="hidden-md-and-up text-center">
@@ -41,9 +44,9 @@
                     <v-list-item link to="/services">Services</v-list-item>
                     <v-list-item link to="/about">About</v-list-item>
                     <v-list-item>
-                        <v-btn color="primary" to="/contact">
-                            <v-icon color="white" class="mr-2">mdi-email</v-icon>
-                            Get in touch
+                        <v-btn color="primary" to="https://calendly.com/">
+                            <v-icon color="white" class="mr-2">mdi-phone</v-icon>
+                            Schedule a call
                         </v-btn>
                     </v-list-item>
                 </v-list>

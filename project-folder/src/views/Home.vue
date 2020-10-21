@@ -3,7 +3,7 @@
     <Header
       title="Rapid prototyping for Data Science solutions"
       descriptionInitial=""
-      descriptionBlue="Thorly is a Data Science & Engineering team for hire. "
+      descriptionBlue="We are a Data Science & Engineering team for hire."
       descriptionFinal="We provide services to help organizations increase their data potential"
       button="Know more"
     ></Header>
@@ -40,17 +40,14 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    We believe in short iterations of well planned sprints. This
-                    mindset keeps us closer to you and your organization's
-                    goals.
+
                   </p>
 
                   <p class="text-center headline">
-                    We work with you on
-                    <b>outside of the box thinking sessions</b>
-                    to come up with creative solutions for your problems and
-                    implement them in small loops of planing, building and
-                    testing.
+                   We work with you on <b style="color: #2C81D6">out-of-the-box thinking sessions</b>
+                    to come up with creative solutions for your problems and implement them in
+                    <b style="color: #2C81D6">small loops of planning, building and testing</b>
+                    that keeps us closer to you and your organization's goals.
                   </p>
                 </v-card-text>
               </v-card>
@@ -111,13 +108,12 @@
                   class="justify-center fix layout mb-12"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    Organizations we have a history with
+                    Part of our story
                   </p>
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    Get to know some of the organizations our team has
-                    contributed in the last years
+                    Get to know some of the <b style="color: #2C81D6">great & innovative organizations</b> that made us grow in the recent past.
                   </p>
                 </v-card-text>
               </v-card>
@@ -141,7 +137,7 @@
         </v-container>
       </section>
 
-      <section id="#cases">
+      <section id="#jumpstart">
         <v-container class="text-center">
           <v-layout
             row
@@ -157,19 +153,14 @@
                   class="justify-center fix layout mb-6"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    Jumpstart your data culture
+                    Simplifying the sales process
                   </p>
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    We built a set of sessions that could positively contribute
-                    to your data culture in different ways. These particular
-                    events are a Thorly initiative to get closer to your team
-                    and
-                    <b
-                      >show you some of the work we can do together, without the
-                      hassle of multiple rounds of email.</b
-                    >
+                    We built a set of sessions to jumpstart your data culture in different ways, get closer to your team and
+                    <b style="color: #2C81D6">show you some of the work we can do together</b>
+                    without the hassle of multiple rounds of email.
                   </p>
                 </v-card-text>
               </v-card>
@@ -238,10 +229,8 @@
                 ></v-img>
                 <v-card-text>
                   <p class="text-center headline">
-                    We are a community of
-                    <b style="color: #2C81D6">friendly and creative people</b>
-                    with a
-                    <b>flexible lifestyle, eager to be challenged everyday</b>.
+                    We are a community of friendly and creative people with a
+                    <b style="color: #2C81D6">flexible lifestyle, eager to be challenged everyday and have a good salary</b>.
                     If this is for you, consider joining and growing along us!
                   </p>
                 </v-card-text>
@@ -249,7 +238,7 @@
             </v-flex>
           </v-layout>
           <div class=" mb-12">
-            <v-btn class="body-1" color="primary" x-large to="/about">
+            <v-btn class="body-1" color="primary" x-large @click="typeform()">
               Join the team
             </v-btn>
             <p class="caption mt-1" style="opacity: 0.4">
@@ -339,28 +328,24 @@ export default {
       ],
       useCases: [
         {
-          title: "Storytelling with Data 101",
-          tags: "Storytelling, Data Visualization, 1 hour",
-          photo: "nova",
+          title: "Data strategy in a nutshell",
+          tags: "Strategy, Consulting, Data science, 1h",
+          photo: "loki"
         },
         {
-          title: "Data Science for Managers",
-          tags: "Data Science, Data literacy, 1 hour",
-          photo: "loki",
+          title: "Make your data talk",
+          tags: "Storytelling, Data Visualization, 1h",
+          photo: "nova"
         },
         {
-          title: "Live demo prototyping an analytics tool",
-          tags: "Consulting, Prototype, Engineering, 2 hours",
-          photo: "chartyn",
-          description:
-            "Luís has been working as a full-stack developer for more than 10 years. Besides Mathematics, he has been evolved with Physics and Radiation in the last years, where he developed software to be deployed in Africa for the oil and gas industry. Lately, he was a Lead Data Scientist at OutSystems and he is teaching Python at Rumos.",
+          title: "Building a cockpit for your data",
+          tags: "Prototype, Engineering, 2h",
+          photo: "chartyn"
         },
         {
-          title: "Data Science Hackathon",
-          tags: "Training, data science, 1 day",
-          photo: "catolica",
-          description:
-            "Luís has been working as a full-stack developer for more than 10 years. Besides Mathematics, he has been evolved with Physics and Radiation in the last years, where he developed software to be deployed in Africa for the oil and gas industry. Lately, he was a Lead Data Scientist at OutSystems and he is teaching Python at Rumos.",
+          title: "Predict churn in a blink",
+          tags: "Consulting, Training, Data science, 2h",
+          photo: "catolica"
         },
       ],
     };

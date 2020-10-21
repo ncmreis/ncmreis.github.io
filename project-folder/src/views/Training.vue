@@ -1,10 +1,10 @@
 <template>
   <div>
     <Header
-      title="Are you feeling a shortage of Data Science talent?"
+      title="Feeling a shortage of Data know-how in your team?"
       descriptionInitial="We can help you"
       descriptionBlue="build and improve your data-driven culture"
-      descriptionFinal="by working with your organization to develop in-house Data Science knowledge."
+      descriptionFinal="by working with your organization to develop in-house Data knowledge."
       button="Explore our training services"
     ></Header>
 
@@ -47,7 +47,7 @@
                     data literacy nor basic understanding of data science.
                     <b style="color: #2C81D6"
                       >We can work with your team developing these skills and
-                      improving the decision making abilities.</b
+                      improving the data-driven decision making abilities.</b
                     >
                   </p>
                 </v-card-text>
@@ -59,7 +59,7 @@
                 <v-layout row wrap align-start>
                   <v-flex
                     v-for="specificService in specificServices"
-                    md3
+                    md6
                     sm6
                     xs12
                   >
@@ -76,64 +76,13 @@
               </v-container>
             </v-flex>
           </v-layout>
+          <v-btn class="body-1 mb-12" color="primary" x-large to="/services">
+            Let's talk about this
+          </v-btn>
         </v-container>
       </section>
 
-      <section id="why us" style="background-color: #F6F9FD">
-        <v-container class="text-center">
-          <v-layout
-            row
-            wrap
-            class="my-12 white--text"
-            align-center
-            justify-center
-          >
-            <v-flex md10 xs12 class="mt-12">
-              <v-card flat class="transparent">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-2"
-                >
-                  <p class="display-2 text-center" style="font-weight: 600">
-                    The reasons to hire us
-                  </p>
-                </v-card-title>
-                <v-card-text>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </section>
-
-      <section id="other services">
+      <section style="background-color: #F6F9FD" id="other services">
         <v-container class="text-center">
           <v-layout
             row
@@ -176,14 +125,15 @@
                           {{ service.description }}
                         </v-card-text>
                         <v-overlay absolute opacity="0.95" :value="hover">
-                          <v-card-text class="subtitle-1 text-center">
+                          <v-card-text class="subtitle-1 text-center pt-0">
+                            <b style="color: #2C81D6">{{ service.target }}</b>
+                            <br />
                             {{ service.largeDescription }}
                           </v-card-text>
                           <v-btn
-                            color="primary"
-                            outlined
-                            :to="'/services/' + service.photo + '/'"
-                            >Explore more</v-btn
+                                  color="primary"
+                                  :to="'/services/' + service.photo + '/'"
+                          >Explore more</v-btn
                           >
                         </v-overlay>
                       </v-card>
@@ -261,67 +211,69 @@ export default {
           name: "Strategy",
           photo: "strategy",
           description:
-            "Define a plan for your data considering multiple approaches",
+                  "Define a plan for your data considering multiple approaches",
+          target:
+                  "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business."
+                  "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs.",
         },
         {
           name: "Consulting",
           photo: "consulting",
           description:
-            "Build data-driven insights to speed up your business potential",
+                  "Build data-driven insights to speed up your business potential",
+          target: "Do you want to improve your decision making with data?",
           largeDescription:
-            "Are you looking to solve a specific business problem or make a better informed decision with data? We work with Data Science & Visualizations most modern techniques to get data-insights and help you solve those challenges with data."
+                  "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
         },
         {
           name: "Development",
           photo: "development",
           description: "Design a tool/product to take advantage from your data",
+          target:
+                  "Do you have plan to develop an internal tool or product using your data?",
           largeDescription:
-            'Do you have an idea to design and build an end-to-end tool or product with data science or engineering needs? We have experience on it using a fast, iterative and "prototype first" mindset to build it for the end-users together with your team '
-        }
-        //{name: 'Training', photo: 'training', description: "Increase your team's data know-how with a tailored academy", largeDescription: "Are you willing to increase your team's data literacy and you believe data should be in the heart of your team decisions? As programming & data science professors, we have already create tailored academies and workshops for our partners."}
-      ],
-      types: [
-        {
-          name: "Industry or Department",
-          photo: "industry_department",
-          description:
-            "We worked for multiple industries and/or across many departments. This allows us to cross best knowledge & practices between all."
+                  'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
         },
-        {
-          name: "Data type or size",
-          photo: "data",
-          description:
-            "We have experienced many kinds of data in multiple situations which allows us to work with any size or type of data you have."
-        },
-        {
-          name: "Technique or Tool",
-          photo: "techniques_tools",
-          description:
-            "As data experts used to deal with problems where no tools exists, we have experience developing our own tools & techniques."
-        }
+        // {
+        //   name: "Training",
+        //   photo: "training",
+        //   description:
+        //           "Increase your team's data know-how with a tailored academy",
+        //   target:
+        //           "Do you want to increase your team's data literacy and culture?",
+        //   largeDescription:
+        //           "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
+        // },
       ],
       specificServices: [
         {
           name: "Bootcamps",
           description:
-            "We have off-the-shelf programs of Data Science, Python, Data Literacy and Storytelling with Data. All of them, we have built different possible experiences that you can use in your organization. Some of these experiences are gamified, self-paced, guided or tutored. If you need data training, it is likely we have an offer for you."
+            "If you need data training, it is likely we have an offer for you as we have off-the-shelf programs on " +
+                  "Data Science, Python, Data Literacy and Storytelling with Data. " +
+                  "These programs can be gamified, self-paced, guided or tutored."
         },
         {
           name: "Tailor-made training",
           description:
-            "We know your needs may be more specific and require details we have not covered in our current offers. By using our framework, we can quickly design together a course for your organization. This framework requires you and the target audience to answer a couple of questions and be available for one brainstorming session after that. Usually we can get this designed in 1-2 weeks."
+            "We know your needs may be more specific and require details we have not covered in our standard offers. " +
+                  "Using our framework, we can design in 1-2 weeks a course for your team " +
+                  "by asking you a couple of questions and then requiring you a brainstorming session."
         },
         {
           name: "Jumpstart",
           description:
-            "We know that getting started after a course or training can be very hard. We offer a 4-8 weeks program to work together with your team in your organization's problems. This way, you can see in practice what you got to learn during our programs. By doing this, we can help you understanding what are the good practices for collaborative working and data projects in general."
+            "Getting started after training can be very hard! " +
+                  "For that reason, we built this 4-8 weeks program, where we work together with your team in your business problems, to help you applying in practice what you learnt: " +
+                  "from basic tools to the best collaborative practices for data projects."
         },
         {
           name: "Hackathon for Culture",
           description:
-            "One of the most special programs we have its a one day hackathon designed for individuals with no experience at all to get their hands dirty with the basics of Data Science and Machine Learning in general, as well as the workflow of a typical project. We have seen excellent results in this methodology both for culture as well as motivational for teams and individuals."
+                  "This program has been very successful for culture and team building. " +
+                  "It is a 1-day event designed for individuals with no experience at all to get their hands dirty " +
+                  "with the basics of Data Science, passing along a typical project workflow, with fun, joy and gamification."
         }
       ]
     };

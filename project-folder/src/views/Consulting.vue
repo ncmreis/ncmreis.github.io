@@ -3,8 +3,8 @@
     <Header
       title="Can data improve your decision making?"
       descriptionInitial="We can help you"
-      descriptionBlue="using your data to answer business questions."
-      descriptionFinal="We skip endless presentations and focus on delivering value to your organization."
+      descriptionBlue="using your data to answer business questions"
+      descriptionFinal="with focus on delivering value and no endless presentations."
       button="Explore our consulting services"
     ></Header>
 
@@ -35,22 +35,16 @@
                   class="justify-center fix layout mb-12"
                 >
                   <p class="display-2 text-center" style="font-weight: 600">
-                    Speed matters. Even in consulting
+                    Pace matters. Even in consulting
                   </p>
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline my-12">
-                    Most business questions can be answered using data. Maybe
-                    you have considered this already, perhaps some of the
-                    challenges you face are hard to explain to your
-                    stakeholders, other might seem too hard or advanced or
-                    simply you just lack the necessary time.
-                    <b style="color: #2C81D6"
-                      >We bring a fresh approach to help you develop and iterate
-                      fast on these ideas.</b
-                    >We also respect and take into consideration your time, we
-                    will not waste it on endless presentations that will not be
-                    used again.
+                    Most business questions can be answered using data. Perhaps some
+                    challenges you face are hard to explain to your stakeholders,
+                    other might seem too advanced or simply you just lack the necessary time.
+                    <b style="color: #2C81D6">We bring a fresh approach to help you develop and iterate
+                      fast on these ideas</b>, without wasting your time with endless presentations.
                   </p>
                 </v-card-text>
               </v-card>
@@ -78,64 +72,13 @@
               </v-container>
             </v-flex>
           </v-layout>
+          <v-btn class="body-1 mb-12" color="primary" x-large to="/services">
+            Let's talk about this
+          </v-btn>
         </v-container>
       </section>
 
-      <section id="why us" style="background-color: #F6F9FD">
-        <v-container class="text-center">
-          <v-layout
-            row
-            wrap
-            class="my-12 white--text"
-            align-center
-            justify-center
-          >
-            <v-flex md10 xs12 class="mt-12">
-              <v-card flat class="transparent">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-2"
-                >
-                  <p class="display-2 text-center" style="font-weight: 600">
-                    The reasons to hire us
-                  </p>
-                </v-card-title>
-                <v-card-text>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                  <p class="text-center headline my-12">
-                    Thorly is by far the
-                    <b><u>most fun and difficult</u></b> thing we faced in our
-                    professional lives so far. But we are building it everyday
-                    with the motivation that
-                    <b style="color: #2C81D6"
-                      >this is the right way to do it.</b
-                    >
-                  </p>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </section>
-
-      <section id="other services">
+      <section style="background-color: #F6F9FD" id="other services">
         <v-container class="text-center">
           <v-layout
             row
@@ -178,14 +121,15 @@
                           {{ service.description }}
                         </v-card-text>
                         <v-overlay absolute opacity="0.95" :value="hover">
-                          <v-card-text class="subtitle-1 text-center">
+                          <v-card-text class="subtitle-1 text-center pt-0">
+                            <b style="color: #2C81D6">{{ service.target }}</b>
+                            <br />
                             {{ service.largeDescription }}
                           </v-card-text>
                           <v-btn
-                            color="primary"
-                            outlined
-                            :to="'/services/' + service.photo + '/'"
-                            >Explore more</v-btn
+                                  color="primary"
+                                  :to="'/services/' + service.photo + '/'"
+                          >Explore more</v-btn
                           >
                         </v-overlay>
                       </v-card>
@@ -263,57 +207,51 @@ export default {
           name: "Strategy",
           photo: "strategy",
           description:
-            "Define a plan for your data considering multiple approaches",
+                  "Define a plan for your data considering multiple approaches",
+          target:
+                  "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "You are a business leader wondering how to take value from your data but not sure how to do it? We can help you by developing a strategic plan for your data, by evaluating all the possibilities and define the best path for your business."
+                  "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs.",
         },
-        //{name: 'Consulting', photo: 'consulting', description: 'Build data-driven insights to speed up your business potential', largeDescription: 'Are you looking to solve a specific business problem or make a better informed decision with data? We work with Data Science & Visualizations most modern techniques to get data-insights and help you solve those challenges with data.'},
+        // {
+        //   name: "Consulting",
+        //   photo: "consulting",
+        //   description:
+        //           "Build data-driven insights to speed up your business potential",
+        //   target: "Do you want to improve your decision making with data?",
+        //   largeDescription:
+        //           "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
+        // },
         {
           name: "Development",
           photo: "development",
           description: "Design a tool/product to take advantage from your data",
+          target:
+                  "Do you have plan to develop an internal tool or product using your data?",
           largeDescription:
-            'Do you have an idea to design and build an end-to-end tool or product with data science or engineering needs? We have experience on it using a fast, iterative and "prototype first" mindset to build it for the end-users together with your team '
+                  'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
         },
         {
           name: "Training",
           photo: "training",
           description:
-            "Increase your team's data know-how with a tailored academy",
+                  "Increase your team's data know-how with a tailored academy",
+          target:
+                  "Do you want to increase your team's data literacy and culture?",
           largeDescription:
-            "Are you willing to increase your team's data literacy and you believe data should be in the heart of your team decisions? As programming & data science professors, we have already create tailored academies and workshops for our partners."
-        }
-      ],
-      types: [
-        {
-          name: "Industry or Department",
-          photo: "industry_department",
-          description:
-            "We worked for multiple industries and/or across many departments. This allows us to cross best knowledge & practices between all."
+                  "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
         },
-        {
-          name: "Data type or size",
-          photo: "data",
-          description:
-            "We have experienced many kinds of data in multiple situations which allows us to work with any size or type of data you have."
-        },
-        {
-          name: "Technique or Tool",
-          photo: "techniques_tools",
-          description:
-            "As data experts used to deal with problems where no tools exists, we have experience developing our own tools & techniques."
-        }
       ],
       specificServices: [
         {
-          name: "Analytics and Machine Learning",
+          name: "Analytics & Machine Learning",
           description:
             "From Machine Learning to Data Exploration, we are used to work with a variety of solutions and technologies. If it involves data, it is likely that we have crossed paths with a problem like yours in the past."
         },
         {
           name: "Data Visualization",
           description:
-            "We consider ourselves Data Visualization geeks and we like to have this mindset while working with our clients. We don't build Dashboards or charts to simply display information, instead we try to tell stories with data that is behind."
+            "We are considered Data Visualization geeks and we like to have this mindset while working with our clients. We don't build Dashboards or charts to simply display information, instead we try to tell stories with the data behind it."
         },
         {
           name: "Tailor-made",
