@@ -201,9 +201,15 @@
             </v-flex>
           </v-layout>
           <div class=" mb-12">
-            <v-btn class="body-1" color="primary" @click="typeform()" x-large>
+            <!-- <v-btn class="body-1" color="primary" x-large>
               I want to jumpstart
-            </v-btn>
+            </v-btn> -->
+            <calendly
+              call="https://calendly.com/ricardo-thorly-education/30min"
+              :xlarge="true"
+              description="Discovery call"
+            ></calendly>
+
             <p class="caption mt-1" style="opacity: 0.4">
               Get the right option for your organization
             </p>
@@ -249,7 +255,7 @@
             </v-flex>
           </v-layout>
           <div class=" mb-12">
-            <v-btn class="body-1" color="primary" x-large to="/about">
+            <v-btn class="body-1" color="primary" @click="typeform()" x-large>
               Join the team
             </v-btn>
             <p class="caption mt-1" style="opacity: 0.4">
@@ -268,6 +274,7 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Calendly from "../components/calendly";
 import * as typeformEmbed from "@typeform/embed";
 
 export default {
@@ -276,6 +283,7 @@ export default {
     Header,
     Navbar,
     Footer,
+    Calendly,
   },
 
   data() {
@@ -367,9 +375,7 @@ export default {
   },
   methods: {
     typeform() {
-      //eslint-disable-next-line
-      console.log("function call");
-      const url = "https://developerplatform.typeform.com/to/Xc7NMh";
+      const url = "https://rgilpereira.typeform.com/to/pJsbSIXz";
       const options = {
         mode: "drawer_right",
       };
