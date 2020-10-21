@@ -13,7 +13,7 @@
         v-if="scrolled"
         :class="{
           nav: $vuetify.breakpoint.smAndUp,
-          'nav-xs': $vuetify.breakpoint.xs
+          'nav-xs': $vuetify.breakpoint.xs,
         }"
         background="back_4"
         height="70"
@@ -40,9 +40,9 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline my-12">
-                    When you want to move from an idea to a product or
-                    you feel you want to do something with your data but you are
-                    not sure of what and how to do it.
+                    When you want to move from an idea to a product or you feel
+                    you want to do something with your data but you are not sure
+                    of what and how to do it.
                     <b style="color: #2C81D6">
                       We can help you with your data strategy, challenge you and
                       work together on defining and prioritising
@@ -131,9 +131,9 @@
                             {{ service.largeDescription }}
                           </v-card-text>
                           <v-btn
-                                  color="primary"
-                                  :to="'/services/' + service.photo + '/'"
-                          >Explore more</v-btn
+                            color="primary"
+                            :to="'/services/' + service.photo + '/'"
+                            >Explore more</v-btn
                           >
                         </v-overlay>
                       </v-card>
@@ -161,7 +161,7 @@ export default {
   components: {
     Header,
     Navbar,
-    Footer
+    Footer,
   },
   data() {
     return {
@@ -183,48 +183,48 @@ export default {
           name: "Consulting",
           photo: "consulting",
           description:
-                  "Build data-driven insights to speed up your business potential",
+            "Build data-driven insights to speed up your business potential",
           target: "Do you want to improve your decision making with data?",
           largeDescription:
-                  "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
+            "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
         },
         {
           name: "Development",
           photo: "development",
           description: "Design a tool/product to take advantage from your data",
           target:
-                  "Do you have plan to develop an internal tool or product using your data?",
+            "Do you have plan to develop an internal tool or product using your data?",
           largeDescription:
-                  'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
+            'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
         },
         {
           name: "Training",
           photo: "training",
           description:
-                  "Increase your team's data know-how with a tailored academy",
+            "Increase your team's data know-how with a tailored academy",
           target:
-                  "Do you want to increase your team's data literacy and culture?",
+            "Do you want to increase your team's data literacy and culture?",
           largeDescription:
-                  "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
+            "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
         },
       ],
       specificServices: [
         {
           name: "Strategic Plan",
           description:
-            "We help you understanding and defining your goals having into account the constraints your organization might have."
+            "We help you understanding and defining your goals having into account the constraints your organization might have.",
         },
         {
           name: "Strategic Sessions",
           description:
-            "We have a set of brainstorming sessions to generate ideas and help to explore the potential of your data for your business."
+            "We have a set of brainstorming sessions to generate ideas and help to explore the potential of your data for your business.",
         },
         {
           name: "Strategic Mentoring",
           description:
-            "We can help you getting started, working on an hourly basis in close collaboration with your team, allowing you to optimize your financial resources."
-        }
-      ]
+            "We can help you getting started, working on an hourly basis in close collaboration with your team, allowing you to optimize your financial resources.",
+        },
+      ],
     };
   },
   methods: {
@@ -248,7 +248,7 @@ export default {
     getServiceImgUrl(pet) {
       var images = require.context("../assets/services/", false, /\.png$/);
       return images("./" + pet + ".png");
-    }
+    },
   },
   created: function() {
     window.addEventListener("resize", this.handleResize);
@@ -262,16 +262,16 @@ export default {
   computed: {
     headerStyle() {
       return {
-        backgroundImage: "url(../assets/blue.jpg)"
+        backgroundImage: "url(../assets/blue.jpg)",
       };
-    }
+    },
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
-  }
+  },
 };
 </script>
 

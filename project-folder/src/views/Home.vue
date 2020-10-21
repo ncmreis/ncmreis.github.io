@@ -39,14 +39,18 @@
                   </p>
                 </v-card-title>
                 <v-card-text>
-                  <p class="text-center headline">
-
-                  </p>
+                  <p class="text-center headline"></p>
 
                   <p class="text-center headline">
-                   We work with you on <b style="color: #2C81D6">out-of-the-box thinking sessions</b>
-                    to come up with creative solutions for your problems and implement them in
-                    <b style="color: #2C81D6">small loops of planning, building and testing</b>
+                    We work with you on
+                    <b style="color: #2C81D6"
+                      >out-of-the-box thinking sessions</b
+                    >
+                    to come up with creative solutions for your problems and
+                    implement them in
+                    <b style="color: #2C81D6"
+                      >small loops of planning, building and testing</b
+                    >
                     that keeps us closer to you and your organization's goals.
                   </p>
                 </v-card-text>
@@ -113,7 +117,11 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    Get to know some of the <b style="color: #2C81D6">great & innovative organizations</b> that made us grow in the recent past.
+                    Get to know some of the
+                    <b style="color: #2C81D6"
+                      >great & innovative organizations</b
+                    >
+                    that made us grow in the recent past.
                   </p>
                 </v-card-text>
               </v-card>
@@ -158,8 +166,11 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    We built a set of sessions to jumpstart your data culture in different ways, get closer to your team and
-                    <b style="color: #2C81D6">show you some of the work we can do together</b>
+                    We built a set of sessions to jumpstart your data culture in
+                    different ways, get closer to your team and
+                    <b style="color: #2C81D6"
+                      >show you some of the work we can do together</b
+                    >
                     without the hassle of multiple rounds of email.
                   </p>
                 </v-card-text>
@@ -192,9 +203,15 @@
             </v-flex>
           </v-layout>
           <div class=" mb-12">
-            <v-btn class="body-1" color="primary" @click="typeform()" x-large>
+            <!-- <v-btn class="body-1" color="primary" x-large>
               I want to jumpstart
-            </v-btn>
+            </v-btn> -->
+            <calendly
+              call="https://calendly.com/ricardo-thorly-education/30min"
+              :xlarge="true"
+              description="Discovery call"
+            ></calendly>
+
             <p class="caption mt-1" style="opacity: 0.4">
               Get the right option for your organization
             </p>
@@ -230,15 +247,18 @@
                 <v-card-text>
                   <p class="text-center headline">
                     We are a community of friendly and creative people with a
-                    <b style="color: #2C81D6">flexible lifestyle, eager to be challenged everyday and have a good salary</b>.
-                    If this is for you, consider joining and growing along us!
+                    <b style="color: #2C81D6"
+                      >flexible lifestyle, eager to be challenged everyday and
+                      have a good salary</b
+                    >. If this is for you, consider joining and growing along
+                    us!
                   </p>
                 </v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
           <div class=" mb-12">
-            <v-btn class="body-1" color="primary" x-large @click="typeform()">
+            <v-btn class="body-1" color="primary" @click="typeform()" x-large>
               Join the team
             </v-btn>
             <p class="caption mt-1" style="opacity: 0.4">
@@ -257,6 +277,7 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Calendly from "../components/calendly";
 import * as typeformEmbed from "@typeform/embed";
 
 export default {
@@ -265,6 +286,7 @@ export default {
     Header,
     Navbar,
     Footer,
+    Calendly,
   },
 
   data() {
@@ -330,31 +352,29 @@ export default {
         {
           title: "Data strategy in a nutshell",
           tags: "Strategy, Consulting, Data science, 1h",
-          photo: "loki"
+          photo: "loki",
         },
         {
           title: "Make your data talk",
           tags: "Storytelling, Data Visualization, 1h",
-          photo: "nova"
+          photo: "nova",
         },
         {
           title: "Building a cockpit for your data",
           tags: "Prototype, Engineering, 2h",
-          photo: "chartyn"
+          photo: "chartyn",
         },
         {
           title: "Predict churn in a blink",
           tags: "Consulting, Training, Data science, 2h",
-          photo: "catolica"
+          photo: "catolica",
         },
       ],
     };
   },
   methods: {
     typeform() {
-      //eslint-disable-next-line
-      console.log("function call");
-      const url = "https://developerplatform.typeform.com/to/Xc7NMh";
+      const url = "https://rgilpereira.typeform.com/to/pJsbSIXz";
       const options = {
         mode: "drawer_right",
       };
