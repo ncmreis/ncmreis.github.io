@@ -55,15 +55,17 @@
                     <b>worked for the UK, USA, Brazil and others.</b> We work in
                     a remote culture, but have our office in Lisbon Downtown.
                   </p>
-                  <p class="text-center headline">You are welcome to visit us and grab a coffee!</p>
                 </v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
           <div class=" mb-12">
             <v-btn class="body-1" color="primary" x-large to="/about">
-              Reach out
+              Reach out to us
             </v-btn>
+            <p class="caption mt-1" style="opacity: 0.4">
+              Visit us and grab a coffee
+            </p>
           </div>
         </v-container>
       </section>
@@ -129,10 +131,9 @@
                   <p class="text-center headline mb-6">
                     We are a group of data-driven entrepreneurs 
                     working in <b>Engineering & Data Science, with a focus
-                    on technology, data and machine learning.</b
-                    
+                    on technology, data and machine learning. </b>
+                    <b style="color: #2C81D6">Nice to e-meet you!</b>
                   </p>
-                  <p style="color: #2C81D6" class="text-center headline mb-6"><b>Nice to e-meet you!</b></p>
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -191,7 +192,7 @@
             x-large
             to="/about"
           >
-            Join us!
+            Join us
           </v-btn>
         </v-container>
       </section>

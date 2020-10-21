@@ -121,7 +121,7 @@
                     <b style="color: #2C81D6"
                       >great & innovative organizations</b
                     >
-                    that made us grow in the recent past.
+                    that made our past.
                   </p>
                 </v-card-text>
               </v-card>
@@ -169,9 +169,8 @@
                     We built a set of sessions to jumpstart your data culture in
                     different ways, get closer to your team and
                     <b style="color: #2C81D6"
-                      >show you some of the work we can do together</b
-                    >
-                    without the hassle of multiple rounds of email.
+                      >show you some of the work we can do together,
+                    without the hassle of multiple rounds of email</b>.
                   </p>
                 </v-card-text>
               </v-card>
@@ -248,8 +247,7 @@
                   <p class="text-center headline">
                     We are a community of friendly and creative people with a
                     <b style="color: #2C81D6"
-                      >flexible lifestyle, eager to be challenged everyday and
-                      have a good salary</b
+                      >flexible lifestyle, eager to be challenged everyday</b
                     >. If this is for you, consider joining and growing along
                     us!
                   </p>

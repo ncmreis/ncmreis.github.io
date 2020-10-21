@@ -4,7 +4,7 @@ import VueRouter from "vue-router";
 import vuetify from "./plugins/vuetify";
 
 import Home from "./views/Home";
-import About from "./views/About";
+import Team from "./views/Team";
 import Services from "./views/Services";
 import Strategy from "./views/Strategy";
 import Consulting from "./views/Consulting";
@@ -20,9 +20,9 @@ const routes = [
     name: "home",
   },
   {
-    path: "/about",
-    component: About,
-    name: "about",
+    path: "/team",
+    component: Team,
+    name: "team",
   },
   {
     path: "/services",
