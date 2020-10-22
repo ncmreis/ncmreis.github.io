@@ -1,12 +1,12 @@
 <template>
   <v-parallax
-    wrap
     src="../assets/back_4.png"
     height="100%"
     grid-list-xl
   >
     <v-layout
       row
+      wrap
       align-start
       justify-center
       class="text-center text-md-left mt-8 mb-6 mx-4"
@@ -17,10 +17,12 @@
         </p>
         <p>
           We are <b>working remote</b> most of the days. We value the
-          flexibility to work on hour own schedules and environments.
+          flexibility to work on our own schedules and environments.
         </p>
       </v-flex>
+
       <v-spacer></v-spacer>
+
       <v-flex md2 sm4 xs6>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">About</p>
         <p>
@@ -32,12 +34,16 @@
             >Joining the team</router-link>
         </p>
       </v-flex>
+
       <v-spacer></v-spacer>
+
       <v-flex md2 sm4 xs6>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Office</p>
         <p>Rua da Prata, 80<br />1100-420 Lisboa<br />Portugal</p>
       </v-flex>
+
       <v-spacer></v-spacer>
+
       <v-flex md2 sm4 xs12>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Contact</p>
         <p>discover@thorly.tech</p>
