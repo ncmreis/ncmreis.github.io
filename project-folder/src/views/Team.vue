@@ -59,14 +59,14 @@
               </v-card>
             </v-flex>
           </v-layout>
-          <div class=" mb-12">
-            <v-btn class="body-1" color="primary" x-large to="/about">
-              Reach out to us
-            </v-btn>
-            <p class="caption mt-1" style="opacity: 0.4">
-              Visit us and grab a coffee
-            </p>
-          </div>
+<!--          <div class=" mb-12">-->
+<!--            <v-btn class="body-1" color="primary" x-large to="/about">-->
+<!--              Reach out to us-->
+<!--            </v-btn>-->
+<!--            <p class="caption mt-1" style="opacity: 0.4">-->
+<!--              Visit us and grab a coffee-->
+<!--            </p>-->
+<!--          </div>-->
         </v-container>
       </section>
 

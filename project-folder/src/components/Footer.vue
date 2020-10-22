@@ -31,7 +31,7 @@
         </p>
         <p>
           <router-link to="/team" style="color: inherit;"
-            >Joining the team</router-link>
+            >Meet the team</router-link>
         </p>
       </v-flex>
 
@@ -47,11 +47,12 @@
       <v-flex md2 sm4 xs12>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Contact</p>
         <p>discover@thorly.tech</p>
-        <p>
-          <v-btn class="white--text" icon
-            ><v-icon size="24px">mdi-linkedin</v-icon></v-btn
-          >
-        </p>
+        <p>+351 918548827</p>
+<!--        <p>-->
+<!--          <v-btn class="white&#45;&#45;text" icon-->
+<!--            ><v-icon size="24px">mdi-linkedin</v-icon></v-btn-->
+<!--          >-->
+<!--        </p>-->
       </v-flex>
     </v-layout>
     <hr />
