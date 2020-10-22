@@ -5,7 +5,7 @@
       descriptionInitial=""
       descriptionBlue="From strategic consulting to development and training"
       descriptionFinal="we designed our services to help you using data science & digital technologies"
-      button="know more"
+      button="Explore our services"
     ></Header>
 
     <v-card>
@@ -72,14 +72,14 @@
                           {{ type.description }}
                         </v-card-text>
                         <v-overlay absolute opacity="0.95" :value="hover">
-                          <v-card-text class="subtitle-1 text-center pt-0">
+                          <v-card-text v-for="elements in type.overlay" class="subtitle-1 text-center pt-0">
                             <b style="color: #2C81D6">{{
-                              type.overlayTitle
+                              elements.overlayTitle
                             }}</b>
                             <br />
 
                             <v-chip
-                              v-for="element in type.overlayDescription"
+                              v-for="element in elements.overlayDescription"
                               class="ma-2"
                               >{{ element }}</v-chip
                             >
@@ -146,7 +146,7 @@
                       <v-card flat class="transparent text-center">
                         <v-card-text
                           class="display-2 justify-center"
-                          style="margin-top: 115px"
+                          style="margin-top: 180px"
                         >
                           vs.
                         </v-card-text>
@@ -414,50 +414,75 @@ export default {
         {
           name: "Industry or Department",
           photo: "industry_department",
-          overlayTitle: "Some industries we know the reality well",
-          overlayDescription: [
-            "Education",
-            "Finance",
-            "Technology",
-            "Sports",
-            "Oil and Gas",
-            "Retail",
-            "Construction"
-          ],
+          overlay:
+                  [
+                          {
+                            overlayTitle: "Some industries we know the reality well",
+                            overlayDescription: [
+                              "Education",
+                              "Finance",
+                              "Technology",
+                              "Sports",
+                              "Oil and Gas",
+                              "Retail",
+                              "Construction",
+                              "Real State"
+                            ]
+                          },
+                          {
+                            overlayTitle: "And departments we have worked with",
+                            overlayDescription: [
+                              "Marketing",
+                              "R&D",
+                              "IT",
+                              "Operations",
+                              "Finance",
+                              "Sales",
+                              "Business"
+                            ]
+                          }
+                  ],
           description:
             "We worked for multiple industries and/or across many departments. This allows us to cross best knowledge & practices between all."
         },
         {
           name: "Data type or size",
           photo: "data",
-          overlayTitle: "Types of data we are used to work with",
-          overlayDescription: [
-            "Tons of spreadsheets",
-            "Tabular Data",
-            "Log files",
-            "Unstructured",
-            "APIs",
-            "Web Scraping",
-            "Time series",
-            "SQL databases",
-            "No SQL databases",
-            "User input data"
-          ],
+          overlay: [{
+            overlayTitle: "Types of data we are used to work with",
+            overlayDescription: [
+              "Tons of spreadsheets",
+              "Tabular Data",
+              "Log files",
+              "Unstructured",
+              "APIs",
+              "Web Scraping",
+              "Time series",
+              "SQL databases",
+              "No SQL databases",
+              "User input data"
+            ]
+          }],
           description:
             "We have experienced many kinds of data in multiple situations which allows us to work with any size or type of data you have."
         },
         {
           name: "Technique or Tool",
           photo: "techniques_tools",
-          overlayTitle: "Tools we use to solve our problems",
-          overlayDescription: [
-            "Python",
-            "Vue JS",
-            "Javascript",
-            "Figma",
-            "AWS",
-            "SQL"
-          ],
+          overlay: [{
+            overlayTitle: "Tools we use to solve our problems",
+            overlayDescription: [
+              "Python",
+              "Vue JS",
+              "Javascript",
+              "Figma",
+              "R",
+              "AWS",
+              "SQL",
+              "MongoDB",
+              "Cloud computing"
+            ]
+          }],
           description:
             "As data experts used to deal with problems where no tools exists, we have experience developing our own tools & techniques."
         }

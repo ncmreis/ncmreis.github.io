@@ -1,7 +1,6 @@
 <template>
   <v-parallax
     wrap
-    id="#contacts"
     src="../assets/back_4.png"
     height="100%"
     grid-list-xl
@@ -10,7 +9,7 @@
       row
       align-start
       justify-center
-      class="text-center text-md-left my-8 mx-4"
+      class="text-center text-md-left mt-8 mb-6 mx-4"
     >
       <v-flex md3 sm12>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">
@@ -25,20 +24,13 @@
       <v-flex md2 sm4 xs6>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">About</p>
         <p>
-          <a href="/services" style="color: inherit; text-decoration: none"
-            >Hiring Thorly</a
-          >
+          <router-link to="/services" style="color: inherit;"
+            >Hiring Thorly</router-link>
         </p>
         <p>
-          <a href="/team" style="color: inherit; text-decoration: none"
-            >Joining the team</a
-          >
+          <router-link to="/team" style="color: inherit;"
+            >Joining the team</router-link>
         </p>
-        <!-- <p>
-          <a href="#!" style="color: inherit; text-decoration: none"
-            >Read our blog</a
-          >
-        </p> -->
       </v-flex>
       <v-spacer></v-spacer>
       <v-flex md2 sm4 xs6>
@@ -49,9 +41,8 @@
       <v-flex md2 sm4 xs12>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Contact</p>
         <p>discover@thorly.tech</p>
-        <p>+ 351 918 548 827</p>
         <p>
-          <v-btn class="white--text mr-1" icon
+          <v-btn class="white--text" icon
             ><v-icon size="24px">mdi-linkedin</v-icon></v-btn
           >
         </p>

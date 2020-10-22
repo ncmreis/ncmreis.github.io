@@ -169,15 +169,9 @@
                             {{ person.description }}
                           </v-card-text>
                           <div class="text-center">
-                            <v-btn class="mr-1" icon color="#2C81D6"
-                              ><v-icon size="24px">mdi-linkedin</v-icon></v-btn
-                            >
-                            <v-btn class="mr-1" icon color="#2C81D6"
-                              ><v-icon size="24px">mdi-instagram</v-icon></v-btn
-                            >
-                            <v-btn icon color="#2C81D6"
-                              ><v-icon size="24px">mdi-facebook</v-icon></v-btn
-                            >
+                            <v-btn large color="primary" icon :href="person.linkedin" target="_blank">
+                              <v-icon>mdi-linkedin</v-icon>
+                            </v-btn>
                           </div>
                         </v-overlay>
                       </v-card>
@@ -229,6 +223,7 @@ export default {
           name: "Ricardo Pereira",
           position: "The pragmatic strategist",
           photo: "ricardo",
+          linkedin: "https://www.linkedin.com/in/ricardojgpereira/",
           description:
             "I come from a mixed Engineering and Management background. I have crossed paths with Data Science years ago and since then it's been more of a passion than a job. With the interesection of my background and my interests, it is very likely you'll see me brainstorming with your team about crazy ideas as well as writing code for your prototype.",
         },
@@ -236,6 +231,7 @@ export default {
           name: "Nuno Reis",
           position: "The outgoing salesman",
           photo: "nuno",
+          linkedin: "https://www.linkedin.com/in/nunocmreis/",
           description:
             "With a passion for engineering, I started my career with a 3 years experience in the industry. I then moved on to Data Science and had already founded two companies, where I fell in love for education, before starting Data Science consultancy. We'll cross paths if you need help on training your team or solving a data-driven business problem.",
         },
@@ -243,6 +239,7 @@ export default {
           name: "Luís Sousa",
           position: "The no-filter developer",
           photo: "luis",
+          linkedin: "https://www.linkedin.com/in/lu%C3%ADs-miguel-sousa-088641183/",
           description:
             "Luís has been working as a full-stack developer for more than 10 years. Besides Mathematics, he has been evolved with Physics and Radiation in the last years, where he developed software to be deployed in Africa for the oil and gas industry. Lately, he was a Lead Data Scientist at OutSystems and he is teaching Python at Rumos.",
         },
@@ -308,8 +305,8 @@ export default {
       return images("./" + pet + ".png");
     },
     getTeamImgUrl(pet) {
-      var images = require.context("../assets/img/faces/", false, /\.jpeg$/);
-      return images("./" + pet + ".jpeg");
+      var images = require.context("../assets/img/faces/", false, /\.png$/);
+      return images("./" + pet + ".png");
     },
   },
   created: function() {
