@@ -121,7 +121,7 @@
                     <b style="color: #2C81D6"
                       >great & innovative organizations</b
                     >
-                    that made our past.
+                    that made our past and help us building our future.
                   </p>
                 </v-card-text>
               </v-card>
@@ -154,7 +154,7 @@
             align-center
             justify-center
           >
-            <v-flex md10 xs12 class="mt-12">
+            <v-flex md10 xs12 class="my-12">
               <v-card flat class="transparent">
                 <v-card-title
                   primary-title
@@ -166,12 +166,9 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    We believe the best and fastest way to get us working
-                    together is showing what we can do.
                     <b style="color: #2C81D6">
-                      Here are some demos we have in our portfolio.</b
-                    >
-                    This way we can show you right away an example of what we
+                      Here are some demos we have in our portfolio</b>
+                    to show you right away some examples of what we
                     can do together,
                     <b style="color: #2C81D6">
                       without the hassle of multiple rounds of email</b
@@ -183,20 +180,20 @@
 
             <v-flex md12 xs12>
               <v-container grid-list-xl>
-                <v-layout row wrap align-start>
+                <v-layout row wrap align-start class="d-flex align-stretch">
                   <v-flex v-for="useCase in useCases" lg3 md6 sm6 xs12>
                     <v-hover v-slot:default="{ hover }">
-                      <v-card flat class="transparent">
+                      <v-card flat class="transparent fill-height">
                         <v-img
                           contain
                           :src="getCaseImgUrl(useCase.photo)"
                           class="text-center align-end"
                           style="border-radius: 5px"
                         ></v-img>
-                        <v-card-title class="layout subtitle-2 text-left pb-0">
+                        <v-card-title class="layout subtitle-2 text-left pb-0 fix">
                           {{ useCase.title }}
                         </v-card-title>
-                        <v-card-text class="caption layout text-left">
+                        <v-card-text class="caption layout text-left fix">
                           {{ useCase.tags }}
                         </v-card-text>
                         <v-overlay absolute opacity="0.95" :value="hover">
@@ -378,7 +375,7 @@ export default {
           overlayTitle: "Make your data sing",
           tags: "Visualization and Storytelling, 1h",
           largeDescription:
-            "We show you how the best practices of Data Visualization and Storytelling can do for your internal communication and decision making.",
+            "We show you what the best practices of Data Visualization and Storytelling can do for your internal communication and decision making.",
           photo: "nova"
         },
         {

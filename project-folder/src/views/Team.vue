@@ -237,7 +237,7 @@ export default {
           position: "The outgoing salesman",
           photo: "nuno",
           description:
-            "Nuno started his career as top student at Técnico Lisboa, where he did research before working for 3 years in the industry. Then he moved on to Data Science and has already founded two startups while he was doing Data Science & Data Architecture consultancy. He is currently teaching Data Science fundamentals at EDIT.",
+            "With a passion for engineering, I started my career with a 3 years experience in the industry. I then moved on to Data Science and had already founded two companies, where I fell in love for education, before starting Data Science consultancy. We'll cross paths if you need help on training your team or solving a data-driven business problem.",
         },
         {
           name: "Luís Sousa",
