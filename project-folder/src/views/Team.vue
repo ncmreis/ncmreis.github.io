@@ -1,11 +1,11 @@
 <template>
   <div>
     <Header
-      title="The team and culture behind your business solutions"
-      descriptionInitial="We believe"
-      descriptionBlue="our creative, friendly and assertive mindset"
-      descriptionFinal="is the sweet spot to help you find the solutions for your business needs"
-      button="Know more"
+      title="Get to know our team, culture and cool avatars."
+      descriptionInitial="We are a mix of"
+      descriptionBlue="good old friends, data geeks and technology enablers"
+      descriptionFinal="looking for a sustainable and mentally sane business model."
+      button="Check our culture"
     ></Header>
 
     <v-card>
@@ -129,9 +129,11 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline mb-6">
-                    We are a group of data-driven entrepreneurs 
-                    working in <b>Engineering & Data Science, with a focus
-                    on technology, data and machine learning. </b>
+                    We are a group of data-driven entrepreneurs working in
+                    <b
+                      >Engineering & Data Science, with a focus on technology,
+                      data and machine learning.
+                    </b>
                     <b style="color: #2C81D6">Nice to e-meet you!</b>
                   </p>
                 </v-card-text>
@@ -185,15 +187,16 @@
               </v-container>
             </v-flex>
           </v-layout>
-          <v-btn
-            align-center
-            class="body-1 mb-12"
-            color="primary"
-            x-large
-            to="/about"
-          >
-            Join us
-          </v-btn>
+          <div class=" mb-12">
+            <v-btn
+              class="body-1"
+              color="primary"
+              @click="typeformCall()"
+              x-large
+            >
+              Join us
+            </v-btn>
+          </div>
         </v-container>
       </section>
     </v-card>
@@ -206,6 +209,7 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { typeform } from "../plugins/typeform.js";
 
 export default {
   name: "Home",
@@ -278,6 +282,9 @@ export default {
     };
   },
   methods: {
+    typeformCall() {
+      typeform();
+    },
     goToSection(hashSection) {
       var elmnt = document.getElementById(hashSection);
       elmnt.scrollIntoView({ behavior: "smooth" });

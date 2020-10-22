@@ -27,17 +27,20 @@
     </v-toolbar-title>
     <div class="flex-grow-1"></div>
     <v-toolbar-items class="hidden-sm-and-down align-center">
-      <router-link style="text-decoration: none"  to="/"><v-btn text color="white">Home</v-btn></router-link>
-      <router-link style="text-decoration: none"  to="/services"
+      <router-link style="text-decoration: none" to="/"
+        ><v-btn text color="white">Home</v-btn></router-link
+      >
+      <router-link style="text-decoration: none" to="/services"
         ><v-btn text color="white">Services</v-btn></router-link
       >
-      <router-link style="text-decoration: none"  to="/team"
+      <router-link style="text-decoration: none" to="/team"
         ><v-btn text color="white">Team</v-btn></router-link
       >
       <calendly
         call="https://calendly.com/ricardo-thorly-education"
         description="Schedule a call"
         class="ml-6 mr-2"
+        icon="mdi-phone"
       >
       </calendly>
     </v-toolbar-items>

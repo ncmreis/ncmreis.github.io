@@ -76,9 +76,14 @@
               </v-container>
             </v-flex>
           </v-layout>
-          <v-btn class="body-1 mb-12" color="primary" x-large to="/services">
-            Let's talk about this
-          </v-btn>
+          <div class="mb-12">
+            <calendly
+              call="https://calendly.com/ricardo-thorly-education"
+              :xlarge="true"
+              description="Let's talk about this"
+            ></calendly>
+            <p class="caption mt-1" style="opacity: 0.4"></p>
+          </div>
         </v-container>
       </section>
 
@@ -155,6 +160,7 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Calendly from "../components/calendly";
 
 export default {
   name: "Strategy",
@@ -162,6 +168,7 @@ export default {
     Header,
     Navbar,
     Footer,
+    Calendly,
   },
   data() {
     return {

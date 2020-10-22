@@ -15,7 +15,8 @@
           v-bind="attrs"
           v-on="on"
         >
-          <v-icon color="white" left>mdi-phone</v-icon>{{ description }}
+          <v-icon v-if="icon" color="white" left>{{ icon }}</v-icon
+          >{{ description }}
         </v-btn>
       </template>
       <v-card>
@@ -44,7 +45,7 @@
 
 <script>
 export default {
-  props: ["call", "xlarge", "xsmall", "description"],
+  props: ["call", "xlarge", "xsmall", "description", "icon"],
   data() {
     return {
       dialog: false,

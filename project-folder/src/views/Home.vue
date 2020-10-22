@@ -13,7 +13,7 @@
         v-if="scrolled"
         :class="{
           nav: $vuetify.breakpoint.smAndUp,
-          'nav-xs': $vuetify.breakpoint.xs,
+          'nav-xs': $vuetify.breakpoint.xs
         }"
         background="back_4"
         height="70"
@@ -166,11 +166,16 @@
                 </v-card-title>
                 <v-card-text>
                   <p class="text-center headline">
-                    We built a set of sessions to jumpstart your data culture in
-                    different ways, get closer to your team and
-                    <b style="color: #2C81D6"
-                      >show you some of the work we can do together,
-                    without the hassle of multiple rounds of email</b>.
+                    We believe the best and fastest way to get us working
+                    together is showing what we can do.
+                    <b style="color: #2C81D6">
+                      Here are some demos we have in our portfolio.</b
+                    >
+                    This way we can show you right away an example of what we
+                    can do together,
+                    <b style="color: #2C81D6">
+                      without the hassle of multiple rounds of email</b
+                    >.
                   </p>
                 </v-card-text>
               </v-card>
@@ -179,7 +184,7 @@
             <v-flex md12 xs12>
               <v-container grid-list-xl>
                 <v-layout row wrap align-start>
-                  <v-flex v-for="useCase in useCases" md3 sm6 xs12>
+                  <v-flex v-for="useCase in useCases" lg3 md6 sm6 xs12>
                     <v-hover v-slot:default="{ hover }">
                       <v-card flat class="transparent">
                         <v-img
@@ -194,6 +199,15 @@
                         <v-card-text class="caption layout text-left">
                           {{ useCase.tags }}
                         </v-card-text>
+                        <v-overlay absolute opacity="0.95" :value="hover">
+                          <v-card-text class="subtitle-1 text-center pt-0">
+                            <b style="color: #2C81D6">{{
+                              useCase.overlayTitle
+                            }}</b>
+                            <br />
+                            {{ useCase.largeDescription }}
+                          </v-card-text>
+                        </v-overlay>
                       </v-card>
                     </v-hover>
                   </v-flex>
@@ -201,18 +215,16 @@
               </v-container>
             </v-flex>
           </v-layout>
-          <div class=" mb-12">
-            <!-- <v-btn class="body-1" color="primary" x-large>
-              I want to jumpstart
-            </v-btn> -->
+          <div class="mb-12">
             <calendly
               call="https://calendly.com/ricardo-thorly-education/30min"
+              icon="mdi-phone"
               :xlarge="true"
               description="Discovery call"
             ></calendly>
 
             <p class="caption mt-1" style="opacity: 0.4">
-              Get the right option for your organization
+              Get the right demo for your organization
             </p>
           </div>
         </v-container>
@@ -256,7 +268,12 @@
             </v-flex>
           </v-layout>
           <div class=" mb-12">
-            <v-btn class="body-1" color="primary" @click="typeform()" x-large>
+            <v-btn
+              class="body-1"
+              color="primary"
+              @click="typeformCall()"
+              x-large
+            >
               Join the team
             </v-btn>
             <p class="caption mt-1" style="opacity: 0.4">
@@ -276,7 +293,7 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Calendly from "../components/calendly";
-import * as typeformEmbed from "@typeform/embed";
+import { typeform } from "../plugins/typeform.js";
 
 export default {
   name: "Home",
@@ -284,7 +301,7 @@ export default {
     Header,
     Navbar,
     Footer,
-    Calendly,
+    Calendly
   },
 
   data() {
@@ -301,7 +318,7 @@ export default {
           target:
             "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs.",
+            "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs."
         },
         {
           name: "Consulting",
@@ -310,7 +327,7 @@ export default {
             "Build data-driven insights to speed up your business potential",
           target: "Do you want to improve your decision making with data?",
           largeDescription:
-            "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions.",
+            "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions."
         },
         {
           name: "Development",
@@ -319,7 +336,7 @@ export default {
           target:
             "Do you have plan to develop an internal tool or product using your data?",
           largeDescription:
-            'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.',
+            'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.'
         },
         {
           name: "Training",
@@ -329,8 +346,8 @@ export default {
           target:
             "Do you want to increase your team's data literacy and culture?",
           largeDescription:
-            "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners.",
-        },
+            "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners."
+        }
       ],
       companies: [
         { name: "Católica Lisbon", photo: "catolica" },
@@ -344,39 +361,49 @@ export default {
         { name: "Rumos", photo: "rumos" },
         { name: "NOVA SBE", photo: "nova" },
         { name: "ISQ", photo: "isq" },
-        { name: "Tranquilidade", photo: "tranquilidade" },
+        { name: "Tranquilidade", photo: "tranquilidade" }
       ],
       useCases: [
         {
-          title: "Data strategy in a nutshell",
-          tags: "Strategy, Consulting, Data science, 1h",
-          photo: "loki",
+          title:
+            "Creative Session - Identify data problems and prototype tools",
+          overlayTitle: "Identify problems and prototype tools",
+          tags: "Design Thinking, Strategy, 2h",
+          largeDescription:
+            "A design thinking session to show you how to get value out of your data and how to prototype technological solutions.",
+          photo: "loki"
         },
         {
-          title: "Make your data talk",
-          tags: "Storytelling, Data Visualization, 1h",
-          photo: "nova",
+          title: "Data Session - Storytelling with Data",
+          overlayTitle: "Make your data sing",
+          tags: "Visualization and Storytelling, 1h",
+          largeDescription:
+            "We show you how the best practices of Data Visualization and Storytelling can do for your internal communication and decision making.",
+          photo: "nova"
         },
         {
-          title: "Building a cockpit for your data",
+          title: "Technology Demo - The art of prototyping",
+          overlayTitle: "Live demo for Analytics",
           tags: "Prototype, Engineering, 2h",
-          photo: "chartyn",
+          largeDescription:
+            "In this session we can show you what are the (typically) necessary decisions and tools to build a valuable prototype.",
+          photo: "chartyn"
         },
         {
-          title: "Predict churn in a blink",
-          tags: "Consulting, Training, Data science, 2h",
-          photo: "catolica",
-        },
-      ],
+          title:
+            "Data Session - How can Data Science help my business problems?",
+          overlayTitle: "Improving client retention",
+          tags: "Consulting, Data science, 2h",
+          largeDescription:
+            "We will walk you through a real life business case using DS to improve client retention. This is a session open to technical and non-technical people.",
+          photo: "catolica"
+        }
+      ]
     };
   },
   methods: {
-    typeform() {
-      const url = "https://rgilpereira.typeform.com/to/pJsbSIXz";
-      const options = {
-        mode: "drawer_right",
-      };
-      typeformEmbed.makePopup(url, options).open();
+    typeformCall() {
+      typeform();
     },
     goToSection(hashSection) {
       var elmnt = document.getElementById(hashSection);
@@ -407,7 +434,7 @@ export default {
     getTeamImgUrl(pet) {
       var images = require.context("../assets/img/faces/", false, /\.jpeg$/);
       return images("./" + pet + ".jpeg");
-    },
+    }
   },
   created: function() {
     window.addEventListener("resize", this.handleResize);
@@ -421,16 +448,16 @@ export default {
   computed: {
     headerStyle() {
       return {
-        backgroundImage: "url(../assets/blue.jpg)",
+        backgroundImage: "url(../assets/blue.jpg)"
       };
-    },
+    }
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
-  },
+  }
 };
 </script>
 
