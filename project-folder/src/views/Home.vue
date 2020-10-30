@@ -8,7 +8,7 @@
       button="Know more"
     ></Header>
 
-    <v-card>
+    <v-card tile>
       <Navbar
         v-if="scrolled"
         :class="{
@@ -17,6 +17,8 @@
         }"
         background="back_4"
         height="70"
+        logo="thorly_logo_white"
+        textColor="#FFFFFF"
       ></Navbar>
 
       <section id="#1">
@@ -413,7 +415,7 @@ export default {
       this.windowHeight = window.innerHeight;
     },
     handleScroll() {
-      this.scrolled = window.scrollY > window.innerHeight - 100;
+      this.scrolled = window.scrollY > window.innerHeight - 70;
     },
 
     getCompImgUrl(pet) {

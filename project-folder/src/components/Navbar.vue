@@ -11,7 +11,7 @@
           contain
           height="70px"
           width="210px"
-          src="../assets/thorly_logo_white.png"
+          :src=getBackUrl(logo)
           alt="Thorly"
           class="v-img-cursor ml-n2 hidden-xs-only"
         ></v-img>
@@ -19,7 +19,7 @@
           contain
           height="35px"
           width="120px"
-          src="../assets/thorly_logo_white.png"
+          :src=getBackUrl(logo)
           alt="Thorly"
           class="v-img-cursor hidden-sm-and-up"
         ></v-img>
@@ -28,13 +28,13 @@
     <div class="flex-grow-1"></div>
     <v-toolbar-items class="hidden-sm-and-down align-center">
       <router-link style="text-decoration: none" to="/"
-        ><v-btn text color="white">Home</v-btn></router-link
+        ><v-btn text :color="textColor">Home</v-btn></router-link
       >
       <router-link style="text-decoration: none" to="/services"
-        ><v-btn text color="white">Services</v-btn></router-link
+        ><v-btn text :color="textColor">Services</v-btn></router-link
       >
       <router-link style="text-decoration: none" to="/team"
-        ><v-btn text color="white">Team</v-btn></router-link
+        ><v-btn text :color="textColor">Team</v-btn></router-link
       >
       <calendly
         call="https://calendly.com/ricardo-thorly-education"
@@ -48,7 +48,7 @@
       <v-menu bottom left>
         <template v-slot:activator="{ on }">
           <v-btn fab text flat class="transparent" v-on="on">
-            <v-icon color="white">mdi-menu</v-icon>
+            <v-icon :color="textColor">mdi-menu</v-icon>
           </v-btn>
         </template>
         <v-list>
@@ -74,7 +74,7 @@ export default {
   components: {
     Calendly,
   },
-  props: ["background", "height"],
+  props: ["background", "height", "logo", "textColor"],
   methods: {
     getBackUrl(pet) {
       var images = require.context("../assets/", false, /\.png$/);

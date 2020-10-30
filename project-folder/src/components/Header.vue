@@ -1,6 +1,10 @@
 <template>
   <v-parallax src="../assets/back_4.png" id="#home" :height="windowHeight">
-    <Navbar height="70"></Navbar>
+    <Navbar
+            height="70"
+            logo="thorly_logo_white"
+            textColor="#FFFFFF">
+    </Navbar>
 
     <v-container class="justify-center fill-height mb-0">
       <v-flex md8 xs12>
@@ -72,10 +76,10 @@ export default {
     "descriptionInitial",
     "descriptionBlue",
     "descriptionFinal",
-    "button",
+    "button"
   ],
   components: {
-    Navbar,
+    Navbar
   },
 
   data() {

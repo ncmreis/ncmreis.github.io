@@ -1,23 +1,53 @@
 <template>
   <div>
-    <Header
-      title="Get to know our team, culture and cool avatars."
-      descriptionInitial="We are a mix of"
-      descriptionBlue="good old friends, data geeks and technology enablers"
-      descriptionFinal="looking for a sustainable and mentally sane business model."
-      button="Check our culture"
-    ></Header>
-
-    <v-card>
+    <v-card tile>
       <Navbar
-        v-if="scrolled"
         :class="{
           nav: $vuetify.breakpoint.smAndUp,
           'nav-xs': $vuetify.breakpoint.xs,
         }"
         background="back_4"
         height="70"
+        logo="thorly_logo_white"
+        textColor="#FFFFFF"
       ></Navbar>
+
+      <section id="#header" style="height: 100vh; background-color: #F6F9FD; padding-top: 70px" class="mb-0 pb-0">
+        <v-container class="fill-height mb-0 pb-0">
+          <v-layout
+                  row
+                  wrap
+                  align-end
+                  justify-center
+          >
+            <v-flex md10 xs12>
+              <v-card flat class="transparent">
+                <v-card-title
+                        primary-title
+                        class="justify-center fix layout mb-0"
+                >
+                  <p class="display-3 text-center mb-0" style="font-weight: 600">
+                    Our people = Our culture
+                  </p>
+                </v-card-title>
+                <v-card-text class="my-0">
+                  <p class="text-center headline my-0">
+                    A
+                    <b style="color: #2C81D6"
+                    >flexible & creative spirit</b> to enhance <b>creativity</b>
+                  </p>
+                </v-card-text>
+              </v-card>
+            </v-flex>
+              <v-img
+                      max-height="325"
+                      contain
+                      src="../assets/team.png"
+                      class="text-center align-end my-0"
+              ></v-img>
+          </v-layout>
+        </v-container>
+      </section>
 
       <section id="#lisbon">
         <v-container class="text-center">
@@ -201,16 +231,18 @@
 
 <script>
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
+//import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { typeform } from "../plugins/typeform.js";
+import Calendly from "../components/calendly";
 
 export default {
   name: "Home",
   components: {
-    Header,
+    Calendly,
     Navbar,
-    Footer,
+    //Header,
+    Footer
   },
 
   data() {
