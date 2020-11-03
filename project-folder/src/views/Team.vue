@@ -10,6 +10,7 @@
         height="70"
         logo="thorly_logo_white"
         textColor="#FFFFFF"
+        colorButton="orange"
       ></Navbar>
 
       <section id="#header" style="height: 100vh; background-color: #F6F9FD; padding-top: 70px" class="mb-0 pb-0">
@@ -26,12 +27,12 @@
                         primary-title
                         class="justify-center fix layout mb-0"
                 >
-                  <p class="display-3 text-center mb-0" style="font-weight: 600">
+                  <p class="text-sm-h3 text-h4 text-center mb-0" style="font-weight: 600">
                     Our people = Our culture
                   </p>
                 </v-card-title>
                 <v-card-text class="my-0">
-                  <p class="text-center headline my-0">
+                  <p class="text-center text-sm-h5 text-h6 my-0" style="font-weight: 400">
                     A
                     <b style="color: #2C81D6"
                     >flexible & creative spirit</b> to enhance <b>creativity</b>
@@ -40,7 +41,7 @@
               </v-card>
             </v-flex>
               <v-img
-                      max-height="325"
+                      :max-height="windowHeight<500 ? '35vh' : '325px'"
                       contain
                       src="../assets/team.png"
                       class="text-center align-end my-0"
@@ -64,7 +65,7 @@
                   primary-title
                   class="justify-center fix layout mb-6"
                 >
-                  <p class="display-2 text-center" style="font-weight: 600">
+                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
                     From Lisbon to the World
                   </p>
                 </v-card-title>
@@ -75,7 +76,7 @@
                   class="text-center align-end"
                 ></v-img>
                 <v-card-text>
-                  <p class="text-center headline">
+                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400"">
                     Born and raised in Lisbon,
                     <b style="color: #2C81D6"
                       >we studied in the top universities and launched our
@@ -89,57 +90,56 @@
               </v-card>
             </v-flex>
           </v-layout>
-<!--          <div class=" mb-12">-->
-<!--            <v-btn class="body-1" color="primary" x-large to="/about">-->
-<!--              Reach out to us-->
-<!--            </v-btn>-->
-<!--            <p class="caption mt-1" style="opacity: 0.4">-->
-<!--              Visit us and grab a coffee-->
-<!--            </p>-->
-<!--          </div>-->
         </v-container>
       </section>
 
-      <section id="#1" style="background-color: #F6F9FD">
+      <section id="#values" style="background-color: #F6F9FD">
         <v-container class="text-center">
           <v-layout row wrap class="my-12" align-center justify-center>
             <v-flex md10 xs12>
               <v-card flat class="transparent justify-center text-center">
                 <v-card-title
                   primary-title
-                  class="justify-center fix layout mt-6 mb-12 "
+                  class="justify-center fix layout mt-6 mb-sm-12 "
                 >
-                  <p class="display-2 text-center" style="font-weight: 600">
+                  <p class="text-h3 text-h4 text-center" style="font-weight: 600">
                     The DNA behind Thorly
                   </p>
                 </v-card-title>
-                <v-card-text>
-                  <p class="text-center headline mb-6">
-                    We believe a team is all about
-                    <b style="color: #2C81D6">people with the right values</b>
-                    and it is the key-factor to create the
-                    <b>open-minded, friendly and creative environment</b> we
-                    have.
-                  </p>
-                </v-card-text>
               </v-card>
             </v-flex>
-            <v-flex md10 xs12>
+
+            <v-flex md12 xs12>
               <v-container grid-list-xl>
-                <v-layout row wrap class="d-flex align-stretch">
-                  <v-flex v-for="value in values" md6 sm6 xs12>
-                    <v-card flat class="transparent fill-height">
-                      <v-card-title class="headline justify-center fix">
-                        <b>{{ value.name }}</b>
-                      </v-card-title>
-                      <v-card-text class="subtitle-1">
-                        {{ value.description }}
+                <v-layout row class="align-center justify-center">
+                  <v-flex md6 xs12>
+                    <v-card flat class="transparent text-center">
+                      <v-card-text class="text-h5 text-h6 text-sm-left" style="font-weight: 400">
+                          We believe a team is all about
+                          <b style="color: #2C81D6"> people with the right values</b>
+                          and it is the key-factor to create the
+                          <b>open-minded, friendly and creative environment</b> we
+                          have.
                       </v-card-text>
                     </v-card>
+                  </v-flex>
+
+                  <v-flex md6 xs12>
+                    <v-container grid-list-xl>
+                      <v-layout row class="d-flex align-stretch">
+                        <v-flex v-for="value in values" sm6 xs12>
+                          <v-card class="fill-height text-left elevation-12 fix">
+                            <v-card-title class='fix' style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #000000; opacity: 0.75">{{ value.name }}</v-card-title>
+                            <v-card-text style="font-size: 14px; line-height: 20px; letter-spacing: 0.25px">{{ value.description }}</v-card-text>
+                          </v-card>
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
                   </v-flex>
                 </v-layout>
               </v-container>
             </v-flex>
+
           </v-layout>
         </v-container>
       </section>
@@ -153,15 +153,15 @@
                   primary-title
                   class="justify-center fix layout mt-6 mb-12 "
                 >
-                  <p class="display-2 text-center" style="font-weight: 600">
+                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
                     Hello, world
                   </p>
                 </v-card-title>
                 <v-card-text>
-                  <p class="text-center headline mb-6">
-                    We are a group of data-driven entrepreneurs working in
+                  <p class="text-h5 text-h6 text-sm-left" style="font-weight: 400">
+                    We are a group of data-driven entrepreneurs
                     <b
-                      >Engineering & Data Science, with a focus on technology,
+                      >with a focus on technology,
                       data and machine learning.
                     </b>
                     <b style="color: #2C81D6">Nice to e-meet you!</b>

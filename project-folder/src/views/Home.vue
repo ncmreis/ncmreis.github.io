@@ -1,14 +1,13 @@
 <template>
   <div>
     <Header
-      title="Rapid prototyping for Data Science solutions"
-      descriptionInitial=""
-      descriptionBlue="We are a Data Science & Engineering team for hire."
-      descriptionFinal="We provide services to help organizations increase their data potential"
-      button="Know more"
+      title="We build data solutions for business problems"
+      descriptionInitial="We are a"
+      descriptionBlue="Data Science & Engineering team for hire"
+      descriptionFinal="with a human-centered and design thinking approach."
     ></Header>
 
-    <v-card tile>
+    <v-card tile class="transparent">
       <Navbar
         v-if="scrolled"
         :class="{
@@ -19,9 +18,101 @@
         height="70"
         logo="thorly_logo_white"
         textColor="#FFFFFF"
+        colorButton="orange"
       ></Navbar>
 
-      <section id="#1">
+      <section id="#services">
+        <v-container class="text-center">
+          <v-layout
+            row
+            wrap
+            class="mb-sm-12 white--text align-center"
+            align-center
+            justify-center
+          >
+            <v-flex  md10 xs12>
+              <v-container class="align-center">
+                <v-layout row class="justify-center my-sm-6">
+                  <v-flex v-for="service in services" :key="service.name" xs3>
+                    <v-card tile flat v-on:click="show = service.name">
+                      <div>
+                        <v-avatar
+                                :size="$vuetify.breakpoint.xs ? 50: 100"
+                                :class="show === service.name ? 'elevation-15 mt-6' : 'mt-6'">
+                          <img contain height="100%" :src="getServiceImgUrl(service.photo)">
+                        </v-avatar>
+                      </div>
+                      <v-card-title
+                              id="#service"
+                              class="justify-center text-sm-h6 text-caption mx-0 px-0"
+                              :style="show === service.name ? {'color': service.color} : {'color': '#656464'}"><b>{{ service.name }}</b>
+                      </v-card-title>
+                      <v-system-bar
+                              height="5"
+                              :color="show === service.name ? service.color : 'gray'"
+                               ></v-system-bar>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+
+            <v-flex md12 xs12 v-for="service in services" :key="service.name" v-if="show === service.name">
+              <v-container grid-list-xl>
+                <v-layout row class="align-center justify-center">
+                  <v-flex md6 xs12 class="pb-0">
+                    <v-card flat class="transparent text-left py-0">
+                      <v-card-title class="text-sm-h4 text-h5 fix" style="font-weight: 500;">
+                        <a :style="{'color': service.color}">{{ service.description }}</a>
+                      </v-card-title>
+                      <v-card-text class="text-sm-h6 text-subtitle-1" style="font-weight: 400">
+                        {{ service.largeDescription }}
+                        <a class="hidden-md-and-up" :style="{'color': service.color}">Check some <b>{{ service.photo }}</b> use cases:</a>
+                      </v-card-text>
+                    </v-card>
+                  </v-flex>
+
+                  <v-flex md6 xs12>
+                    <v-container grid-list-xl>
+                      <v-layout row class="d-flex align-stretch">
+                        <v-flex v-for="caso in service.cases" sm6 xs12>
+                          <v-card class="fill-height text-left elevation-12">
+                            <v-card-title class='fix' style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #000000; opacity: 0.75">{{ caso.title }}</v-card-title>
+                            <v-card-text style="font-size: 14px; line-height: 20px; letter-spacing: 0.25px">{{ caso.goals }}</v-card-text>
+                          </v-card>
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+              <img style="margin-top: -150px; width: 100%; max-width: 800px; object-fit: cover;" class="align-center" :src=getBlobImgUrl(service.photo)>
+            </v-flex>
+
+            <v-flex md10 xs12 class="hidden-sm-and-up">
+              <v-container class="align-center pb-0">
+                <v-layout row class="justify-center">
+                  <v-flex v-for="service in services" :key="service.name" xs3>
+                    <v-card tile flat v-on:click="show = service.name, goToSection('#service')">
+                      <v-system-bar
+                              height="5"
+                              :color="show === service.name ? service.color : 'gray'"
+                      ></v-system-bar>
+                      <v-card-title
+                              class="justify-center text-sm-h6 text-caption mx-0 px-0"
+                              :style="show === service.name ? {'color': service.color} : {'color': '#656464'}"><b>{{ service.name }}</b>
+                      </v-card-title>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </section>
+
+      <section id="#process" style="background-color: #F6F9FD">
         <v-container class="text-center">
           <v-layout
             row
@@ -33,203 +124,70 @@
             <v-flex md10 xs12 class="my-12">
               <v-card flat class="transparent">
                 <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-12"
+                  class="justify-center fix layout mb-sm-6"
                 >
-                  <p class="display-2 text-center" style="font-weight: 600">
-                    Iterating as quickly as possible
+                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
+                    Human-centered process
                   </p>
                 </v-card-title>
                 <v-card-text>
-                  <p class="text-center headline"></p>
-
-                  <p class="text-center headline">
-                    We work with you on
-                    <b style="color: #2C81D6"
-                      >out-of-the-box thinking sessions</b
-                    >
-                    to come up with creative solutions for your problems and
-                    implement them in
-                    <b style="color: #2C81D6"
-                      >small loops of planning, building and testing</b
-                    >
-                    that keeps us closer to you and your organization's goals.
+                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400">
+                    Iterate faster. Test sooner.
+                      <b style="color: #2C81D6">Get quick wins</b>
                   </p>
                 </v-card-text>
+                <v-img
+                        contain
+                        src="../assets/process.png"
+                        class="text-center align-end"
+                ></v-img>
               </v-card>
             </v-flex>
 
-            <v-flex md12 xs12>
-              <v-container grid-list-xl>
-                <v-layout row wrap align-start>
-                  <v-flex v-for="service in services" md3 sm6 xs12>
-                    <v-hover v-slot:default="{ hover }">
-                      <v-card flat class="transparent">
-                        <v-img
-                          height="200"
-                          contain
-                          :src="getServiceImgUrl(service.photo)"
-                          class="text-center"
-                        ></v-img>
-                        <v-card-title
-                          class="headline fix layout justify-center"
-                        >
-                          <b style="">{{ service.name }}</b>
-                        </v-card-title>
-                        <v-card-text class="subtitle-1">
-                          {{ service.description }}
-                        </v-card-text>
-                        <v-overlay absolute opacity="0.95" :value="hover">
-                          <v-card-text class="subtitle-1 text-center pt-0">
-                            <b style="color: #2C81D6">{{ service.target }}</b>
-                            <br />
-                            {{ service.largeDescription }}
-                          </v-card-text>
-                          <v-btn
-                            color="primary"
-                            :to="'/services/' + service.photo + '/'"
-                            >Know more</v-btn
-                          >
-                        </v-overlay>
-                      </v-card>
-                    </v-hover>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
-          </v-layout>
-          <v-btn class="body-1 mb-12" color="primary" x-large to="/services">
-            Explore our services
-          </v-btn>
-        </v-container>
-      </section>
-
-      <section id="#clients" style="background-color: #F6F9FD">
-        <v-container class="text-center">
-          <v-layout row wrap class="my-12" align-center justify-center>
-            <v-flex md8 xs12 class="my-12">
-              <v-card flat class="transparent">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-12"
-                >
-                  <p class="display-2 text-center" style="font-weight: 600">
-                    Part of our story
-                  </p>
-                </v-card-title>
-                <v-card-text>
-                  <p class="text-center headline">
-                    Get to know some of the
-                    <b style="color: #2C81D6"
-                      >great & innovative organizations</b
-                    >
-                    that made our past and help us building our future.
-                  </p>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-
-            <v-flex md10 xs11 class="mb-6">
-              <v-container grid-list-xl align-center>
-                <v-layout row wrap align-center>
-                  <v-flex v-for="company in companies" sm3 xs4 class="py-5">
-                    <v-img
-                      height="75"
-                      contain
-                      :src="getCompImgUrl(company.photo)"
-                      class="text-center"
-                    ></v-img>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
           </v-layout>
         </v-container>
       </section>
 
-      <section id="#jumpstart">
+      <section id="#call" style="background-color: #1667C0">
         <v-container class="text-center">
           <v-layout
-            row
-            wrap
-            class="my-12 white--text"
-            align-center
-            justify-center
+                  row
+                  wrap
+                  class="mt-12 white--text"
+                  align-center
+                  justify-center
           >
-            <v-flex md10 xs12 class="my-12">
+            <v-flex md10 xs12>
               <v-card flat class="transparent">
                 <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-6"
+                        primary-title
+                        class="justify-center fix layout"
                 >
-                  <p class="display-2 text-center" style="font-weight: 600">
-                    Simplifying the sales process
+                  <p class="white--text text-sm-h3 text-h4 text-center" style="font-weight: 600">
+                    Let's brainstorm!
                   </p>
                 </v-card-title>
                 <v-card-text>
-                  <p class="text-center headline">
-                    <b style="color: #2C81D6">
-                      Here are some demos we have in our portfolio</b>
-                    to show you right away some examples of what we
-                    can do together,
-                    <b style="color: #2C81D6">
-                      without the hassle of multiple rounds of email</b
-                    >.
+                  <p class="white--text text-center text-sm-h5 text-h6" style="font-weight: 400">
+                    Talk to us and schedule your <b style="color: #FFFFFF">free creative session</b>
                   </p>
                 </v-card-text>
               </v-card>
             </v-flex>
-
-            <v-flex md12 xs12>
-              <v-container grid-list-xl>
-                <v-layout row wrap align-start class="d-flex align-stretch">
-                  <v-flex v-for="useCase in useCases" lg3 md6 sm6 xs12>
-                    <v-hover v-slot:default="{ hover }">
-                      <v-card flat class="transparent fill-height">
-                        <v-img
-                          contain
-                          :src="getCaseImgUrl(useCase.photo)"
-                          class="text-center align-end"
-                          style="border-radius: 5px"
-                        ></v-img>
-                        <v-card-title class="layout subtitle-2 text-left pb-0 fix">
-                          {{ useCase.title }}
-                        </v-card-title>
-                        <v-card-text class="caption layout text-left fix">
-                          {{ useCase.tags }}
-                        </v-card-text>
-                        <v-overlay absolute opacity="0.95" :value="hover">
-                          <v-card-text class="subtitle-1 text-center pt-0">
-                            <b style="color: #2C81D6">{{
-                              useCase.overlayTitle
-                            }}</b>
-                            <br />
-                            {{ useCase.largeDescription }}
-                          </v-card-text>
-                        </v-overlay>
-                      </v-card>
-                    </v-hover>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
           </v-layout>
-          <div class="mb-12">
+          <div class="mt-6 mb-12">
             <calendly
-              call="https://calendly.com/ricardo-thorly-education/30min"
-              icon="mdi-phone"
-              :xlarge="true"
-              description="Discovery call"
+                    call="https://calendly.com/ricardo-thorly-education/30min"
+                    icon="mdi-phone"
+                    :xlarge="true"
+                    description="Schedule a call"
+                    button="orange"
             ></calendly>
-
-            <p class="caption mt-1" style="opacity: 0.4">
-              Get the right demo for your organization
-            </p>
           </div>
         </v-container>
       </section>
 
-      <section id="#team" style="background-color: #F6F9FD">
+      <section id="#team">
         <v-container class="text-center">
           <v-layout
             row
@@ -244,7 +202,7 @@
                   primary-title
                   class="justify-center fix layout mb-6"
                 >
-                  <p class="display-2 text-center" style="font-weight: 600">
+                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
                     Be part of team Thor
                   </p>
                 </v-card-title>
@@ -255,7 +213,7 @@
                   class="text-center align-end"
                 ></v-img>
                 <v-card-text>
-                  <p class="text-center headline">
+                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400">
                     We are a community of friendly and creative people with a
                     <b style="color: #2C81D6"
                       >flexible lifestyle, eager to be challenged everyday</b
@@ -281,6 +239,46 @@
           </div>
         </v-container>
       </section>
+
+      <section id="#story" style="background-color: #F6F9FD">
+        <v-container class="text-center">
+          <v-layout row wrap class="my-6" align-center justify-center>
+            <v-flex md12 xs12>
+              <v-card flat class="transparent">
+                <v-card-text>
+                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400">
+                    Part of our story
+                  </p>
+                </v-card-text>
+              </v-card>
+
+              <v-slide-group
+                      v-model="model"
+                      show-arrows
+                      class="my-4 mx-0 px-0"
+              >
+                <v-slide-item
+                        v-for="(company,index) in companies"
+                        :key="index"
+                        v-slot="{ active, toggle }"
+                        mx-0
+                >
+                  <v-card flat
+                          class="mx-sm-6 mx-2 transparent layout align-center"
+                          @click="toggle"
+                  >
+                    <img
+                            :src="getCompImgUrl(company.photo)"
+                            :width="$vuetify.breakpoint.xs ? 90: 150"
+                            contain
+                    >
+                  </v-card>
+                </v-slide-item>
+              </v-slide-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </section>
     </v-card>
 
     <Footer />
@@ -292,6 +290,7 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Calendly from "../components/calendly";
+import slider from "../components/slider";
 import { typeform } from "../plugins/typeform.js";
 
 export default {
@@ -300,67 +299,101 @@ export default {
     Header,
     Navbar,
     Footer,
-    Calendly
+    Calendly,
+    slider
   },
 
   data() {
     return {
+      show: "Strategy",
       hashSection: null,
       windowHeight: 0,
       scrolled: false,
+      model: null,
       services: [
         {
           name: "Strategy",
+          color: "#FFB347",
           photo: "strategy",
           description:
-            "Define a plan for your data considering multiple approaches",
+            "We help you with planning sessions, strategic reports and mentoring.",
           target:
             "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "We can help you by developing a strategic plan, by evaluating your possibilities with you and define the best path for your needs."
+            "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
+          cases: [
+            {title: "Design Thinking Approach", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
+            {title: "Project & Product Scope", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
+            {title: "Quick wins", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
+            {title: "Data planning", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+          ]
         },
         {
-          name: "Consulting",
-          photo: "consulting",
+          name: "Analytics",
+          color: "#A7A0E0",
+          photo: "analytics",
           description:
-            "Build data-driven insights to speed up your business potential",
-          target: "Do you want to improve your decision making with data?",
+                  "We help you with planning sessions, strategic reports and mentoring.",
+          target:
+                  "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "We work with Data Science & Visualizations most modern techniques to help you getting data-insights and improve your business decisions."
+                  "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
+          cases: [
+            {title: "Data Analysis", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
+            {title: "Machine Learning", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
+            {title: "Business Insights", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
+            {title: "Visualization", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+          ]
         },
         {
-          name: "Development",
-          photo: "development",
-          description: "Design a tool/product to take advantage from your data",
+          name: "Engineering",
+          color: "#FF9E7E",
+          photo: "engineering",
+          description:
+                  "We help you with planning sessions, strategic reports and mentoring.",
           target:
-            "Do you have plan to develop an internal tool or product using your data?",
+                  "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            'We can get you there faster through a collaborative, iterative and "prototype first" framework we use for product development.'
+                  "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
+          cases: [
+            {title: "Developing Data Tools", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
+            {title: "Prototype / MVP", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
+            {title: "Data Pipelines", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
+            {title: "...", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+          ]
         },
         {
           name: "Training",
+          color: "#FA86B7",
           photo: "training",
           description:
-            "Increase your team's data know-how with a tailored academy",
+                  "We help you with planning sessions, strategic reports and mentoring.",
           target:
-            "Do you want to increase your team's data literacy and culture?",
+                  "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-            "We have done several tailor-made bootcamps, workshops and fast ramp-ups for our partners."
-        }
+                  "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
+          cases: [
+            {title: "Hackathon for culture", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
+            {title: "Jumpstarts", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
+            {title: "Tailor-made programs", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
+            {title: "Bootcamps", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+          ]
+        },
       ],
       companies: [
         { name: "Católica Lisbon", photo: "catolica" },
         { name: "Kepler Forensic Partners", photo: "kepler" },
         { name: "Chartyn", photo: "chartyn" },
+        { name: "NOVA SBE", photo: "nova" },
         { name: "Outsystems", photo: "outsystems" },
+        { name: "Tranquilidade", photo: "tranquilidade" },
         { name: "Técnico Lisboa", photo: "ist" },
         { name: "Teixeira Duarte", photo: "td" },
-        { name: "EDIT", photo: "edit" },
-        { name: "ELU", photo: "elu" },
-        { name: "Rumos", photo: "rumos" },
-        { name: "NOVA SBE", photo: "nova" },
-        { name: "ISQ", photo: "isq" },
-        { name: "Tranquilidade", photo: "tranquilidade" }
+        { name: "ISQ", photo: "isq" }
+
+        // { name: "EDIT", photo: "edit" },
+        // { name: "ELU", photo: "elu" },
+        // { name: "Rumos", photo: "rumos" },
       ],
       useCases: [
         {
@@ -426,6 +459,10 @@ export default {
       var images = require.context("../assets/services/", false, /\.png$/);
       return images("./" + pet + ".png");
     },
+    getBlobImgUrl(pet) {
+      var images = require.context("../assets/services/", false, /\.png$/);
+      return images("./blob_" + pet + ".png");
+    },
     getCaseImgUrl(pet) {
       var images = require.context("../assets/cases/", false, /\.jpg$/);
       return images("./" + pet + ".jpg");
@@ -461,6 +498,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .v-card--reveal {
   align-items: center;
   bottom: 0;

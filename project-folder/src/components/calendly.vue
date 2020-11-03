@@ -8,12 +8,12 @@
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn
-          color="primary"
           :x-large="xlarge"
           :x-small="xsmall"
           dark
           v-bind="attrs"
           v-on="on"
+          :color="button"
         >
           <v-icon v-if="icon" color="white" left>{{ icon }}</v-icon
           >{{ description }}
@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  props: ["call", "xlarge", "xsmall", "description", "icon"],
+  props: ["call", "xlarge", "xsmall", "description", "icon", "button"],
   data() {
     return {
       dialog: false,

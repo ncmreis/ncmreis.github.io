@@ -10,8 +10,11 @@
   "dependencies": {
     "@typeform/embed": "^0.25.4",
     "core-js": "^2.6.5",
+    "swiper": "^6.3.5",
     "vue": "^2.6.10",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-meta": "^2.3.1",
+    "vue-resize-text": "^0.1.1",
     "vue-router": "^3.0.3",
     "vuetify": "^2.0.0"
   },

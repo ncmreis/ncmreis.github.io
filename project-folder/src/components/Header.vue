@@ -3,16 +3,17 @@
     <Navbar
             height="70"
             logo="thorly_logo_white"
-            textColor="#FFFFFF">
+            textColor="#FFFFFF"
+            colorButton="primary">
     </Navbar>
 
     <v-container class="justify-center fill-height mb-0">
-      <v-flex md8 xs12>
+      <v-flex md9 xs12>
         <v-layout
           column
           align-start
           justify-center
-          class="white--text d-flex flex-grow-1"
+          class="white--text"
         >
           <div v-if="(windowHeight < 500) | $vuetify.breakpoint.xs">
             <h1 style="font-size:225%; font-weight: 600">{{ title }}</h1>
@@ -24,21 +25,6 @@
               }}<b style="color: #2C81D6">{{ " " + descriptionBlue + " " }}</b>
               {{ descriptionFinal }}
             </h2>
-
-            <v-col
-              v-if="windowHeight > 400"
-              class="d-flex align-stretch"
-            ></v-col>
-
-            <v-btn
-              v-if="windowHeight > 400"
-              align-center
-              color="primary"
-              small
-              @click="goToSection('#1')"
-            >
-              {{ button }}
-            </v-btn>
           </div>
 
           <div v-else>
@@ -50,15 +36,6 @@
               {{ descriptionFinal }}
             </h2>
 
-            <v-btn
-              align-center
-              class="body-1 mt-10"
-              color="primary"
-              x-large
-              @click="goToSection('#1')"
-            >
-              {{ button }}
-            </v-btn>
           </div>
         </v-layout>
       </v-flex>
@@ -75,8 +52,7 @@ export default {
     "title",
     "descriptionInitial",
     "descriptionBlue",
-    "descriptionFinal",
-    "button"
+    "descriptionFinal"
   ],
   components: {
     Navbar

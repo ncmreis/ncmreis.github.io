@@ -30,9 +30,6 @@
       <router-link style="text-decoration: none" to="/"
         ><v-btn text :color="textColor">Home</v-btn></router-link
       >
-      <router-link style="text-decoration: none" to="/services"
-        ><v-btn text :color="textColor">Services</v-btn></router-link
-      >
       <router-link style="text-decoration: none" to="/team"
         ><v-btn text :color="textColor">Team</v-btn></router-link
       >
@@ -41,6 +38,7 @@
         description="Schedule a call"
         class="ml-6 mr-2"
         icon="mdi-phone"
+        :button="colorButton"
       >
       </calendly>
     </v-toolbar-items>
@@ -53,12 +51,12 @@
         </template>
         <v-list>
           <v-list-item link to="/">Home</v-list-item>
-          <v-list-item link to="/services">Services</v-list-item>
           <v-list-item link to="/team">Team</v-list-item>
           <v-list-item>
             <calendly
               description="Schedule a call"
               call="https://calendly.com/ricardo-thorly-education"
+              :button="colorButton"
             ></calendly>
           </v-list-item>
         </v-list>
@@ -69,12 +67,13 @@
 
 <script>
 import Calendly from "./calendly";
+
 export default {
   name: "Navbar",
   components: {
     Calendly,
   },
-  props: ["background", "height", "logo", "textColor"],
+  props: ["background", "height", "logo", "textColor", "colorButton"],
   methods: {
     getBackUrl(pet) {
       var images = require.context("../assets/", false, /\.png$/);
