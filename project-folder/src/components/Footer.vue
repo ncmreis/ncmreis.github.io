@@ -25,13 +25,17 @@
 
       <v-flex md2 sm4 xs6>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">About</p>
-        <p>
-          <router-link to="/services" style="color: inherit;"
-            >Hiring Thorly</router-link>
+        <p class="justify-start">
+          <calendly
+                  call="https://calendly.com/ricardo-thorly-education"
+                  description="Hiring Thorly"
+                  link=1
+                  class="ml-0"
+          >
+          </calendly>
         </p>
         <p>
-          <router-link to="/team" style="color: inherit;"
-            >Meet the team</router-link>
+          <a @click="typeformCall()" style="text-decoration: underline; color: inherit">Join the team</a>
         </p>
       </v-flex>
 
@@ -48,11 +52,6 @@
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Contact</p>
         <p>discover@thorly.tech</p>
         <p>+351 918548827</p>
-<!--        <p>-->
-<!--          <v-btn class="white&#45;&#45;text" icon-->
-<!--            ><v-icon size="24px">mdi-linkedin</v-icon></v-btn-->
-<!--          >-->
-<!--        </p>-->
       </v-flex>
     </v-layout>
     <hr />
@@ -65,8 +64,24 @@
 </template>
 
 <script>
+
+import { typeform } from "../plugins/typeform.js";
+import Calendly from "./calendly";
+
 export default {
   name: "Footer",
+  components: {
+    Calendly,
+  },
+  methods: {
+    goToSection(hashSection) {
+      var elmnt = document.getElementById(hashSection);
+      elmnt.scrollIntoView({ behavior: "smooth" });
+    },
+    typeformCall() {
+      typeform();
+    }
+  }
 };
 </script>
 

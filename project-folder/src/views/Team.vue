@@ -35,7 +35,7 @@
                   <p class="text-center text-sm-h5 text-h6 my-0" style="font-weight: 400">
                     A
                     <b style="color: #2C81D6"
-                    >flexible & creative spirit</b> to enhance <b>creativity</b>
+                    >flexible & positive spirit</b> to enhance <b>creativity</b>
                   </p>
                 </v-card-text>
               </v-card>
@@ -102,7 +102,7 @@
                   primary-title
                   class="justify-center fix layout mt-6 mb-sm-12 "
                 >
-                  <p class="text-h3 text-h4 text-center" style="font-weight: 600">
+                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
                     The DNA behind Thorly
                   </p>
                 </v-card-title>
@@ -114,7 +114,7 @@
                 <v-layout row class="align-center justify-center">
                   <v-flex md6 xs12>
                     <v-card flat class="transparent text-center">
-                      <v-card-text class="text-h5 text-h6 text-sm-left" style="font-weight: 400">
+                      <v-card-text class="text-sm-h5 text-h6 text-sm-left" style="font-weight: 400">
                           We believe a team is all about
                           <b style="color: #2C81D6"> people with the right values</b>
                           and it is the key-factor to create the
@@ -158,7 +158,7 @@
                   </p>
                 </v-card-title>
                 <v-card-text>
-                  <p class="text-h5 text-h6 text-sm-left" style="font-weight: 400">
+                  <p class="text-sm-h5 text-h6 text-center" style="font-weight: 400">
                     We are a group of data-driven entrepreneurs
                     <b
                       >with a focus on technology,

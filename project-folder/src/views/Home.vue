@@ -1,10 +1,11 @@
 <template>
   <div>
     <Header
-      title="We build data solutions for business problems"
-      descriptionInitial="We are a"
-      descriptionBlue="Data Science & Engineering team for hire"
-      descriptionFinal="with a human-centered and design thinking approach."
+            id="top" name="top"
+            title="We build data solutions for business problems"
+            descriptionInitial="We are a"
+            descriptionBlue="Data Science & Engineering team for hire"
+            descriptionFinal="with a human-centered and design thinking approach."
     ></Header>
 
     <v-card tile class="transparent">
@@ -21,7 +22,7 @@
         colorButton="orange"
       ></Navbar>
 
-      <section id="#services">
+      <section id="services" name="services">
         <v-container class="text-center">
           <v-layout
             row
@@ -136,11 +137,54 @@
                       <b style="color: #2C81D6">Get quick wins</b>
                   </p>
                 </v-card-text>
+
                 <v-img
+                        max-height="300px"
                         contain
                         src="../assets/process.png"
-                        class="text-center align-end"
+                        class="text-center align-end mb-12"
                 ></v-img>
+
+                <v-btn
+                        color="primary"
+                        x-large
+                        @click="overlay = !overlay"
+                >
+                  Know more
+                </v-btn>
+                <p class="caption mt-1" style="opacity: 0.4">
+                  * our process at a glance
+                </p>
+                <v-overlay
+                        :value="overlay"
+                        opacity="0.75"
+                        class="justify-center"
+                        z-index="15"
+                >
+                  <v-col class="align-center">
+                    <v-row class="justify-end">
+                      <v-icon
+                              large
+                              @click="overlay=false"
+                      >mdi-close</v-icon>
+                    </v-row>
+                    <v-row>
+                      <video
+                              autoplay
+                              controls
+                              class="text-center"
+                              style="max-width: 90vw; max-height: 70vh"
+                              @ended="overlay=false"
+                      >
+                        <source src="../assets/process.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </v-row>
+                  </v-col>
+
+
+                </v-overlay>
+
               </v-card>
             </v-flex>
 
@@ -182,6 +226,7 @@
                     :xlarge="true"
                     description="Schedule a call"
                     button="orange"
+                    class="justify-center"
             ></calendly>
           </div>
         </v-container>
@@ -226,7 +271,6 @@
           </v-layout>
           <div class=" mb-12">
             <v-btn
-              class="body-1"
               color="primary"
               @click="typeformCall()"
               x-large
@@ -310,6 +354,8 @@ export default {
       windowHeight: 0,
       scrolled: false,
       model: null,
+      dialog: false,
+      overlay: false,
       services: [
         {
           name: "Strategy",
@@ -479,6 +525,11 @@ export default {
 
   destroyed: function() {
     window.removeEventListener("resize", this.handleResize);
+  },
+  mounted() {
+    var section=this.$router.currentRoute.hash.replace("#", "");
+    if (section)
+      this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
   },
 
   computed: {

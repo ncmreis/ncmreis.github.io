@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center">
+  <v-row>
     <v-dialog
       v-model="dialog"
       fullscreen
@@ -7,6 +7,7 @@
       transition="dialog-bottom-transition"
     >
       <template v-slot:activator="{ on, attrs }">
+        <a v-if="link" v-on="on" style="text-decoration: underline; color: inherit">{{ description }}</a>
         <v-btn
           :x-large="xlarge"
           :x-small="xsmall"
@@ -14,6 +15,7 @@
           v-bind="attrs"
           v-on="on"
           :color="button"
+          v-else
         >
           <v-icon v-if="icon" color="white" left>{{ icon }}</v-icon
           >{{ description }}
@@ -45,7 +47,7 @@
 
 <script>
 export default {
-  props: ["call", "xlarge", "xsmall", "description", "icon", "button"],
+  props: ["call", "xlarge", "xsmall", "description", "icon", "link", "button"],
   data() {
     return {
       dialog: false,
