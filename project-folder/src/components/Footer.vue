@@ -25,12 +25,12 @@
 
       <v-flex md2 sm4 xs6>
         <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">About</p>
-        <p class="justify-start">
+        <p>
           <calendly
                   call="https://calendly.com/ricardo-thorly-education"
                   description="Hiring Thorly"
                   link=1
-                  class="ml-0"
+                  class="mx-0 justify-md-start justify-center"
           >
           </calendly>
         </p>
