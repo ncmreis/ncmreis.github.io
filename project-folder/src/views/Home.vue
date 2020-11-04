@@ -75,7 +75,7 @@
 
                   <v-flex md6 xs12>
                     <v-container grid-list-xl>
-                      <v-layout row class="d-flex align-stretch">
+                      <v-layout row wrap class="d-flex align-stretch">
                         <v-flex v-for="caso in service.cases" sm6 xs12>
                           <v-card class="fill-height text-left elevation-12">
                             <v-card-title class='fix' style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #000000; opacity: 0.75">{{ caso.title }}</v-card-title>
