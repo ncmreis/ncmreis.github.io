@@ -111,7 +111,7 @@
 
             <v-flex md12 xs12>
               <v-container grid-list-xl>
-                <v-layout row class="align-center justify-center">
+                <v-layout row wrap class="align-center justify-center">
                   <v-flex md6 xs12>
                     <v-card flat class="transparent text-center">
                       <v-card-text class="text-sm-h5 text-h6 text-sm-left" style="font-weight: 400">
@@ -126,7 +126,7 @@
 
                   <v-flex md6 xs12>
                     <v-container grid-list-xl>
-                      <v-layout row class="d-flex align-stretch">
+                      <v-layout row wrap class="d-flex align-stretch">
                         <v-flex v-for="value in values" sm6 xs12>
                           <v-card class="fill-height text-left elevation-12 fix">
                             <v-card-title class='fix' style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #000000; opacity: 0.75">{{ value.name }}</v-card-title>

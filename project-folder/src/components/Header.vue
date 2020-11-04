@@ -7,7 +7,7 @@
             colorButton="primary">
     </Navbar>
 
-    <v-container class="justify-center fill-height mb-0">
+    <v-container class="justify-center fill-height mb-0 px-6">
       <v-flex md9 xs12>
         <v-layout
           column
@@ -112,6 +112,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .fix {
   overflow-wrap: anywhere;
   word-wrap: break-word;

@@ -6,7 +6,7 @@
     :src="background ? getBackUrl(background) : ''"
   >
     <v-toolbar-title class="align-center">
-      <router-link to="/#top">
+      <router-link to="/">
         <v-img
           contain
           height="70px"
@@ -14,6 +14,7 @@
           :src=getBackUrl(logo)
           alt="Thorly"
           class="v-img-cursor ml-n2 hidden-xs-only"
+          @click="goToSection('top')"
         ></v-img>
         <v-img
           contain
@@ -22,16 +23,17 @@
           :src=getBackUrl(logo)
           alt="Thorly"
           class="v-img-cursor hidden-sm-and-up"
+          @click="goToSection('top')"
         ></v-img>
       </router-link>
     </v-toolbar-title>
     <div class="flex-grow-1"></div>
     <v-toolbar-items class="hidden-sm-and-down align-center">
-      <router-link style="text-decoration: none" to="/#top">
-        <v-btn text :color="textColor">Home</v-btn>
+      <router-link style="text-decoration: none" to="/">
+        <v-btn text :color="textColor" @click="goToSection('top')">Home</v-btn>
       </router-link>
       <router-link style="text-decoration: none" to="/#services">
-        <v-btn text :color="textColor">Services</v-btn>
+        <v-btn text :color="textColor" @click="goToSection('services')">Services</v-btn>
       </router-link>
       <router-link style="text-decoration: none" to="/team">
         <v-btn text :color="textColor">Team</v-btn>
@@ -53,8 +55,8 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item link to="/#top"">Home</v-list-item>
-          <v-list-item link to="/#services">Services</v-list-item>
+          <v-list-item link to="/" @click="goToSection('top')">Home</v-list-item>
+          <v-list-item link to="/#services" @click="goToSection('services')">Services</v-list-item>
           <v-list-item link to="/team">Team</v-list-item>
           <v-list-item>
             <calendly

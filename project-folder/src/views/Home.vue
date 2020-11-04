@@ -33,7 +33,7 @@
           >
             <v-flex  md10 xs12>
               <v-container class="align-center">
-                <v-layout row class="justify-center my-sm-6">
+                <v-layout row wrap class="justify-center my-sm-6">
                   <v-flex v-for="service in services" :key="service.name" xs3>
                     <v-card tile flat v-on:click="show = service.name">
                       <div>
@@ -60,7 +60,7 @@
 
             <v-flex md12 xs12 v-for="service in services" :key="service.name" v-if="show === service.name">
               <v-container grid-list-xl>
-                <v-layout row class="align-center justify-center">
+                <v-layout row wrap class="align-center justify-center">
                   <v-flex md6 xs12 class="pb-0">
                     <v-card flat class="transparent text-left py-0">
                       <v-card-title class="text-sm-h4 text-h5 fix" style="font-weight: 500;">
@@ -92,7 +92,7 @@
 
             <v-flex md10 xs12 class="hidden-sm-and-up">
               <v-container class="align-center pb-0">
-                <v-layout row class="justify-center">
+                <v-layout row wrap class="justify-center">
                   <v-flex v-for="service in services" :key="service.name" xs3>
                     <v-card tile flat v-on:click="show = service.name, goToSection('#service')">
                       <v-system-bar
@@ -334,7 +334,6 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Calendly from "../components/calendly";
-import slider from "../components/slider";
 import { typeform } from "../plugins/typeform.js";
 
 export default {
@@ -343,8 +342,7 @@ export default {
     Header,
     Navbar,
     Footer,
-    Calendly,
-    slider
+    Calendly
   },
 
   data() {
@@ -420,7 +418,7 @@ export default {
                   "It's tricky when someone does not have enough data literacy or basic understanding of data science. We can help you using our programs based on personalized education and gamification.",
           cases: [
             {title: "Hackathon for culture", goals: "A 1-day event designed to teach the basics of Data Science, with hands-on learning, gamification and lot's of fun."},
-            {title: "Jumpstarts", goals: "This program was desgined to get you started on-job after training. We work with you to apply in practice what you learnt."},
+            {title: "Jumpstarts", goals: "This program was designed to get you started on-job after training. We work with you to apply in practice what you learnt."},
             {title: "Bootcamps", goals: "From Python, Data Science, Data Literacy or Storytelling, it is likely we have gamified, self-paced or tutored programs for your needs."},
             {title: "Tailor-made training", goals: "For specific needs we have not covered in our standard offers, we can design in 1-2 weeks a course for your team using our framework."}
           ]
