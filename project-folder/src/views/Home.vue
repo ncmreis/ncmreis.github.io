@@ -363,15 +363,15 @@ export default {
           photo: "strategy",
           description:
             "We help you with planning sessions, strategic reports and mentoring.",
-          target:
-            "Do you have data but you are struggling to establish a plan to solve your business problems?",
+          // target:
+          //   "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
             "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
           cases: [
-            {title: "Design Thinking Approach", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
-            {title: "Project & Product Scope", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
-            {title: "Quick wins", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
-            {title: "Data planning", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+            {title: "Creative sessions", goals: "A set of brainstorming sessions to generate ideas and help you explore the business potential of your data."},
+            {title: "Strategic planning", goals: "We help you understanding and defining your data goals having into account the constraints your organization might have."},
+            {title: "Project & Product Scope", goals: "Quick wins goes first, before big planning. Focus on prioritizing valuable problems to unlock business value."},
+            {title: "It's your call...", goals: "Your problem is unique, but you know it requires a data science or engineering capability that you don't have. We're your team."}
           ]
         },
         {
@@ -379,16 +379,16 @@ export default {
           color: "#A7A0E0",
           photo: "analytics",
           description:
-                  "We help you with planning sessions, strategic reports and mentoring.",
+                  "We use your data to answer business questions with focus on delivering value.",
           target:
                   "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-                  "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
+                  "Most business questions can be answered using data. We bring a fresh approach to help you iterate fast on these problems, without endless presentations.",
           cases: [
-            {title: "Data Analysis", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
-            {title: "Machine Learning", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
-            {title: "Business Insights", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
-            {title: "Visualization", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+            {title: "Data Analysis", goals: "Big or small data of any type, we use our broad range of analytical skills to make data talk and solve important problems."},
+            {title: "Machine Learning", goals: "From regressions to natural language processing or time series, it is likely we have crossed paths with a problem like yours."},
+            {title: "Visualization", goals: "We build data-driven interfaces to tell stories behind the data. We keep it simple and explainable so it is useful for anyone."},
+            {title: "You name it...", goals: "You want to build something with your data but you don't know how to name it? It is common and likely that we can work together."}
           ]
         },
         {
@@ -396,16 +396,16 @@ export default {
           color: "#FF9E7E",
           photo: "engineering",
           description:
-                  "We help you with planning sessions, strategic reports and mentoring.",
+                  "We build with you tailor-made data tools in small, incremental and cost-effective steps.",
           target:
                   "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-                  "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
+                  "To build a tool around data may feel a hard-to-navigate problem. We have experience on building it and demonstrate it's value to the stakeholders, with a prototype first approach.",
           cases: [
-            {title: "Developing Data Tools", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
-            {title: "Prototype / MVP", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
-            {title: "Data Pipelines", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
-            {title: "...", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+            {title: "Prototype", goals: "Our place to work is where we transform ideas into v1.0 products in few weeks, choosing what delivers more business value."},
+            {title: "Production tool", goals: "After several build-test cycles focused on end-user, we build robust products considering scalability and maintenance costs."},
+            {title: "Pipelines for data", goals: "From ETL to Data Pipelines, we have experience on building efficient tools to consolidate data from multiple sources."},
+            {title: "Your tool...", goals: "Sometimes it's hard to define what we need from a tool. Yes, it's common, we've been there. We help you to define and building it."}
           ]
         },
         {
@@ -413,16 +413,16 @@ export default {
           color: "#FA86B7",
           photo: "training",
           description:
-                  "We help you with planning sessions, strategic reports and mentoring.",
+                  "We help you on building a data-driven culture and developing in-house data knowledge.",
           target:
                   "Do you have data but you are struggling to establish a plan to solve your business problems?",
           largeDescription:
-                  "A few hours on the whiteboard can save months of work. We try to bring this mindset to our clients for every work we do.",
+                  "It's tricky when someone does not have enough data literacy or basic understanding of data science. We can help you using our programs based on personalized education and gamification.",
           cases: [
-            {title: "Hackathon for culture", goals: "Fast problem definition\n" + "\n" + "Empathy with the user\n" + "\n" + "Fast cycles "},
-            {title: "Jumpstarts", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."},
-            {title: "Tailor-made programs", goals: "Quick wins goes first, before big planning. Focus on defining valuable problems to unlock business value."},
-            {title: "Bootcamps", goals: "Company ACME was trying to understand how they could leverage their data to retain more customers."}
+            {title: "Hackathon for culture", goals: "A 1-day event designed to teach the basics of Data Science, with hands-on learning, gamification and lot's of fun."},
+            {title: "Jumpstarts", goals: "This program was desgined to get you started on-job after training. We work with you to apply in practice what you learnt."},
+            {title: "Bootcamps", goals: "From Python, Data Science, Data Literacy or Storytelling, it is likely we have gamified, self-paced or tutored programs for your needs."},
+            {title: "Tailor-made training", goals: "For specific needs we have not covered in our standard offers, we can design in 1-2 weeks a course for your team using our framework."}
           ]
         },
       ],
