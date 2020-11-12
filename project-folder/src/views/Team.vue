@@ -1,19 +1,18 @@
 <template>
-  <div>
     <v-card tile>
+
       <Navbar
         :class="{
           nav: $vuetify.breakpoint.smAndUp,
           'nav-xs': $vuetify.breakpoint.xs,
         }"
-        background="back_4"
         height="70"
         logo="thorly_logo_white"
         textColor="#FFFFFF"
         colorButton="orange"
       ></Navbar>
 
-      <section id="#header" style="height: 100vh; background-color: #F6F9FD; padding-top: 70px" class="mb-0 pb-0">
+      <section id="#header" style="height: 100vh; background-color: #F7F8FA;; padding-top: 70px" class="mb-0 pb-0">
         <v-container class="fill-height mb-0 pb-0">
           <v-layout
                   row
@@ -21,13 +20,13 @@
                   align-end
                   justify-center
           >
-            <v-flex md10 xs12>
+            <v-flex md12 xs12>
               <v-card flat class="transparent">
                 <v-card-title
                         primary-title
                         class="justify-center fix layout mb-0"
                 >
-                  <p class="text-sm-h3 text-h4 text-center mb-0" style="font-weight: 600">
+                  <p class="text-sm-h3 text-h4 text-center mb-0">
                     Our people = Our culture
                   </p>
                 </v-card-title>
@@ -59,13 +58,13 @@
             align-center
             justify-center
           >
-            <v-flex md10 xs12 class="mt-12">
+            <v-flex md12 xs12 class="mt-12">
               <v-card flat class="transparent">
                 <v-card-title
                   primary-title
                   class="justify-center fix layout mb-6"
                 >
-                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
+                  <p class="text-sm-h4 text-h5 text-center">
                     From Lisbon to the World
                   </p>
                 </v-card-title>
@@ -76,7 +75,7 @@
                   class="text-center align-end"
                 ></v-img>
                 <v-card-text>
-                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400"">
+                  <p class="text-center text-sm-h6 text-subtitle-1 font-weight-regular">
                     Born and raised in Lisbon,
                     <b style="color: #2C81D6"
                       >we studied in the top universities and launched our
@@ -93,44 +92,35 @@
         </v-container>
       </section>
 
-      <section id="#values" style="background-color: #F6F9FD">
+      <section id="#values" style="background-color: #F7F8FA;">
         <v-container class="text-center">
           <v-layout row wrap class="my-12" align-center justify-center>
-            <v-flex md10 xs12>
-              <v-card flat class="transparent justify-center text-center">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mt-6 mb-sm-12 "
-                >
-                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
-                    The DNA behind Thorly
-                  </p>
-                </v-card-title>
-              </v-card>
-            </v-flex>
 
             <v-flex md12 xs12>
               <v-container grid-list-xl>
                 <v-layout row wrap class="align-center justify-center">
-                  <v-flex md6 xs12>
-                    <v-card flat class="transparent text-center">
-                      <v-card-text class="text-sm-h5 text-h6 text-sm-left" style="font-weight: 400">
-                          We believe a team is all about
-                          <b style="color: #2C81D6"> people with the right values</b>
-                          and it is the key-factor to create the
-                          <b>open-minded, friendly and creative environment</b> we
-                          have.
+
+                  <v-flex md5 xs12 class="pb-0">
+                    <v-card flat class="transparent text-md-left text-center py-0 mr-md-6">
+                      <v-card-title class="text-sm-h4 text-h5 justify-md-start justify-center fix">
+                        The DNA behind Thorly
+                      </v-card-title>
+                      <v-card-text class="text-sm-h6 text-subtitle-1 font-weight-regular">
+                        We believe a team is all about people with the right values
+                        and it is the key-factor to create an
+                        open-minded, friendly and creative environment.
                       </v-card-text>
                     </v-card>
                   </v-flex>
 
-                  <v-flex md6 xs12>
+
+                  <v-flex md7 xs12>
                     <v-container grid-list-xl>
                       <v-layout row wrap class="d-flex align-stretch">
                         <v-flex v-for="value in values" sm6 xs12>
-                          <v-card class="fill-height text-left elevation-12 fix">
-                            <v-card-title class='fix' style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #000000; opacity: 0.75">{{ value.name }}</v-card-title>
-                            <v-card-text style="font-size: 14px; line-height: 20px; letter-spacing: 0.25px">{{ value.description }}</v-card-text>
+                          <v-card class="fill-height text-left elevation-5 fix py-6 px-3">
+                            <v-card-title class='fix justify-start text-sm-subtitle-1 text-subtitle-2' style="line-height: 20px">{{ value.name }}</v-card-title>
+                            <v-card-text class="text-sm-body-2 text-caption">{{ value.description }}</v-card-text>
                           </v-card>
                         </v-flex>
                       </v-layout>
@@ -146,60 +136,53 @@
 
       <section id="#team">
         <v-container class="text-center">
-          <v-layout row wrap class="my-12" align-center justify-center>
-            <v-flex md10 xs12>
+          <v-layout row wrap align-center justify-center class="mt-12">
+
+            <v-flex md12 xs12>
               <v-card flat class="transparent justify-center text-center">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mt-6 mb-12 "
-                >
-                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
-                    Hello, world
-                  </p>
+                <v-card-title class="text-sm-h4 text-h5 justify-center mt-6 mb-md-12 mb-6">
+                  Hello, world
                 </v-card-title>
                 <v-card-text>
-                  <p class="text-sm-h5 text-h6 text-center" style="font-weight: 400">
-                    We are a group of data-driven entrepreneurs
-                    <b
-                      >with a focus on technology,
-                      data and machine learning.
-                    </b>
+                  <p class="text-sm-h6 text-subtitle-1 text-center font-weight-regular">
+                    We are a group of data-driven entrepreneurs with a focus on technology, data and machine learning.
                     <b style="color: #2C81D6">Nice to e-meet you!</b>
                   </p>
                 </v-card-text>
               </v-card>
             </v-flex>
-            <v-flex md10 xs12>
+
+            <v-flex md12 xs12>
               <v-container grid-list-xl>
                 <v-layout row wrap align-start>
                   <v-flex v-for="person in people" md4 xs12>
                     <v-hover v-slot:default="{ hover }">
                       <v-card flat class="transparent pb-6">
-                        <v-card-text class="text-center">
-                          <v-avatar size="200">
+                        <div class="text-center mt-3">
+                          <v-avatar :size="$vuetify.breakpoint.xs ? 150 : 200">
                             <img
                               contain
                               :src="getTeamImgUrl(person.photo)"
                               :alt="person.photo"
                             />
                           </v-avatar>
-                        </v-card-text>
+                        </div>
                         <v-card-title class="fix layout justify-center">
-                          <div class="fix headline text-center">
+                          <div class="fix text-sm-h5 text-h6 font-weight-regular text-center">
                             {{ person.name }}
                           </div>
                         </v-card-title>
                         <v-card-text class="mt-n4">
-                          <div class="fix subtitle-1 text-center">
+                          <div class="fix text-sm-subtitle-1 text-subtitle-2 font-weight-regular text-center">
                             {{ person.position }}
                           </div>
                         </v-card-text>
                         <v-overlay absolute opacity="0.90" :value="hover">
-                          <v-card-text class="text-center px-6">
+                          <v-card-text class="caption text-center px-6" style="line-height: 16px">
                             {{ person.description }}
                           </v-card-text>
                           <div class="text-center">
-                            <v-btn large color="primary" icon :href="person.linkedin" target="_blank">
+                            <v-btn color="primary" icon :href="person.linkedin" target="_blank">
                               <v-icon>mdi-linkedin</v-icon>
                             </v-btn>
                           </div>
@@ -208,25 +191,26 @@
                     </v-hover>
                   </v-flex>
                 </v-layout>
+                <div class="mt-12 mb-12">
+                  <v-btn
+                          color="orange"
+                          class="white--text"
+                          @click="typeformCall()"
+                          x-large
+                  >
+                    Join the team
+                  </v-btn>
+                </div>
               </v-container>
             </v-flex>
           </v-layout>
-          <div class=" mb-12">
-            <v-btn
-              class="body-1"
-              color="primary"
-              @click="typeformCall()"
-              x-large
-            >
-              Join us
-            </v-btn>
-          </div>
+
         </v-container>
       </section>
+
+      <Footer />
     </v-card>
 
-    <Footer />
-  </div>
 </template>
 
 <script>

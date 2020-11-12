@@ -1,19 +1,19 @@
 <template>
-  <v-parallax
-    src="../assets/back_4.png"
-    height="100%"
-    grid-list-xl
-    class="px-4"
+  <section
+          style="background-color: #303030;"
+          height="100%"
+          grid-list-xl
+          class="px-4"
   >
     <v-layout
       row
       wrap
       align-start
       justify-center
-      class="text-center text-md-left mt-8 mb-6 mx-4"
+      class="white--text text-left text-sm-center text-md-left pt-8 mb-6 mx-4"
     >
       <v-flex md3 sm12>
-        <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">
+        <p class="subtitle-1 text-uppercase mb-4 font-weight-black">
           Our status
         </p>
         <p>
@@ -24,14 +24,14 @@
 
       <v-spacer></v-spacer>
 
-      <v-flex md2 sm4 xs6 class="mt-md-0 mt-sm-4 mt-4">
-        <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">About</p>
+      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-4">
+        <p class="subtitle-1 text-uppercase mb-4 font-weight-black">About</p>
         <p>
           <calendly
                   call="https://calendly.com/ricardo-thorly-education"
                   description="Hiring Thorly"
                   link=1
-                  class="mx-0 justify-md-start justify-center"
+                  class="mx-0 justify-md-start justify-sm-center justify-start"
           >
           </calendly>
         </p>
@@ -42,15 +42,15 @@
 
       <v-spacer></v-spacer>
 
-      <v-flex md2 sm4 xs6 class="mt-md-0 mt-sm-4 mt-4">
-        <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Office</p>
+      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-4">
+        <p class="subtitle-1 text-uppercase mb-4 font-weight-black">Office</p>
         <p>Rua da Prata, 80<br />1100-420 Lisboa<br />Portugal</p>
       </v-flex>
 
       <v-spacer></v-spacer>
 
       <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-4">
-        <p class="subtitle-1 text-uppercase mb-4 font-weight-bold">Contact</p>
+        <p class="subtitle-1 text-uppercase mb-4 font-weight-black">Contact</p>
         <p>discover@thorly.tech</p>
         <p>+351 918548827</p>
       </v-flex>
@@ -61,7 +61,7 @@
         >THORLY &copy; 2020</v-btn
       >
     </v-row>
-  </v-parallax>
+  </section>
 </template>
 
 <script>

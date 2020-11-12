@@ -1,46 +1,45 @@
 <template>
-  <v-parallax src="../assets/back_4.png" id="#home" :height="windowHeight">
+  <section id="#home" style="height: 100vh; background-color: #303030" class="align-center justify-center">
     <Navbar
             height="70"
             logo="thorly_logo_white"
             textColor="#FFFFFF"
-            colorButton="primary">
+            colorButton="#FFB347"
+    >
     </Navbar>
 
-    <v-container class="justify-center fill-height mb-0 px-6">
-      <v-flex md9 xs12>
+    <v-container class="align-center">
         <v-layout
-          column
-          align-start
-          justify-center
-          class="white--text"
+          row
+          class="align-center justify-center"
         >
-          <div v-if="(windowHeight < 500) | $vuetify.breakpoint.xs">
-            <h1 style="font-size:225%; font-weight: 600">{{ title }}</h1>
+          <v-flex md10 xs12>
+            <v-container class="align-center fill-height">
+              <v-layout row class="justify-center">
 
-            <v-col class="d-flex align-stretch"></v-col>
+                <v-flex md8 class="align-end">
+                  <v-card dark tile flat class="transparent">
+                    <v-card-title class="text-sm-h3 text-h4 fix" style="font-weight: 600">
+                      All your customers matter.
+                      <br>
+                      Each one is unique.
+                    </v-card-title>
+                    <v-card-text class="text-sm-h5 text-h6" style="font-weight: 400">
+                      Improve your <a style="color: #008FFF">Customer Intelligence</a> to personalize your customers experience.
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
 
-            <h2 class="body-1">
-              {{ descriptionInitial
-              }}<b style="color: #2C81D6">{{ " " + descriptionBlue + " " }}</b>
-              {{ descriptionFinal }}
-            </h2>
-          </div>
+                <v-flex md4>
+                  <v-img max-height="1000" contain src="../assets/header.png"></v-img>
+                </v-flex>
 
-          <div v-else>
-            <h1 style="font-size:350%; font-weight: 600">{{ title }}</h1>
-
-            <h2 class="mt-10" style="font-weight:400">
-              {{ descriptionInitial
-              }}<b style="color: #2C81D6">{{ " " + descriptionBlue + " " }}</b>
-              {{ descriptionFinal }}
-            </h2>
-
-          </div>
+              </v-layout>
+            </v-container>
+          </v-flex>
         </v-layout>
-      </v-flex>
     </v-container>
-  </v-parallax>
+  </section>
 </template>
 
 <script>
@@ -48,12 +47,7 @@ import Navbar from "../components/Navbar";
 
 export default {
   name: "Header",
-  props: [
-    "title",
-    "descriptionInitial",
-    "descriptionBlue",
-    "descriptionFinal"
-  ],
+  props: [],
   components: {
     Navbar
   },

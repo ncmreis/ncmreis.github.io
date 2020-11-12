@@ -2,8 +2,7 @@
   <v-toolbar
     :height="height"
     flat
-    class="transparent"
-    :src="background ? getBackUrl(background) : ''"
+    color="#303030"
   >
     <v-toolbar-title class="align-center">
       <router-link to="/">
@@ -32,9 +31,9 @@
       <router-link style="text-decoration: none" to="/">
         <v-btn text :color="textColor" @click="goToSection('top')">Home</v-btn>
       </router-link>
-      <router-link style="text-decoration: none" to="/#services">
-        <v-btn text :color="textColor" @click="goToSection('services')">Services</v-btn>
-      </router-link>
+<!--      <router-link style="text-decoration: none" to="/services">-->
+<!--        <v-btn text :color="textColor" @click="goToSection('services')">Services</v-btn>-->
+<!--      </router-link>-->
       <router-link style="text-decoration: none" to="/team">
         <v-btn text :color="textColor">Team</v-btn>
       </router-link>
@@ -56,7 +55,7 @@
         </template>
         <v-list>
           <v-list-item link to="/" @click="goToSection('top')">Home</v-list-item>
-          <v-list-item link to="/#services" @click="goToSection('services')">Services</v-list-item>
+<!--          <v-list-item link to="/#services" @click="goToSection('services')">Services</v-list-item>-->
           <v-list-item link to="/team">Team</v-list-item>
           <v-list-item>
             <calendly
@@ -79,7 +78,7 @@ export default {
   components: {
     Calendly,
   },
-  props: ["background", "height", "logo", "textColor", "colorButton"],
+  props: ["height", "logo", "textColor", "colorButton", "scrolled"],
   methods: {
     getBackUrl(pet) {
       var images = require.context("../assets/", false, /\.png$/);

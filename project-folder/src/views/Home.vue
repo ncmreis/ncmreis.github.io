@@ -1,220 +1,137 @@
 <template>
-  <div>
-    <Header
-            id="top" name="top"
-            title="We build data solutions for business problems"
-            descriptionInitial="We are a"
-            descriptionBlue="Data Science & Engineering team for hire"
-            descriptionFinal="with a human-centered and design thinking approach."
-    ></Header>
 
     <v-card tile class="transparent">
+
       <Navbar
-        v-if="scrolled"
-        :class="{
-          nav: $vuetify.breakpoint.smAndUp,
-          'nav-xs': $vuetify.breakpoint.xs
-        }"
-        background="back_4"
-        height="70"
-        logo="thorly_logo_white"
-        textColor="#FFFFFF"
-        colorButton="orange"
+              :class="{
+                'nav': $vuetify.breakpoint.smAndUp,
+                'nav-xs': $vuetify.breakpoint.xs,
+              }"
+              height="70"
+              logo="thorly_logo_white"
+              textColor="#FFFFFF"
+              colorButton="orange"
       ></Navbar>
 
-      <section id="services" name="services">
-        <v-container class="text-center">
-          <v-layout
-            row
-            wrap
-            class="mb-sm-12 white--text align-center"
-            align-center
-            justify-center
-          >
-            <v-flex  md10 xs12>
-              <v-container class="align-center">
-                <v-layout row wrap class="justify-center my-sm-6">
-                  <v-flex v-for="service in services" :key="service.name" xs3>
-                    <v-card tile flat v-on:click="show = service.name">
-                      <div>
-                        <v-avatar
-                                :size="$vuetify.breakpoint.xs ? 50: 100"
-                                :class="show === service.name ? 'elevation-15 mt-6' : 'mt-6'">
-                          <img contain height="100%" :src="getServiceImgUrl(service.photo)">
-                        </v-avatar>
-                      </div>
-                      <v-card-title
-                              id="#service"
-                              class="justify-center text-sm-h6 text-caption mx-0 px-0"
-                              :style="show === service.name ? {'color': service.color} : {'color': '#656464'}"><b>{{ service.name }}</b>
-                      </v-card-title>
-                      <v-system-bar
-                              height="5"
-                              :color="show === service.name ? service.color : 'gray'"
-                               ></v-system-bar>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
+      <section id="top" style="background-color: #303030; height: 100vh; padding-top: 70px">
 
-            <v-flex md12 xs12 v-for="service in services" :key="service.name" v-if="show === service.name">
-              <v-container grid-list-xl>
-                <v-layout row wrap class="align-center justify-center">
-                  <v-flex md6 xs12 class="pb-0">
-                    <v-card flat class="transparent text-left py-0">
-                      <v-card-title class="text-sm-h4 text-h5 fix" style="font-weight: 500;">
-                        <a :style="{'color': service.color}">{{ service.description }}</a>
-                      </v-card-title>
-                      <v-card-text class="text-sm-h6 text-subtitle-1" style="font-weight: 400">
-                        {{ service.largeDescription }}
-                        <a class="hidden-md-and-up" :style="{'color': service.color}">Check some <b>{{ service.photo }}</b> use cases:</a>
-                      </v-card-text>
-                    </v-card>
-                  </v-flex>
+        <v-container class="align-center fill-height">
 
-                  <v-flex md6 xs12>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap class="d-flex align-stretch">
-                        <v-flex v-for="caso in service.cases" sm6 xs12>
-                          <v-card class="fill-height text-left elevation-12">
-                            <v-card-title class='fix' style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #000000; opacity: 0.75">{{ caso.title }}</v-card-title>
-                            <v-card-text style="font-size: 14px; line-height: 20px; letter-spacing: 0.25px">{{ caso.goals }}</v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-              <img style="margin-top: -150px; width: 100%; max-width: 800px; object-fit: cover;" class="align-center" :src=getBlobImgUrl(service.photo)>
-            </v-flex>
+          <v-layout row wrap class="justify-center align-center">
 
-            <v-flex md10 xs12 class="hidden-sm-and-up">
-              <v-container class="align-center pb-0">
-                <v-layout row wrap class="justify-center">
-                  <v-flex v-for="service in services" :key="service.name" xs3>
-                    <v-card tile flat v-on:click="show = service.name, goToSection('#service')">
-                      <v-system-bar
-                              height="5"
-                              :color="show === service.name ? service.color : 'gray'"
-                      ></v-system-bar>
-                      <v-card-title
-                              class="justify-center text-sm-h6 text-caption mx-0 px-0"
-                              :style="show === service.name ? {'color': service.color} : {'color': '#656464'}"><b>{{ service.name }}</b>
-                      </v-card-title>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-flex>
-
-          </v-layout>
-        </v-container>
-      </section>
-
-      <section id="#process" style="background-color: #F6F9FD">
-        <v-container class="text-center">
-          <v-layout
-            row
-            wrap
-            class="my-12 white--text"
-            align-center
-            justify-center
-          >
-            <v-flex md10 xs12 class="my-12">
-              <v-card flat class="transparent">
-                <v-card-title
-                  class="justify-center fix layout mb-sm-6"
+            <v-flex md7 xs12 class="align-center">
+              <v-card dark flat class="transparent text-left">
+                <v-card-text
+                        :class="windowHeight < 500 ? 'white--text text-h4 fix' : 'white--text text-sm-h3 text-h4 fix'"
                 >
-                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
-                    Human-centered process
-                  </p>
-                </v-card-title>
-                <v-card-text>
-                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400">
-                    Iterate faster. Test sooner.
-                      <b style="color: #2C81D6">Get quick wins</b>
-                  </p>
+                  All your customers matter.</br> Each one is unique.
                 </v-card-text>
-
-                <v-img
-                        max-height="300px"
-                        contain
-                        src="../assets/process.png"
-                        class="text-center align-end mb-12"
-                ></v-img>
-
-                <v-btn
-                        color="primary"
-                        x-large
-                        @click="overlay = !overlay"
-                >
-                  Know more
-                </v-btn>
-                <p class="caption mt-1" style="opacity: 0.4">
-                  * our process at a glance
-                </p>
-                <v-overlay
-                        :value="overlay"
-                        opacity="0.75"
-                        class="justify-center"
-                        z-index="15"
-                >
-                  <v-col class="align-center">
-                    <v-row class="justify-end">
-                      <v-icon
-                              large
-                              @click="overlay=false"
-                      >mdi-close</v-icon>
-                    </v-row>
-                    <v-row>
-                      <video
-                              autoplay
-                              controls
-                              class="text-center"
-                              style="max-width: 90vw; max-height: 70vh"
-                              @ended="overlay=false"
-                      >
-                        <source src="../assets/process.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                    </v-row>
-                  </v-col>
-
-
-                </v-overlay>
-
+                <v-card-text
+                        :class="windowHeight < 500 ? 'text-h6' : 'text-sm-h5 text-h6'">
+                  Improve your <a style="color: #008FFF">Customer Intelligence</a> to personalize your customers experience.
+                </v-card-text>
               </v-card>
             </v-flex>
 
+            <v-flex md5 xs12 class="hidden-sm-and-down text-center">
+              <img style="max-width:100%; max-height:700px; height: auto" src="../assets/header.png">
+            </v-flex>
           </v-layout>
         </v-container>
       </section>
 
-      <section id="#call" style="background-color: #1667C0">
-        <v-container class="text-center">
+      <section id="questions" style="background-color: #F7F8FA; overflow: hidden; position: relative;"
+      >
+        <v-container class="text-center py-md-0 my-12 my-md-0">
+          <v-layout
+            row
+            wrap
+            class="white--text align-center"
+            align-center
+            justify-center
+          >
+
+            <v-flex md12 xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap class="align-center justify-center">
+
+                  <v-flex md5 xs12 class="pb-0">
+                    <v-card flat class="transparent text-md-left text-center py-0 mr-md-6">
+                      <v-card-title class="text-sm-h4 text-h5 justify-md-start justify-center fix">
+                        Unsufficient customer knowledge is frustrating
+                      </v-card-title>
+                      <v-card-text class="text-sm-h6 text-subtitle-1 font-weight-regular">
+                        If this is you know that we understand and can help.
+                      </v-card-text>
+                      <v-card-actions>
+                        <calendly
+                                call="https://calendly.com/ricardo-thorly-education"
+                                description="Schedule a call"
+                                icon="mdi-phone"
+                                button="orange"
+                                xlarge="true"
+                                class="ml-md-2 justify-center justify-md-start mt-3"
+                        >
+                        </calendly>
+                      </v-card-actions>
+                    </v-card>
+                  </v-flex>
+
+                  <v-flex md7 class="py-0 hidden-sm-and-down" style="height: 3000px; margin-top: -2400px">
+                    <v-row wrap class="anime-md">
+                      <v-flex md6 v-for="(question, index) in questions.concat(questions)" :key="index" >
+                        <v-card height="226px" class="px-3">
+                          <v-icon x-large :color=generator() class="mt-9 mb-3">mdi-help-circle</v-icon>
+                          <v-card-text class="justify-center">
+                            {{ question }}
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-row>
+                  </v-flex>
+
+                  <v-div class="hidden-md-and-up anime-xs-questions-up mt-12 justify-center" style="width: 2200px">
+                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
+                      <v-card v-for="(question, index) in questions.concat(questions).slice(10,20)" :key="index" width="196px" height="176px" class="mx-3">
+                        <v-icon x-large :color="generator()" class="mt-4">mdi-help-circle</v-icon>
+                        <v-card-text class="justify-center text-sm-body-2 text-caption">
+                          {{ question }}
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </v-div>
+
+                  <v-div class="hidden-md-and-up anime-xs-questions-down my-6 justify-center" style="width: 2200px">
+                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
+                      <v-card v-for="(question, index) in questions.concat(questions).slice(4,14)" :key="index" width="196px" height="176px" class="mx-3">
+                        <v-icon x-large :color="generator()" class="mt-4">mdi-help-circle</v-icon>
+                        <v-card-text class="justify-center text-sm-body-2 text-caption">
+                          <b>{{ question }}</b>
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </v-div>
+
+                </v-layout>
+              </v-container>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </section>
+
+      <section id="call" style="background-color: #1667C0">
+        <v-container class="text-center py-12">
           <v-layout
                   row
                   wrap
-                  class="mt-12 white--text"
-                  align-center
                   justify-center
+                  class="py-12"
           >
             <v-flex md10 xs12>
-              <v-card flat class="transparent">
-                <v-card-title
-                        primary-title
-                        class="justify-center fix layout"
-                >
-                  <p class="white--text text-sm-h3 text-h4 text-center" style="font-weight: 600">
-                    Let's brainstorm!
-                  </p>
-                </v-card-title>
-                <v-card-text>
-                  <p class="white--text text-center text-sm-h5 text-h6" style="font-weight: 400">
-                    Talk to us and schedule your <b style="color: #FFFFFF">free creative session</b>
-                  </p>
+              <v-card flat class=" transparent">
+                <v-card-text class="white--text justify-center fix text-sm-h4 text-h5 font-weight-medium">
+                  We can help you improving your Customer Intelligence with a low upfront investment and a structured process.
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -232,65 +149,236 @@
         </v-container>
       </section>
 
-      <section id="#team">
-        <v-container class="text-center">
+      <section id="benefits" style="background-color: #F7F8FA;"
+      >
+        <v-container class="text-center py-md-0 my-md-0">
           <v-layout
-            row
-            wrap
-            class="my-12 white--text"
-            align-center
-            justify-center
+                  row
+                  wrap
+                  class="white--text align-center"
+                  align-center
+                  justify-center
           >
-            <v-flex md10 xs12 class="mt-12">
-              <v-card flat class="transparent">
-                <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-6"
-                >
-                  <p class="text-sm-h3 text-h4 text-center" style="font-weight: 600">
-                    Be part of team Thor
-                  </p>
-                </v-card-title>
-                <v-img
-                  max-height="250"
-                  contain
-                  src="../assets/team.png"
-                  class="text-center align-end"
-                ></v-img>
-                <v-card-text>
-                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400">
-                    We are a community of friendly and creative people with a
-                    <b style="color: #2C81D6"
-                      >flexible lifestyle, eager to be challenged everyday</b
-                    >. If this is for you, consider joining and growing along
-                    us!
-                  </p>
+
+            <v-flex md12 xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap class="align-center justify-center my-12">
+
+                  <v-flex md5 xs12 class="pb-0">
+                    <v-card flat class="transparent text-md-left text-center py-0">
+                      <v-card-title class="text-sm-h4 text-h5 justify-center justify-md-start fix">
+                        Benefits of improving your Customer Intelligence
+                      </v-card-title>
+                      <v-card-text class="text-sm-h6 text-subtitle-1 font-weight-regular">
+                        Check what the big players in the market are doing.
+                      </v-card-text>
+<!--                      <v-btn-->
+<!--                              color="orange"-->
+<!--                              @click="typeformCall()"-->
+<!--                              x-large-->
+<!--                              class="white&#45;&#45;text ml-md-4 mt-3"-->
+<!--                      >-->
+<!--                        Download Guide ||| Get our guide for 5 quick wins on your Customer Intelligence-->
+<!--                      </v-btn>-->
+                    </v-card>
+                  </v-flex>
+
+                  <v-flex md7 xs12 class="my-12">
+                    <v-container grid-list-xl>
+                      <v-layout row wrap class="d-flex align-stretch">
+                        <v-flex v-for="usecase in useCases" :key="usecase.company" sm6 xs12>
+                          <v-card
+                                  class="fill-height text-center elevation-5 fix py-6 px-3"
+                                  :href="usecase.link"
+                                  target="_blank"
+                          >
+                            <v-img :src="getCaseImgUrl(usecase.company)" contain max-height="30"></v-img>
+                            <v-card-title class='fix justify-center text-sm-subtitle-1 text-subtitle-2 mt-3' style="line-height: 20px">{{ usecase.title }}</v-card-title>
+                            <v-card-text class="text-sm-body-2 text-caption">{{ usecase.description }}</v-card-text>
+                          </v-card>
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-flex>
+
+                </v-layout>
+              </v-container>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </section>
+
+      <section id="toolkit" style="overflow: hidden; position: relative;"
+      >
+        <v-container class="text-center py-md-0 my-12 my-md-0">
+          <v-layout
+                  row
+                  wrap
+                  class="white--text align-center"
+                  align-center
+                  justify-center
+          >
+
+            <v-flex md12 xs12>
+              <v-container grid-list-xl>
+                <v-layout row wrap class="align-center justify-center">
+
+                  <v-flex md6 class="py-0 hidden-sm-and-down" style="height: 2640px; margin-top: -1980px">
+                    <v-row wrap class="anime-md-toolkit">
+                      <v-flex md6 v-for="(tool, index) in tools.concat(tools)" :key="index" >
+                        <v-card height="196px">
+                          <v-icon x-large color="#008FFF" class="mt-12">{{ tool.icon }}</v-icon>
+                          <v-card-text class="fix justify-center text-sm-subtitle-1 text-subtitle-2 font-weight-medium" style="line-height: 20px">
+                            {{ tool.name }}
+                          </v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-row>
+                  </v-flex>
+
+                  <v-flex md6 xs12 class="pb-0 pl-md-12">
+                    <v-card flat class="transparent text-center text-md-left py-0">
+                      <v-card-title class="text-sm-h4 text-h5 justify-center justify-md-start fix">
+                        Customer Intelligence toolkit
+                      </v-card-title>
+                      <v-card-text class="text-sm-h6 text-subtitle-1 font-weight-regular">
+                        We use Data Science and Software Development under a Design Thinking methodology to build your toolkit.
+                      </v-card-text>
+                      <v-card-actions>
+                        <calendly
+                                call="https://calendly.com/ricardo-thorly-education"
+                                description="Schedule a call"
+                                icon="mdi-phone"
+                                button="orange"
+                                xlarge=""
+                                class="ml-md-2 mt-3 justify-center justify-md-start"
+                        >
+                        </calendly>
+                      </v-card-actions>
+                    </v-card>
+                  </v-flex>
+
+                  <v-div class="hidden-md-and-up anime-xs-tools-up mt-12 justify-center" style="width: 1800px">
+                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
+                      <v-card v-for="(tool, index) in tools.concat(tools).slice(10,20)" :key="index" width="156px" height="126px" class="mx-3">
+                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
+                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">
+                          {{ tool.name }}
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </v-div>
+
+                  <v-div class="hidden-md-and-up anime-xs-tools-down my-6 justify-center" style="width: 1800px">
+                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
+                      <v-card v-for="(tool, index) in tools.concat(tools).slice(4,14)" :key="index" width="156px" height="126px" class="mx-3">
+                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
+                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">
+                          {{ tool.name }}
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </v-div>
+
+                </v-layout>
+              </v-container>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </section>
+
+      <section id="plan" style="background-color: #1667C0">
+        <v-container class="text-center py-12">
+          <v-layout
+                  row
+                  wrap
+                  justify-center
+                  class="py-12"
+          >
+            <v-flex md10 xs12>
+              <v-card flat class="transparent justify-center">
+
+                <v-card-text class="white--text justify-center fix text-sm-h4 text-h5" style="font-weight: 500;">
+                  Start improving your Customer Intelligence today
                 </v-card-text>
+
+                <v-stepper light class="transparent elevation-0 mt-12 hidden-sm-and-down" alt-labels>
+                  <v-stepper-header>
+                    <v-stepper-step step="1" class="transparent">
+                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>
+                    </v-stepper-step>
+
+                    <v-divider style="margin: 48px -55px 0;"></v-divider>
+
+                    <v-stepper-step step="2">
+                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>
+                    </v-stepper-step>
+
+                    <v-divider style="margin: 48px -55px 0;"></v-divider>
+
+                    <v-stepper-step step="3">
+                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>
+                    </v-stepper-step>
+
+                    <v-divider style="margin: 48px -55px 0;"></v-divider>
+
+                    <v-stepper-step step="4">
+                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>
+                    </v-stepper-step>
+                  </v-stepper-header>
+                </v-stepper>
+
+                <v-stepper light class="transparent elevation-0 mt-12 hidden-md-and-up justify-center" vertical alt-labels>
+                  <v-stepper-step step="1" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>
+                  </v-stepper-step>
+<!--                  <v-stepper-content step="1" class="justify-center"></v-stepper-content>-->
+                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
+
+                  <v-stepper-step step="2" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>
+                  </v-stepper-step>
+<!--                  <v-stepper-content step="2"></v-stepper-content>-->
+                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
+
+                  <v-stepper-step step="3" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>
+                  </v-stepper-step>
+<!--                  <v-stepper-content step="3"></v-stepper-content>-->
+                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
+
+                  <v-stepper-step step="4" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>
+                  </v-stepper-step>
+<!--                  <v-stepper-content step="4"></v-stepper-content>-->
+
+                </v-stepper>
+
               </v-card>
             </v-flex>
           </v-layout>
-          <div class=" mb-12">
-            <v-btn
-              color="primary"
-              @click="typeformCall()"
-              x-large
-            >
-              Join the team
-            </v-btn>
-            <p class="caption mt-1" style="opacity: 0.4">
-              and get your avatar too
-            </p>
+          <div class="mt-md-6 mt-0 mb-12">
+            <calendly
+                    call="https://calendly.com/ricardo-thorly-education/30min"
+                    icon="mdi-phone"
+                    :xlarge="true"
+                    description="Schedule a call"
+                    button="orange"
+                    class="justify-center"
+            ></calendly>
           </div>
         </v-container>
       </section>
 
-      <section id="#story" style="background-color: #F6F9FD">
+      <section id="story" >
         <v-container class="text-center">
-          <v-layout row wrap class="my-6" align-center justify-center>
+          <v-layout row wrap class="my-12" align-center justify-center>
             <v-flex md12 xs12>
               <v-card flat class="transparent">
                 <v-card-text>
-                  <p class="text-center text-sm-h5 text-h6" style="font-weight: 400">
+                  <p class="text-center text-body-2">
                     Part of our story
                   </p>
                 </v-card-text>
@@ -299,7 +387,7 @@
               <v-slide-group
                       v-model="model"
                       show-arrows
-                      class="my-4 mx-0 px-0"
+                      class="mb-4 mx-0 px-0"
               >
                 <v-slide-item
                         v-for="(company,index) in companies"
@@ -323,10 +411,10 @@
           </v-layout>
         </v-container>
       </section>
+
+      <Footer/>
     </v-card>
 
-    <Footer />
-  </div>
 </template>
 
 <script>
@@ -334,12 +422,12 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Calendly from "../components/calendly";
+
 import { typeform } from "../plugins/typeform.js";
 
 export default {
   name: "Home",
   components: {
-    Header,
     Navbar,
     Footer,
     Calendly
@@ -350,6 +438,8 @@ export default {
       show: "Strategy",
       hashSection: null,
       windowHeight: 0,
+      windowHeight2: this.windowHeight - 70,
+      mycolor: '#'+(Math.random()*0xFFFFFF<<0).toString(16),
       scrolled: false,
       model: null,
       dialog: false,
@@ -441,43 +531,65 @@ export default {
       ],
       useCases: [
         {
-          title:
-            "Creative Session - Identify data problems and prototype tools",
-          overlayTitle: "Identify problems and prototype tools",
-          tags: "Design Thinking, Strategy, 2h",
-          largeDescription:
-            "A design thinking session to show you how to get value out of your data and how to prototype technological solutions.",
-          photo: "loki"
+          title: "No Customer left behind: drive growth with personalization",
+          company: "mckinsey",
+          description: "Personalization at scale can drive between 5-15% revenue growth for companies in many industries.",
+          link: "https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/no-customer-left-behind"
         },
         {
-          title: "Data Session - Storytelling with Data",
-          overlayTitle: "Make your data sing",
-          tags: "Visualization and Storytelling, 1h",
-          largeDescription:
-            "We show you what the best practices of Data Visualization and Storytelling can do for your internal communication and decision making.",
-          photo: "nova"
+          title: "Intelligent Marketing starts with Customer Intelligence",
+          company: "forbes",
+          description: "One of the most powerful commodities that brands have today is customer intelligence.",
+          link: "https://www.forbes.com/sites/forbestechcouncil/2020/04/14/intelligent-marketing-starts-with-customer-intelligence/?sh=6c47bcffa867"
         },
         {
-          title: "Technology Demo - The art of prototyping",
-          overlayTitle: "Live demo for Analytics",
-          tags: "Prototype, Engineering, 2h",
-          largeDescription:
-            "In this session we can show you what are the (typically) necessary decisions and tools to build a valuable prototype.",
-          photo: "chartyn"
+          title: "The dividends of digital marketing",
+          company: "bcg",
+          description: "The best marketers now use data for end-to-end measurement and messaging to reach the right consumers.",
+          link: "https://www.bcg.com/publications/2019/dividends-digital-marketing-maturity"
         },
         {
-          title:
-            "Data Session - How can Data Science help my business problems?",
-          overlayTitle: "Improving client retention",
-          tags: "Consulting, Data science, 2h",
-          largeDescription:
-            "We will walk you through a real life business case using DS to improve client retention. This is a session open to technical and non-technical people.",
-          photo: "catolica"
+          title: "Marketing’s holy grail: digital personalization at scale",
+          company: "mckinsey",
+          description: "The secret to kick-starting this change is to empower a small group of the right people.",
+          link: "https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/marketings-holy-grail-digital-personalization-at-scale"
         }
+      ],
+      questions: [
+              'Struggling to understand your customer behaviour?',
+              'Spend endless hours on building and analysing marekting reports?',
+              "You feel you don't really know your customer?",
+              'Lost on what to offer to each customer?',
+              'There’s too many customers to make individual offers?',
+              'Your customer information is spread all over the place?',
+              'Unable to predict what your customer is going to do?',
+              'Afraid your customer is leaving for your competition?',
+              'To improve your current customer relationship is expensive?',
+              'Improve your customer relationship at scale takes to long with few results?',
+              'Unsure of the best investment options to increase your customer satisfaction?',
+              'Hidden insights in your customer data?',
+      ],
+      tools: [
+        {name: "Machine Learning Algorithms", icon: "mdi-chart-timeline"},
+        {name: "Live Dashboards", icon: "mdi-chart-areaspline"},
+        {name: "Clickable Prototypes", icon: "mdi-cursor-pointer"},
+        {name: "Advanced Data Analytics", icon: "mdi-chart-bar-stacked"},
+        {name: "Data Pipelines", icon: "mdi-cube-send"},
+        {name: "User-centered Technology", icon: "mdi-account-circle"},
+        {name: "UI mock-ups", icon: "mdi-television-guide"},
+        {name: "Automated reports", icon: "mdi-file-chart"},
+        {name: "End-to-end tools", icon: "mdi-loop"},
+        {name: "Mobile apps", icon: "mdi-cellphone-android"},
+        {name: "User-personalized websites", icon: "mdi-camera-metering-center"},
+        {name: "Real-time Insights", icon: "mdi-lan-connect"},
       ]
     };
   },
   methods: {
+    generator() {
+      this.mycolor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+      return this.mycolor;
+    },
     typeformCall() {
       typeform();
     },
@@ -492,9 +604,12 @@ export default {
       this.windowHeight = window.innerHeight;
     },
     handleScroll() {
-      this.scrolled = window.scrollY > window.innerHeight - 70;
+      this.scrolled = window.scrollY > 0 // window.innerHeight - 70;
     },
-
+    getCaseImgUrl(pet) {
+      var images = require.context("../assets/cases/", false, /\.png$/);
+      return images("./" + pet + ".png");
+    },
     getCompImgUrl(pet) {
       var images = require.context("../assets/companies/", false, /\.png$/);
       return images("./" + pet + ".png");
@@ -506,10 +621,6 @@ export default {
     getBlobImgUrl(pet) {
       var images = require.context("../assets/services/", false, /\.png$/);
       return images("./blob_" + pet + ".png");
-    },
-    getCaseImgUrl(pet) {
-      var images = require.context("../assets/cases/", false, /\.jpg$/);
-      return images("./" + pet + ".jpg");
     },
     getTeamImgUrl(pet) {
       var images = require.context("../assets/img/faces/", false, /\.jpeg$/);
@@ -546,9 +657,127 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-.v-card--reveal {
+  .v-application--is-ltr .v-stepper--vertical .v-stepper__step__step {
+    margin-right: 0px !important;
+  }
+
+  .v-stepper__step__step {
+    height: 48px;
+    width: 48px;
+    font-size: 1.5rem;
+  }
+
+  .anime-xs-tools-up {
+    position: relative;
+    animation: moverighttool 60s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  @keyframes moverighttool {
+    0%   {left:0px; top:0px;}
+    25%  {left:440px; top:0px;}
+    50% {left:0px; top:0px;}
+    75% {left:-440px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
+
+  .anime-xs-tools-up:hover {
+    animation-play-state: paused;
+  }
+
+  .anime-xs-tools-down {
+    position: relative;
+    animation: movelefttool 60s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  @keyframes movelefttool {
+    0%   {left:0px; top:0px;}
+    25%  {left:-440px; top:0px;}
+    50% {left:0px; top:0px;}
+    75% {left:440px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
+
+  .anime-xs-tools-down:hover {
+    animation-play-state: paused;
+  }
+
+  .anime-xs-questions-up {
+    position: relative;
+    animation: moveleft 90s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  @keyframes moveleft {
+    0%   {left:0px; top:0px;}
+    25%  {left:-560px; top:0px;}
+    50% {left:0px; top:0px;}
+    75% {left:560px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
+
+  .anime-xs-questions-up:hover {
+    animation-play-state: paused;
+  }
+
+  .anime-xs-questions-down {
+    position: relative;
+    animation: moveright 90s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  @keyframes moveright {
+    0%   {left:0px; top:0px;}
+    25%  {left:560px; top:0px;}
+    50% {left:0px; top:0px;}
+    75% {left:-560px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
+
+  .anime-xs-questions-down:hover {
+    animation-play-state: paused;
+  }
+
+  .anime-md {
+    position: relative;
+    animation: mymove 60s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  @keyframes mymove {
+    from {top: 0px;}
+    to {top: 1500px;}
+  }
+
+  .anime-md:hover {
+    animation-play-state: paused;
+  }
+
+  .anime-md-toolkit {
+    position: relative;
+    animation: movetools 20s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  @keyframes movetools {
+    from {top: 0px;}
+    to {top: 1320px;}
+  }
+
+  .anime-md-toolkit:hover {
+    animation-play-state: paused;
+  }
+
+  .v-card--reveal {
   align-items: center;
   bottom: 0;
   justify-content: center;
