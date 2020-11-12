@@ -90,27 +90,27 @@
                     </v-row>
                   </v-flex>
 
-<!--                  <div class="hidden-md-and-up anime-xs-questions-up mt-12 justify-center" style="width: 2200px">-->
-<!--                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">-->
-<!--                      <v-card v-for="(question, index) in questions.concat(questions).slice(10,20)" :key="index" width="196px" height="176px" class="mx-3">-->
-<!--                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>-->
-<!--                        <v-card-text class="justify-center text-sm-body-2 text-caption">-->
-<!--                          {{ question }}-->
-<!--                        </v-card-text>-->
-<!--                      </v-card>-->
-<!--                    </v-row>-->
-<!--                  </div> -->
+                  <div class="hidden-md-and-up anime-xs-questions-up mt-12 justify-center" style="width: 2200px">
+                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
+                      <v-card v-for="(question, index) in questions.concat(questions).slice(10,20)" :key="index" width="196px" height="176px" class="mx-3">
+                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>
+                        <v-card-text class="justify-center text-sm-body-2 text-caption">
+                          {{ question }}
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </div>
 
-<!--                  <div class="hidden-md-and-up anime-xs-questions-down my-6 justify-center" style="width: 2200px">-->
-<!--                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">-->
-<!--                      <v-card v-for="(question, index) in questions.concat(questions).slice(4,14)" :key="index" width="196px" height="176px" class="mx-3">-->
-<!--                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>-->
-<!--                        <v-card-text class="justify-center text-sm-body-2 text-caption">-->
-<!--                          <b>{{ question }}</b>-->
-<!--                        </v-card-text>-->
-<!--                      </v-card>-->
-<!--                    </v-row>-->
-<!--                  </div> -->
+                  <div class="hidden-md-and-up anime-xs-questions-down my-6 justify-center" style="width: 2200px">
+                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
+                      <v-card v-for="(question, index) in questions.concat(questions).slice(4,14)" :key="index" width="196px" height="176px" class="mx-3">
+                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>
+                        <v-card-text class="justify-center text-sm-body-2 text-caption">
+                          <b>{{ question }}</b>
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </div>
 
                 </v-layout>
               </v-container>
@@ -660,111 +660,111 @@ export default {
   }
 
   .anime-xs-tools-up {
-    /*position: relative;*/
-    /*animation: moverighttool 60s infinite;*/
-    /*animation-timing-function: linear;*/
-    /*animation-delay: 0s;*/
+    position: relative;
+    animation: moverighttool 60s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
   }
 
-/*  @keyframes moverighttool {
+  @keyframes moverighttool {
     0%   {left:0px; top:0px;}
     25%  {left:440px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:-440px; top:0px;}
     100% {left:0px; top:0px;}
-  }*/
+  }
 
   .anime-xs-tools-up:hover {
-    /*animation-play-state: paused;*/
+    animation-play-state: paused;
   }
 
   .anime-xs-tools-down {
-    /*position: relative;*/
-    /*animation: movelefttool 60s infinite;*/
-    /*animation-timing-function: linear;*/
-    /*animation-delay: 0s;*/
+    position: relative;
+    animation: movelefttool 60s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
   }
 
-/*  @keyframes movelefttool {
+  @keyframes movelefttool {
     0%   {left:0px; top:0px;}
     25%  {left:-440px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:440px; top:0px;}
     100% {left:0px; top:0px;}
-  }*/
+  }
 
   .anime-xs-tools-down:hover {
-    /*animation-play-state: paused;*/
+    animation-play-state: paused;
   }
 
   .anime-xs-questions-up {
-    /*position: relative;*/
-    /*animation: moveleft 90s infinite;*/
-    /*animation-timing-function: linear;*/
-    /*animation-delay: 0s;*/
+    position: relative;
+    animation: moveleft 90s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
   }
 
-/*  @keyframes moveleft {
+  @keyframes moveleft {
     0%   {left:0px; top:0px;}
     25%  {left:-560px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:560px; top:0px;}
     100% {left:0px; top:0px;}
-  }*/
+  }
 
   .anime-xs-questions-up:hover {
-    /*animation-play-state: paused;*/
+    animation-play-state: paused;
   }
 
   .anime-xs-questions-down {
-    /*position: relative;*/
-    /*animation: moveright 90s infinite;*/
-    /*animation-timing-function: linear;*/
-    /*animation-delay: 0s;*/
+    position: relative;
+    animation: moveright 90s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
   }
 
-/*  @keyframes moveright {
+  @keyframes moveright {
     0%   {left:0px; top:0px;}
     25%  {left:560px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:-560px; top:0px;}
     100% {left:0px; top:0px;}
-  }*/
+  }
 
   .anime-xs-questions-down:hover {
-    /*animation-play-state: paused;*/
+    animation-play-state: paused;
   }
 
   .anime-md {
-    /*position: relative;*/
-    /*animation: mymove 60s infinite;*/
-    /*animation-timing-function: linear;*/
-    /*animation-delay: 0s;*/
+    position: relative;
+    animation: mymove 60s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
   }
 
-/*  @keyframes mymove {
+  @keyframes mymove {
     from {top: 0px;}
     to {top: 1500px;}
-  }*/
+  }
 
   .anime-md:hover {
-/*    animation-play-state: paused;*/
+    animation-play-state: paused;
   }
 
   .anime-md-toolkit {
-/*    position: relative;
+    position: relative;
     animation: movetools 20s infinite;
     animation-timing-function: linear;
-    animation-delay: 0s;*/
+    animation-delay: 0s;
   }
 
-  /*@keyframes movetools {*/
-  /*  from {top: 0px;}*/
-  /*  to {top: 1320px;}*/
-  /*}*/
+  @keyframes movetools {
+    from {top: 0px;}
+    to {top: 1320px;}
+  }
 
   .anime-md-toolkit:hover {
-    /*animation-play-state: paused;*/
+    animation-play-state: paused;
   }
 
   .v-card--reveal {
