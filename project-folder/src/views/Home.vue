@@ -34,7 +34,7 @@
             </v-flex>
 
             <v-flex md5 xs12 class="hidden-sm-and-down text-center">
-              <img style="max-width:100%; max-height:700px; height: auto" src="../assets/header.png">
+<!--              <img style="max-width:100%; max-height:700px; height: auto" src="../assets/header.png">-->
             </v-flex>
           </v-layout>
         </v-container>
@@ -90,27 +90,27 @@
                     </v-row>
                   </v-flex>
 
-                  <div class="hidden-md-and-up anime-xs-questions-up mt-12 justify-center" style="width: 2200px">
-                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
-                      <v-card v-for="(question, index) in questions.concat(questions).slice(10,20)" :key="index" width="196px" height="176px" class="mx-3">
-                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>
-                        <v-card-text class="justify-center text-sm-body-2 text-caption">
-                          {{ question }}
-                        </v-card-text>
-                      </v-card>
-                    </v-row>
-                  </div> 
+<!--                  <div class="hidden-md-and-up anime-xs-questions-up mt-12 justify-center" style="width: 2200px">-->
+<!--                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">-->
+<!--                      <v-card v-for="(question, index) in questions.concat(questions).slice(10,20)" :key="index" width="196px" height="176px" class="mx-3">-->
+<!--                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>-->
+<!--                        <v-card-text class="justify-center text-sm-body-2 text-caption">-->
+<!--                          {{ question }}-->
+<!--                        </v-card-text>-->
+<!--                      </v-card>-->
+<!--                    </v-row>-->
+<!--                  </div> -->
 
-                  <div class="hidden-md-and-up anime-xs-questions-down my-6 justify-center" style="width: 2200px">
-                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
-                      <v-card v-for="(question, index) in questions.concat(questions).slice(4,14)" :key="index" width="196px" height="176px" class="mx-3">
-                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>
-                        <v-card-text class="justify-center text-sm-body-2 text-caption">
-                          <b>{{ question }}</b>
-                        </v-card-text>
-                      </v-card>
-                    </v-row>
-                  </div> 
+<!--                  <div class="hidden-md-and-up anime-xs-questions-down my-6 justify-center" style="width: 2200px">-->
+<!--                    <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">-->
+<!--                      <v-card v-for="(question, index) in questions.concat(questions).slice(4,14)" :key="index" width="196px" height="176px" class="mx-3">-->
+<!--                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>-->
+<!--                        <v-card-text class="justify-center text-sm-body-2 text-caption">-->
+<!--                          <b>{{ question }}</b>-->
+<!--                        </v-card-text>-->
+<!--                      </v-card>-->
+<!--                    </v-row>-->
+<!--                  </div> -->
 
                 </v-layout>
               </v-container>
@@ -259,27 +259,27 @@
                     </v-card>
                   </v-flex>
 
-                  <div class="hidden-md-and-up anime-xs-tools-up mt-12 justify-center" style="width: 1800px">
-                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
-                      <v-card v-for="(tool, index) in tools.concat(tools).slice(10,20)" :key="index" width="156px" height="126px" class="mx-3">
-                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
-                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">
-                          {{ tool.name }}
-                        </v-card-text>
-                      </v-card>
-                    </v-row>
-                  </div> 
+<!--                  <div class="hidden-md-and-up anime-xs-tools-up mt-12 justify-center" style="width: 1800px">-->
+<!--                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">-->
+<!--                      <v-card v-for="(tool, index) in tools.concat(tools).slice(10,20)" :key="index" width="156px" height="126px" class="mx-3">-->
+<!--                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>-->
+<!--                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">-->
+<!--                          {{ tool.name }}-->
+<!--                        </v-card-text>-->
+<!--                      </v-card>-->
+<!--                    </v-row>-->
+<!--                  </div> -->
 
-                  <div class="hidden-md-and-up anime-xs-tools-down my-6 justify-center" style="width: 1800px">
-                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
-                      <v-card v-for="(tool, index) in tools.concat(tools).slice(4,14)" :key="index" width="156px" height="126px" class="mx-3">
-                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
-                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">
-                          {{ tool.name }}
-                        </v-card-text>
-                      </v-card>
-                    </v-row>
-                  </div> 
+<!--                  <div class="hidden-md-and-up anime-xs-tools-down my-6 justify-center" style="width: 1800px">-->
+<!--                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">-->
+<!--                      <v-card v-for="(tool, index) in tools.concat(tools).slice(4,14)" :key="index" width="156px" height="126px" class="mx-3">-->
+<!--                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>-->
+<!--                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">-->
+<!--                          {{ tool.name }}-->
+<!--                        </v-card-text>-->
+<!--                      </v-card>-->
+<!--                    </v-row>-->
+<!--                  </div> -->
 
                 </v-layout>
               </v-container>
@@ -330,31 +330,31 @@
                   </v-stepper-header>
                 </v-stepper>
 
-                <v-stepper light class="transparent elevation-0 mt-12 hidden-md-and-up justify-center" vertical alt-labels>
-                  <v-stepper-step step="1" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>
-                  </v-stepper-step>
-<!--                  <v-stepper-content step="1" class="justify-center"></v-stepper-content>-->
-                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
+<!--                <v-stepper light class="transparent elevation-0 mt-12 hidden-md-and-up justify-center" vertical alt-labels>-->
+<!--                  <v-stepper-step step="1" class="py-3">-->
+<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>-->
+<!--                  </v-stepper-step>-->
+<!--&lt;!&ndash;                  <v-stepper-content step="1" class="justify-center"></v-stepper-content>&ndash;&gt;-->
+<!--                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>-->
 
-                  <v-stepper-step step="2" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>
-                  </v-stepper-step>
-<!--                  <v-stepper-content step="2"></v-stepper-content>-->
-                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
+<!--                  <v-stepper-step step="2" class="py-3">-->
+<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>-->
+<!--                  </v-stepper-step>-->
+<!--&lt;!&ndash;                  <v-stepper-content step="2"></v-stepper-content>&ndash;&gt;-->
+<!--                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>-->
 
-                  <v-stepper-step step="3" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>
-                  </v-stepper-step>
-<!--                  <v-stepper-content step="3"></v-stepper-content>-->
-                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
+<!--                  <v-stepper-step step="3" class="py-3">-->
+<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>-->
+<!--                  </v-stepper-step>-->
+<!--&lt;!&ndash;                  <v-stepper-content step="3"></v-stepper-content>&ndash;&gt;-->
+<!--                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>-->
 
-                  <v-stepper-step step="4" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>
-                  </v-stepper-step>
-<!--                  <v-stepper-content step="4"></v-stepper-content>-->
+<!--                  <v-stepper-step step="4" class="py-3">-->
+<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>-->
+<!--                  </v-stepper-step>-->
+<!--&lt;!&ndash;                  <v-stepper-content step="4"></v-stepper-content>&ndash;&gt;-->
 
-                </v-stepper>
+<!--                </v-stepper>-->
 
               </v-card>
             </v-flex>
@@ -670,111 +670,111 @@ export default {
   }
 
   .anime-xs-tools-up {
-    position: relative;
-    animation: moverighttool 60s infinite;
-    animation-timing-function: linear;
-    animation-delay: 0s;
+    /*position: relative;*/
+    /*animation: moverighttool 60s infinite;*/
+    /*animation-timing-function: linear;*/
+    /*animation-delay: 0s;*/
   }
 
-  @keyframes moverighttool {
+/*  @keyframes moverighttool {
     0%   {left:0px; top:0px;}
     25%  {left:440px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:-440px; top:0px;}
     100% {left:0px; top:0px;}
-  }
+  }*/
 
   .anime-xs-tools-up:hover {
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
   }
 
   .anime-xs-tools-down {
-    position: relative;
-    animation: movelefttool 60s infinite;
-    animation-timing-function: linear;
-    animation-delay: 0s;
+    /*position: relative;*/
+    /*animation: movelefttool 60s infinite;*/
+    /*animation-timing-function: linear;*/
+    /*animation-delay: 0s;*/
   }
 
-  @keyframes movelefttool {
+/*  @keyframes movelefttool {
     0%   {left:0px; top:0px;}
     25%  {left:-440px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:440px; top:0px;}
     100% {left:0px; top:0px;}
-  }
+  }*/
 
   .anime-xs-tools-down:hover {
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
   }
 
   .anime-xs-questions-up {
-    position: relative;
-    animation: moveleft 90s infinite;
-    animation-timing-function: linear;
-    animation-delay: 0s;
+    /*position: relative;*/
+    /*animation: moveleft 90s infinite;*/
+    /*animation-timing-function: linear;*/
+    /*animation-delay: 0s;*/
   }
 
-  @keyframes moveleft {
+/*  @keyframes moveleft {
     0%   {left:0px; top:0px;}
     25%  {left:-560px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:560px; top:0px;}
     100% {left:0px; top:0px;}
-  }
+  }*/
 
   .anime-xs-questions-up:hover {
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
   }
 
   .anime-xs-questions-down {
-    position: relative;
-    animation: moveright 90s infinite;
-    animation-timing-function: linear;
-    animation-delay: 0s;
+    /*position: relative;*/
+    /*animation: moveright 90s infinite;*/
+    /*animation-timing-function: linear;*/
+    /*animation-delay: 0s;*/
   }
 
-  @keyframes moveright {
+/*  @keyframes moveright {
     0%   {left:0px; top:0px;}
     25%  {left:560px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:-560px; top:0px;}
     100% {left:0px; top:0px;}
-  }
+  }*/
 
   .anime-xs-questions-down:hover {
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
   }
 
   .anime-md {
-    position: relative;
-    animation: mymove 60s infinite;
-    animation-timing-function: linear;
-    animation-delay: 0s;
+    /*position: relative;*/
+    /*animation: mymove 60s infinite;*/
+    /*animation-timing-function: linear;*/
+    /*animation-delay: 0s;*/
   }
 
-  @keyframes mymove {
+/*  @keyframes mymove {
     from {top: 0px;}
     to {top: 1500px;}
-  }
+  }*/
 
   .anime-md:hover {
-    animation-play-state: paused;
+/*    animation-play-state: paused;*/
   }
 
   .anime-md-toolkit {
-    position: relative;
+/*    position: relative;
     animation: movetools 20s infinite;
     animation-timing-function: linear;
-    animation-delay: 0s;
+    animation-delay: 0s;*/
   }
 
-  @keyframes movetools {
-    from {top: 0px;}
-    to {top: 1320px;}
-  }
+  /*@keyframes movetools {*/
+  /*  from {top: 0px;}*/
+  /*  to {top: 1320px;}*/
+  /*}*/
 
   .anime-md-toolkit:hover {
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
   }
 
   .v-card--reveal {

@@ -117,7 +117,7 @@
                   <v-flex md7 xs12>
                     <v-container grid-list-xl>
                       <v-layout row wrap class="d-flex align-stretch">
-                        <v-flex v-for="value in values" sm6 xs12>
+                        <v-flex v-for="(value,index) in values" :key="index" sm6 xs12>
                           <v-card class="fill-height text-left elevation-5 fix py-6 px-3">
                             <v-card-title class='fix justify-start text-sm-subtitle-1 text-subtitle-2' style="line-height: 20px">{{ value.name }}</v-card-title>
                             <v-card-text class="text-sm-body-2 text-caption">{{ value.description }}</v-card-text>
@@ -215,7 +215,6 @@
 
 <script>
 import Navbar from "../components/Navbar";
-//import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { typeform } from "../plugins/typeform.js";
 import Calendly from "../components/calendly";
@@ -225,7 +224,6 @@ export default {
   components: {
     Calendly,
     Navbar,
-    //Header,
     Footer
   },
 
