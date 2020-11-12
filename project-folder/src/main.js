@@ -11,6 +11,7 @@ import Team from "./views/Team";
 // import Development from "./views/Development";
 // import Training from "./views/Training";
 
+Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
 const routes = [
@@ -54,12 +55,12 @@ const routes = [
 const router = new VueRouter({
   mode: "history",
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     return { x: 0, y: 0 };
   },
 });
 
-Vue.config.productionTip = false;
+
 
 new Vue({
   router,

@@ -69,7 +69,7 @@
                                 description="Schedule a call"
                                 icon="mdi-phone"
                                 button="orange"
-                                xlarge="true"
+                                :xlarge="true"
                                 class="ml-md-2 justify-center justify-md-start mt-3"
                         >
                         </calendly>
@@ -81,7 +81,7 @@
                     <v-row wrap class="anime-md">
                       <v-flex md6 v-for="(question, index) in questions.concat(questions)" :key="index" >
                         <v-card height="226px" class="px-3">
-                          <v-icon x-large :color=generator() class="mt-9 mb-3">mdi-help-circle</v-icon>
+                          <v-icon x-large color="blue" class="mt-9 mb-3">mdi-help-circle</v-icon>
                           <v-card-text class="justify-center">
                             {{ question }}
                           </v-card-text>
@@ -90,27 +90,27 @@
                     </v-row>
                   </v-flex>
 
-                  <v-div class="hidden-md-and-up anime-xs-questions-up mt-12 justify-center" style="width: 2200px">
+                  <div class="hidden-md-and-up anime-xs-questions-up mt-12 justify-center" style="width: 2200px">
                     <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
                       <v-card v-for="(question, index) in questions.concat(questions).slice(10,20)" :key="index" width="196px" height="176px" class="mx-3">
-                        <v-icon x-large :color="generator()" class="mt-4">mdi-help-circle</v-icon>
+                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>
                         <v-card-text class="justify-center text-sm-body-2 text-caption">
                           {{ question }}
                         </v-card-text>
                       </v-card>
                     </v-row>
-                  </v-div>
+                  </div> 
 
-                  <v-div class="hidden-md-and-up anime-xs-questions-down my-6 justify-center" style="width: 2200px">
+                  <div class="hidden-md-and-up anime-xs-questions-down my-6 justify-center" style="width: 2200px">
                     <v-row wrap class="mx-3" style="height:176px; width: 2200px; margin-right: 1100px; margin-left: 1100px">
                       <v-card v-for="(question, index) in questions.concat(questions).slice(4,14)" :key="index" width="196px" height="176px" class="mx-3">
-                        <v-icon x-large :color="generator()" class="mt-4">mdi-help-circle</v-icon>
+                        <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>
                         <v-card-text class="justify-center text-sm-body-2 text-caption">
                           <b>{{ question }}</b>
                         </v-card-text>
                       </v-card>
                     </v-row>
-                  </v-div>
+                  </div> 
 
                 </v-layout>
               </v-container>
@@ -186,7 +186,7 @@
                   <v-flex md7 xs12 class="my-12">
                     <v-container grid-list-xl>
                       <v-layout row wrap class="d-flex align-stretch">
-                        <v-flex v-for="usecase in useCases" :key="usecase.company" sm6 xs12>
+                        <v-flex v-for="(usecase, index) in useCases" :key="index" sm6 xs12>
                           <v-card
                                   class="fill-height text-center elevation-5 fix py-6 px-3"
                                   :href="usecase.link"
@@ -259,7 +259,7 @@
                     </v-card>
                   </v-flex>
 
-                  <v-div class="hidden-md-and-up anime-xs-tools-up mt-12 justify-center" style="width: 1800px">
+                  <div class="hidden-md-and-up anime-xs-tools-up mt-12 justify-center" style="width: 1800px">
                     <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
                       <v-card v-for="(tool, index) in tools.concat(tools).slice(10,20)" :key="index" width="156px" height="126px" class="mx-3">
                         <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
@@ -268,9 +268,9 @@
                         </v-card-text>
                       </v-card>
                     </v-row>
-                  </v-div>
+                  </div> 
 
-                  <v-div class="hidden-md-and-up anime-xs-tools-down my-6 justify-center" style="width: 1800px">
+                  <div class="hidden-md-and-up anime-xs-tools-down my-6 justify-center" style="width: 1800px">
                     <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
                       <v-card v-for="(tool, index) in tools.concat(tools).slice(4,14)" :key="index" width="156px" height="126px" class="mx-3">
                         <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
@@ -279,7 +279,7 @@
                         </v-card-text>
                       </v-card>
                     </v-row>
-                  </v-div>
+                  </div> 
 
                 </v-layout>
               </v-container>

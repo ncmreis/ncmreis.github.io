@@ -339,26 +339,7 @@ export default {
       return {
         backgroundImage: "url(../assets/blue.jpg)",
       };
-    },
-    function() {
-      var qs,
-        js,
-        q,
-        s,
-        d = document,
-        gi = d.getElementById,
-        ce = d.createElement,
-        gt = d.getElementsByTagName,
-        id = "typeform-share",
-        b = "https://embed.typeform.com/";
-      if (!gi.call(d, id)) {
-        js = ce.call(d, "script");
-        js.id = id;
-        js.src = b + "embed.js";
-        q = gt.call(d, "script")[0];
-        q.parentNode.insertBefore(js, q);
-      }
-    },
+    }
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);

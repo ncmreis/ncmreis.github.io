@@ -49,7 +49,7 @@
     <div class="hidden-md-and-up text-center">
       <v-menu bottom left>
         <template v-slot:activator="{ on }">
-          <v-btn fab text flat class="transparent" v-on="on">
+          <v-btn fab text class="transparent" v-on="on">
             <v-icon :color="textColor">mdi-menu</v-icon>
           </v-btn>
         </template>
