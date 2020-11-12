@@ -259,27 +259,27 @@
                     </v-card>
                   </v-flex>
 
-<!--                  <div class="hidden-md-and-up anime-xs-tools-up mt-12 justify-center" style="width: 1800px">-->
-<!--                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">-->
-<!--                      <v-card v-for="(tool, index) in tools.concat(tools).slice(10,20)" :key="index" width="156px" height="126px" class="mx-3">-->
-<!--                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>-->
-<!--                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">-->
-<!--                          {{ tool.name }}-->
-<!--                        </v-card-text>-->
-<!--                      </v-card>-->
-<!--                    </v-row>-->
-<!--                  </div> -->
+                  <div class="hidden-md-and-up anime-xs-tools-up mt-12 justify-center" style="width: 1800px">
+                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
+                      <v-card v-for="(tool, index) in tools.concat(tools).slice(10,20)" :key="index" width="156px" height="126px" class="mx-3">
+                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
+                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">
+                          {{ tool.name }}
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </div>
 
-<!--                  <div class="hidden-md-and-up anime-xs-tools-down my-6 justify-center" style="width: 1800px">-->
-<!--                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">-->
-<!--                      <v-card v-for="(tool, index) in tools.concat(tools).slice(4,14)" :key="index" width="156px" height="126px" class="mx-3">-->
-<!--                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>-->
-<!--                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">-->
-<!--                          {{ tool.name }}-->
-<!--                        </v-card-text>-->
-<!--                      </v-card>-->
-<!--                    </v-row>-->
-<!--                  </div> -->
+                  <div class="hidden-md-and-up anime-xs-tools-down my-6 justify-center" style="width: 1800px">
+                    <v-row wrap class="mx-3" style="height:126px; width: 1800px; margin-right: 900px; margin-left: 900px">
+                      <v-card v-for="(tool, index) in tools.concat(tools).slice(4,14)" :key="index" width="156px" height="126px" class="mx-3">
+                        <v-icon large color="#008FFF" class="mt-4">{{ tool.icon }}</v-icon>
+                        <v-card-text class="justify-center" style="line-height: 20px; font-weight: 500">
+                          {{ tool.name }}
+                        </v-card-text>
+                      </v-card>
+                    </v-row>
+                  </div>
 
                 </v-layout>
               </v-container>
@@ -330,31 +330,27 @@
                   </v-stepper-header>
                 </v-stepper>
 
-<!--                <v-stepper light class="transparent elevation-0 mt-12 hidden-md-and-up justify-center" vertical alt-labels>-->
-<!--                  <v-stepper-step step="1" class="py-3">-->
-<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>-->
-<!--                  </v-stepper-step>-->
-<!--&lt;!&ndash;                  <v-stepper-content step="1" class="justify-center"></v-stepper-content>&ndash;&gt;-->
-<!--                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>-->
+                <v-stepper light class="transparent elevation-0 mt-12 hidden-md-and-up justify-center" vertical alt-labels>
+                  <v-stepper-step step="1" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>
+                  </v-stepper-step>
+                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
 
-<!--                  <v-stepper-step step="2" class="py-3">-->
-<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>-->
-<!--                  </v-stepper-step>-->
-<!--&lt;!&ndash;                  <v-stepper-content step="2"></v-stepper-content>&ndash;&gt;-->
-<!--                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>-->
+                  <v-stepper-step step="2" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>
+                  </v-stepper-step>
+                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
 
-<!--                  <v-stepper-step step="3" class="py-3">-->
-<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>-->
-<!--                  </v-stepper-step>-->
-<!--&lt;!&ndash;                  <v-stepper-content step="3"></v-stepper-content>&ndash;&gt;-->
-<!--                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>-->
+                  <v-stepper-step step="3" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>
+                  </v-stepper-step>
+                  <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
 
-<!--                  <v-stepper-step step="4" class="py-3">-->
-<!--                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>-->
-<!--                  </v-stepper-step>-->
-<!--&lt;!&ndash;                  <v-stepper-content step="4"></v-stepper-content>&ndash;&gt;-->
+                  <v-stepper-step step="4" class="py-3">
+                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>
+                  </v-stepper-step>
 
-<!--                </v-stepper>-->
+                </v-stepper>
 
               </v-card>
             </v-flex>
@@ -438,8 +434,6 @@ export default {
       show: "Strategy",
       hashSection: null,
       windowHeight: 0,
-      windowHeight2: this.windowHeight - 70,
-      mycolor: '#'+(Math.random()*0xFFFFFF<<0).toString(16),
       scrolled: false,
       model: null,
       dialog: false,
@@ -586,10 +580,6 @@ export default {
     };
   },
   methods: {
-    generator() {
-      this.mycolor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-      return this.mycolor;
-    },
     typeformCall() {
       typeform();
     },
