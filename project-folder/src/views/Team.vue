@@ -58,11 +58,10 @@
             align-center
             justify-center
           >
-            <v-flex md12 xs12 class="mt-12">
+            <v-flex md10 xs12>
               <v-card flat class="transparent">
                 <v-card-title
-                  primary-title
-                  class="justify-center fix layout mb-6"
+                  class="justify-center fix layout mt-6 mb-6"
                 >
                   <p class="text-sm-h4 text-h5 text-center">
                     From Lisbon to the World
@@ -106,7 +105,7 @@
                         The DNA behind Thorly
                       </v-card-title>
                       <v-card-text class="text-sm-h6 text-subtitle-1 font-weight-regular">
-                        We believe a team is all about people with the right values
+                        We believe a team is all about <b style="color: #2C81D6">people with the right values</b>
                         and it is the key-factor to create an
                         open-minded, friendly and creative environment.
                       </v-card-text>
@@ -136,9 +135,9 @@
 
       <section id="#team">
         <v-container class="text-center">
-          <v-layout row wrap align-center justify-center class="mt-12">
+          <v-layout row wrap align-center justify-center class="my-12">
 
-            <v-flex md12 xs12>
+            <v-flex md10 xs12>
               <v-card flat class="transparent justify-center text-center">
                 <v-card-title class="text-sm-h4 text-h5 justify-center mt-6 mb-md-12 mb-6">
                   Hello, world
@@ -178,7 +177,7 @@
                           </div>
                         </v-card-text>
                         <v-overlay absolute opacity="0.90" :value="hover">
-                          <v-card-text class="caption text-center px-6" style="line-height: 16px">
+                          <v-card-text class="text-sm-body-2 text-caption text-center px-6" :style="$vuetify.breakpoint.xs ? 'line-height: 16px' : ''">
                             {{ person.description }}
                           </v-card-text>
                           <div class="text-center">
@@ -209,6 +208,7 @@
       </section>
 
       <Footer />
+
     </v-card>
 
 </template>
@@ -277,7 +277,7 @@ export default {
         {
           name: "Learning Continuously",
           description:
-            "The field we work changes ridicously fast. We create incentives and have the structure to make our team able to learn daily.",
+            "The field we work changes ridiculously fast. We create incentives and have the structure to make our team able to learn daily.",
         },
         // {
         //   name: "Brainstorm often",
@@ -285,7 +285,7 @@ export default {
         //     "New ideas are key to go bigger so. In the process, lots of stupid ideas get in the mix. That's fine, please keep the stupid ideas coming.",
         // },
         {
-          name: "Optimists are prefered",
+          name: "Optimism is preferred",
           description:
             "As entrepreneurs and being used to navigate environments without already pre-established solutions, we survive by being optimists. We like that.",
         },

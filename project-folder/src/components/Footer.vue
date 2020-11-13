@@ -24,7 +24,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-4">
+      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-8">
         <p class="subtitle-1 text-uppercase mb-4 font-weight-black">About</p>
         <p>
           <calendly
@@ -42,14 +42,14 @@
 
       <v-spacer></v-spacer>
 
-      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-4">
+      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-8">
         <p class="subtitle-1 text-uppercase mb-4 font-weight-black">Office</p>
         <p>Rua da Prata, 80<br />1100-420 Lisboa<br />Portugal</p>
       </v-flex>
 
       <v-spacer></v-spacer>
 
-      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-4">
+      <v-flex md2 sm4 xs12 class="mt-md-0 mt-sm-4 mt-8">
         <p class="subtitle-1 text-uppercase mb-4 font-weight-black">Contact</p>
         <p>discover@thorly.tech</p>
         <p>+351 918548827</p>

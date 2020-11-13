@@ -24,17 +24,17 @@
                 <v-card-text
                         :class="windowHeight < 500 ? 'white--text text-h4 fix' : 'white--text text-sm-h3 text-h4 fix'"
                 >
-                  All your customers matter.</br> Each one is unique.
+                  All your customers matter.<br> Each one is unique.
                 </v-card-text>
                 <v-card-text
                         :class="windowHeight < 500 ? 'text-h6' : 'text-sm-h5 text-h6'">
-                  Improve your <a style="color: #008FFF">Customer Intelligence</a> to personalize your customers experience.
+                  Improve your <span style="color: #008FFF">Customer Intelligence</span> to personalize your customers experience.
                 </v-card-text>
               </v-card>
             </v-flex>
 
             <v-flex md5 xs12 class="hidden-sm-and-down text-center">
-<!--              <img style="max-width:100%; max-height:700px; height: auto" src="../assets/header.png">-->
+              <img style="max-width:100%; max-height:700px; height: auto" src="../assets/header.png">
             </v-flex>
           </v-layout>
         </v-container>
@@ -106,7 +106,7 @@
                       <v-card v-for="(question, index) in questions.concat(questions).slice(4,14)" :key="index" width="196px" height="176px" class="mx-3">
                         <v-icon x-large color="blue" class="mt-4">mdi-help-circle</v-icon>
                         <v-card-text class="justify-center text-sm-body-2 text-caption">
-                          <b>{{ question }}</b>
+                          {{ question }}
                         </v-card-text>
                       </v-card>
                     </v-row>
@@ -304,50 +304,51 @@
                   Start improving your Customer Intelligence today
                 </v-card-text>
 
-                <v-stepper light class="transparent elevation-0 mt-12 hidden-sm-and-down" alt-labels>
+                <v-stepper class="transparent elevation-0 mt-12 hidden-sm-and-down" alt-labels>
                   <v-stepper-header>
-                    <v-stepper-step step="1" class="transparent">
-                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>
+
+                    <v-stepper-step step="1" color="rgba(0, 0, 0, 0.38)">
+                      <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</span>
                     </v-stepper-step>
 
                     <v-divider style="margin: 48px -55px 0;"></v-divider>
 
                     <v-stepper-step step="2">
-                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>
+                      <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</span>
                     </v-stepper-step>
 
                     <v-divider style="margin: 48px -55px 0;"></v-divider>
 
                     <v-stepper-step step="3">
-                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>
+                      <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</span>
                     </v-stepper-step>
 
                     <v-divider style="margin: 48px -55px 0;"></v-divider>
 
                     <v-stepper-step step="4">
-                      <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>
+                      <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</span>
                     </v-stepper-step>
                   </v-stepper-header>
                 </v-stepper>
 
-                <v-stepper light class="transparent elevation-0 mt-12 hidden-md-and-up justify-center" vertical alt-labels>
-                  <v-stepper-step step="1" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</a>
+                <v-stepper class="transparent elevation-0 mt-12 hidden-md-and-up justify-center" vertical alt-labels>
+                  <v-stepper-step step="1" class="py-3" color="rgba(0, 0, 0, 0.38)">
+                    <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Schedule a call</span>
                   </v-stepper-step>
                   <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
 
                   <v-stepper-step step="2" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</a>
+                    <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Get a plan for your customer intelligence</span>
                   </v-stepper-step>
                   <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
 
                   <v-stepper-step step="3" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</a>
+                    <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Start working</span>
                   </v-stepper-step>
                   <div style="margin-left: auto; margin-right: auto; background-color: gray; height: 40px; width: 1px"></div>
 
                   <v-stepper-step step="4" class="py-3">
-                    <a style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</a>
+                    <span style="color: #ffffff; font-weight: 500" class="subtitle text-center">Personalized customer experience</span>
                   </v-stepper-step>
 
                 </v-stepper>
@@ -409,6 +410,7 @@
       </section>
 
       <Footer/>
+
     </v-card>
 
 </template>
@@ -674,9 +676,9 @@ export default {
     100% {left:0px; top:0px;}
   }
 
-  .anime-xs-tools-up:hover {
-    animation-play-state: paused;
-  }
+  /*.anime-xs-tools-up:hover {*/
+  /*  animation-play-state: paused;*/
+  /*}*/
 
   .anime-xs-tools-down {
     position: relative;
@@ -693,9 +695,9 @@ export default {
     100% {left:0px; top:0px;}
   }
 
-  .anime-xs-tools-down:hover {
-    animation-play-state: paused;
-  }
+  /*.anime-xs-tools-down:hover {*/
+  /*  animation-play-state: paused;*/
+  /*}*/
 
   .anime-xs-questions-up {
     position: relative;
@@ -712,9 +714,9 @@ export default {
     100% {left:0px; top:0px;}
   }
 
-  .anime-xs-questions-up:hover {
-    animation-play-state: paused;
-  }
+  /*.anime-xs-questions-up:hover {*/
+  /*  animation-play-state: paused;*/
+  /*}*/
 
   .anime-xs-questions-down {
     position: relative;
@@ -731,9 +733,9 @@ export default {
     100% {left:0px; top:0px;}
   }
 
-  .anime-xs-questions-down:hover {
-    animation-play-state: paused;
-  }
+  /*.anime-xs-questions-down:hover {*/
+  /*  animation-play-state: paused;*/
+  /*}*/
 
   .anime-md {
     position: relative;
@@ -747,13 +749,13 @@ export default {
     to {top: 1500px;}
   }
 
-  .anime-md:hover {
-    animation-play-state: paused;
-  }
+  /*.anime-md:hover {*/
+  /*  animation-play-state: paused;*/
+  /*}*/
 
   .anime-md-toolkit {
     position: relative;
-    animation: movetools 20s infinite;
+    animation: movetools 50s infinite;
     animation-timing-function: linear;
     animation-delay: 0s;
   }
@@ -763,9 +765,9 @@ export default {
     to {top: 1320px;}
   }
 
-  .anime-md-toolkit:hover {
-    animation-play-state: paused;
-  }
+  /*.anime-md-toolkit:hover {*/
+  /*  animation-play-state: paused;*/
+  /*}*/
 
   .v-card--reveal {
   align-items: center;
